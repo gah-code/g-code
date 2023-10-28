@@ -23,13 +23,6 @@ const StyledSection = styled.section`
     grid-template-columns: repeat(1, 2.1fr 2fr);
   }
 
-  /* Medium screens */
-  @media (min-width: 481px) and (max-width: 768px) {
-    .grid--2-cols-other {
-      grid-template-columns: 1fr;
-    }
-  }
-
   .projects {
     width: 444px;
     display: flex;
@@ -69,6 +62,16 @@ const StyledSection = styled.section`
     color: #263147;
     background-color: blue;
     max-width: 30rem;
+  }
+
+  /**************************/
+  /* BELOW 544px (Phones) */
+  /**************************/
+
+  @media (max-width: 34em) {
+    .grid--2-cols-other {
+      grid-template-columns: 1fr;
+    }
   }
 `
 

@@ -7,16 +7,6 @@ import { Link } from "gatsby"
 import { Heading, Text, sx, Container, Grid, Box } from "theme-ui"
 
 const StyledSection = styled.section`
-  /* background: #eff; */
-  /* ul {
-    background-color: red;
-  } */
-
-  /* li {
-    color: #263147;
-    background-color: orange;
-    max-width: 30rem;
-  } */
   .step-img-box {
     position: relative;
     display: flex;
@@ -34,25 +24,8 @@ const StyledSection = styled.section`
     grid-template-columns: repeat(1, 1fr 1.2fr);
   }
 
-  /* Medium screens */
-  @media (min-width: 481px) and (max-width: 768px) {
-    .grid--2-cols-other {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  /* .projects {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .project {
-    background-color: blue;
-  } */
-
   .projects {
-    width: 400px;
+    width: 360px;
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -61,8 +34,6 @@ const StyledSection = styled.section`
 
   .item {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    /* padding: 10px 12px; */
-    /* padding-right: 48px; */
     cursor: pointer;
     border-top: 4px solid #fff;
     border-bottom: 4px solid #fff;
@@ -72,6 +43,19 @@ const StyledSection = styled.section`
     column-gap: 24px;
     row-gap: 32px;
     align-items: center;
+  }
+
+  /**************************/
+  /* BELOW 544px (Phones) */
+  /**************************/
+
+  @media (max-width: 34em) {
+    .grid--2-cols-other {
+      grid-template-columns: 1fr;
+    }
+    .project-box:nth-child(2) {
+      grid-row: 1;
+    }
   }
 `
 
@@ -95,15 +79,14 @@ const Update = ({ content }) => {
   return (
     <StyledSection>
       <div className="container grid grid--2-cols-other">
-        <div className="projects">
+        <div className="projects project-box">
           <ul>
             <li>{frontmatter.list}</li>
             <li>{frontmatter.list}</li>
             <li>{frontmatter.list}</li>
           </ul>
         </div>
-
-        <div>
+        <div className="project-box">
           <Heading
             sx={{
               ...theme.styles.h3,

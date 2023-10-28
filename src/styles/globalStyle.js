@@ -322,10 +322,6 @@ select {
         .grid--4-cols {
             grid-template-columns: 1fr;
         }
-
-
-  
-
 }
 
     
