@@ -5,5 +5,5 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+ Gilbert A. Haro Website
 </h1>
