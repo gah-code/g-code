@@ -7,3 +7,7 @@
 <h1 align="center">
  Gilbert A. Haro Website
 </h1>
+
+Netlify
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f2ecbaf1-b540-48fd-82fd-b0d389e98a81/deploy-status)](https://app.netlify.com/sites/ubiquitous-cat-ade1f1/deploys)
