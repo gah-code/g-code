@@ -11,6 +11,7 @@ import theme from "../gatsby-plugin-theme-ui"
 import Card from "../components/card"
 import { Box } from "theme-ui"
 import styled from "styled-components"
+import { Paragraph } from "theme-ui"
 
 const samplePageLinks = [
   {
@@ -50,6 +51,30 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Hero content={heroContent} />
       <About content={aboutContent} />
+
+      <div className="container">
+        <Heading
+          sx={{
+            textAlign: "center",
+            ...theme.styles.h3,
+          }}
+        >
+          What I've been up to 2023
+        </Heading>
+        <Paragraph
+          variant="block"
+          sx={{
+            textAlign: "center",
+            ...theme.text.paragraph,
+          }}
+        >
+          I'm currently engaged in full-time web development at Robert Half,
+          while occasionally immersing myself in weekend wedding photography
+          gigs. In the spaces between, I eagerly delve into the ever-evolving
+          world of front-end technology.
+        </Paragraph>
+      </div>
+
       <Update content={updateContent} />
       <Slider />
 

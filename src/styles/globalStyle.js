@@ -103,39 +103,11 @@ select {
         line-height: 1.7;
         font-weight: 400;
     }
-    h1 {
-        font-weight: 700;
-        ${"" /* font-size: 3.2rem; */}
-        ${"" /* font-size: var(--fs-xl); */}
-        line-height: 1.09;
-        margin-bottom: 1.5rem;
-        color: black;
-        @media (max-width: 59em) {
-        font-size: 2.8rem;
-        }
-    }
+
 
     h1.fluid-type {
   --fluid-type-min-size: 2.2;
   --fluid-type-max-size: 4.5;
-    }
-
-
-    
-    h2 {
-        font-weight: 600;
-        font-size: 1.85rem; 
-        line-height: 1.8rem;
-        margin-bottom: 1.2rem;
-        color: black;
-        max-width: 48rem;
-      
-          @media (max-width: 59em) {
-            font-size: 1.5rem;
-            max-width: 50rem;
-            ${"" /* line-height: 1.5rem; */}
-        } 
-        
     }
 
       h2.fluid-type {
@@ -201,6 +173,13 @@ select {
 
     .grid--4-cols {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .center {
+      max-width:768px ;
+      margin: 0 auto;
+      text-align: center;
+      
     }
 
 

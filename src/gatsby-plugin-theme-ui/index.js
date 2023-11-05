@@ -67,6 +67,14 @@ const theme = {
       letterSpacing: "-0.03em",
       mt: 3,
     },
+
+    text: {
+      block: {
+        variant: "paragraph",
+        fontSize: [2, 3],
+        fontWeight: 500,
+      },
+    },
   },
 
   badges: {
@@ -80,9 +88,9 @@ const theme = {
       boxShadow: "inset 0 0 0 1px",
     },
   },
-  sizes: {
-    container: 768,
-  },
+  // sizes: {
+  //   container: 768,
+  // },
 }
 
 export default theme
