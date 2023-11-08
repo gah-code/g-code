@@ -14,7 +14,6 @@ const Slider = props => {
   return (
     <>
       <section className="section-gallery">
-        <h1>Title</h1>
         <Heading // apply both the heading styles and the color style
           as="h2"
           mb="2"

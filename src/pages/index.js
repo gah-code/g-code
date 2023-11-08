@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Hero from "../components/hero"
 import About from "../components/about"
 import Update from "../components/segments/update"
+import Background from "../components/segments/background"
 import Slider from "../components/slider"
 import { Grid, Heading, sx, Text } from "theme-ui"
 import theme from "../gatsby-plugin-theme-ui"
@@ -37,20 +38,37 @@ const samplePageLinks = [
 const IndexPage = ({ data }) => {
   // const heroContent = data.hero.edges[0].node
   // const aboutContent = data.about.edges[1].node
-  const heroContent = data.hero.edges.find(
-    edge => edge.node.frontmatter.id === 0
-  ).node
-  const aboutContent = data.about.edges.find(
-    edge => edge.node.frontmatter.id === 1
-  ).node
+  // const heroContent = data.hero.edges.find(
+  //   edge => edge.node.frontmatter.id === 0
+  // ).node
+
+  // const aboutContent = data.about.edges.find(
+  //   edge => edge.node.frontmatter.id === 1
+  // ).node
+  // const updateContent = data.update.edges.find(
+  //   edge => edge.node.frontmatter.id === 2
+  // ).node
+  // const backgroundContent = data.background.edges.find(
+  //   edge => edge.node.frontmatter.id === 3
+  // ).node
+
+  const findContentById = (data, id, category) => {
+    return data[category].edges.find(edge => edge.node.frontmatter.id === id)
+      ?.node
+  }
+
+  const heroContent = findContentById(data, 0, "hero")
+  const aboutContent = findContentById(data, 1, "about")
+  const updateContent = findContentById(data, 2, "update")
+  const backgroundContent = findContentById(data, 3, "background")
+
   const aboutRawMarkdownBody = aboutContent.rawMarkdownBody
-  const updateContent = data.update.edges.find(
-    edge => edge.node.frontmatter.id === 2
-  ).node
+
   return (
     <Layout>
       <Hero content={heroContent} />
       <About content={aboutContent} />
+      <Background content={backgroundContent} />
 
       <div className="container">
         <Heading
@@ -75,8 +93,8 @@ const IndexPage = ({ data }) => {
         </Paragraph>
       </div>
 
-      <Update content={updateContent} />
       <Slider />
+      <Update content={updateContent} />
 
       <p>
         <b>Example pages:</b>{" "}
@@ -138,6 +156,23 @@ export const pageQuery = graphql`
             subtitlePrefix
             subtitleHighlight
             list
+            id
+          }
+          rawMarkdownBody
+        }
+      }
+    }
+    background: allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            greetings
+            emoji
+            subtitlePrefix
+            subtitleHighlight
+            update
+            text
             id
           }
           rawMarkdownBody

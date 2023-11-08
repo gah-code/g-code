@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import aboutImg from "../images/about.jpg"
+import aboutImg from "../../images/about.jpg"
 import { Heading, Text, sx, Container } from "theme-ui"
-import theme from "../gatsby-plugin-theme-ui"
+import theme from "../../gatsby-plugin-theme-ui"
 import { graphql } from "gatsby"
 
 const StyledSection = styled.section`
@@ -75,11 +75,14 @@ const StyledSection = styled.section`
   }
 `
 
-const About = ({ content }) => {
+const Background = ({ content }) => {
   const { frontmatter, rawMarkdownBody } = content
   return (
     <StyledSection>
       <div className="container grid grid--2-cols-other">
+        <div className="step-img-box">
+          <img src={aboutImg} alt="" />
+        </div>
         <div>
           <Heading
             sx={{
@@ -89,14 +92,11 @@ const About = ({ content }) => {
             {frontmatter.title}
           </Heading>
           {/* <h2 className="title fluid-type">{frontmatter.title}</h2> */}
-          <Text sx={theme.text.default}>{frontmatter.life}</Text>
-        </div>
-        <div className="step-img-box">
-          <img src={aboutImg} alt="" />
+          <Text sx={theme.text.default}>{frontmatter.text}</Text>
         </div>
       </div>
     </StyledSection>
   )
 }
 
-export default About
+export default Background
