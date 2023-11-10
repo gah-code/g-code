@@ -29,7 +29,7 @@ const theme = {
       mb: [2, 1],
     },
     h2: {
-      fontSize: [32, 48],
+      fontSize: [24, 32],
       fontFamily: "heading",
       fontWeight: "heading",
       color: "text",

@@ -76,6 +76,9 @@ const StyledSection = styled.section`
     .step-img-box:nth-child(1) {
       grid-row: 2;
     }
+    .step-img-box {
+      transform: translateY(2.4rem);
+    }
   }
 `
 

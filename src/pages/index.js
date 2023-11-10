@@ -56,7 +56,7 @@ const IndexPage = ({ data }) => {
       <Background content={backgroundContent} />
       <Container
         sx={{
-          minWidth: 420,
+          maxWidth: 512,
           mx: "auto",
           px: 0,
           py: 6,
