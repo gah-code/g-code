@@ -13,6 +13,7 @@ import Card from "../components/card"
 import { Box } from "theme-ui"
 import styled from "styled-components"
 import { Paragraph } from "theme-ui"
+import { Container } from "theme-ui"
 
 const samplePageLinks = [
   {
@@ -36,22 +37,6 @@ const samplePageLinks = [
 // import { motion } from "framer-motion"
 
 const IndexPage = ({ data }) => {
-  // const heroContent = data.hero.edges[0].node
-  // const aboutContent = data.about.edges[1].node
-  // const heroContent = data.hero.edges.find(
-  //   edge => edge.node.frontmatter.id === 0
-  // ).node
-
-  // const aboutContent = data.about.edges.find(
-  //   edge => edge.node.frontmatter.id === 1
-  // ).node
-  // const updateContent = data.update.edges.find(
-  //   edge => edge.node.frontmatter.id === 2
-  // ).node
-  // const backgroundContent = data.background.edges.find(
-  //   edge => edge.node.frontmatter.id === 3
-  // ).node
-
   const findContentById = (data, id, category) => {
     return data[category].edges.find(edge => edge.node.frontmatter.id === id)
       ?.node
@@ -69,11 +54,18 @@ const IndexPage = ({ data }) => {
       <Hero content={heroContent} />
       <About content={aboutContent} />
       <Background content={backgroundContent} />
-
-      <div className="container">
+      <Container
+        sx={{
+          minWidth: 420,
+          mx: "auto",
+          px: 0,
+          py: 6,
+          textAlign: "center",
+          backgroundColor: "tomato",
+        }}
+      >
         <Heading
           sx={{
-            textAlign: "center",
             ...theme.styles.h3,
           }}
         >
@@ -82,20 +74,17 @@ const IndexPage = ({ data }) => {
         <Paragraph
           variant="block"
           sx={{
-            textAlign: "center",
             ...theme.text.paragraph,
           }}
         >
-          I'm currently engaged in full-time web development at Robert Half,
-          while occasionally immersing myself in weekend wedding photography
-          gigs. In the spaces between, I eagerly delve into the ever-evolving
-          world of front-end technology.
+          I'm currently a full-time web development at Robert Half, while
+          occasionally immersing myself in weekend wedding photography gigs. In
+          the spaces between, I eagerly delve into the ever-evolving world of
+          front-end technology and stay active building my own projects
         </Paragraph>
-      </div>
-
+      </Container>
       <Slider />
-      <Update content={updateContent} />
-
+      {/* <Update content={updateContent} /> */}
       <p>
         <b>Example pages:</b>{" "}
         {samplePageLinks.map((link, i) => (
@@ -181,3 +170,19 @@ export const pageQuery = graphql`
     }
   }
 `
+
+// const heroContent = data.hero.edges[0].node
+// const aboutContent = data.about.edges[1].node
+// const heroContent = data.hero.edges.find(
+//   edge => edge.node.frontmatter.id === 0
+// ).node
+
+// const aboutContent = data.about.edges.find(
+//   edge => edge.node.frontmatter.id === 1
+// ).node
+// const updateContent = data.update.edges.find(
+//   edge => edge.node.frontmatter.id === 2
+// ).node
+// const backgroundContent = data.background.edges.find(
+//   edge => edge.node.frontmatter.id === 3
+// ).node

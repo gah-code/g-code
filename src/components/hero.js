@@ -6,22 +6,22 @@ const skills = [
   {
     skill: "HTML+CSS",
     level: "advanced",
-    color: "#72A0C1",
+    color: "#099268",
   },
   {
     skill: "SCSS",
     level: "advanced",
-    color: "#F2C1D1",
+    color: "#354c44",
   },
   {
     skill: "JavaScript",
     level: "advanced",
-    color: "#EFD81D",
+    color: "#233349",
   },
   {
     skill: "React",
     level: "advanced",
-    color: "#60DAFB",
+    color: "#d9a398",
   },
   {
     skill: "Gatsby",
@@ -77,7 +77,8 @@ const StyledSection = styled.section`
   }
 
   .skill {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: 400;
     padding: 0.3rem 1rem;
     border-radius: 25px;
     text-decoration: none;
@@ -87,7 +88,8 @@ const StyledSection = styled.section`
     display: flex;
     align-items: center;
     gap: 6px;
-    color: #263147;
+    text-transform: uppercase;
+    color: #222;
   }
   @media (max-width: 34em) {
     .skill-list {

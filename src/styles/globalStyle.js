@@ -9,19 +9,6 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
 }
 
-.fluid-type {
-  --fluid-type-min-size: 1;
-  --fluid-type-max-size: 2;
-  --fluid-type-min-screen: 20;
-  --fluid-type-max-screen: 88;
-
-  /* We multiply by 1rem to essentially stick a rem unit to a number. */
-  font-size: calc(
-    (var(--fluid-type-min-size) * 1rem) + (var(--fluid-type-max-size) - var(--fluid-type-min-size)) *
-      (100vw - (var(--fluid-type-min-screen) * 1rem)) /
-      (var(--fluid-type-max-screen) - var(--fluid-type-min-screen))
-  );
-}
 
 /* Remove default margin */
 body,
@@ -91,8 +78,8 @@ select {
     scroll-behavior: auto !important;
   }
 }
- 
-    body {
+
+body {
         width: 100%;
         height: 100%;
         margin: 0;
@@ -105,19 +92,6 @@ select {
     }
 
 
-    h1.fluid-type {
-  --fluid-type-min-size: 2.2;
-  --fluid-type-max-size: 4.5;
-    }
-
-      h2.fluid-type {
-    --fluid-type-min-size: 2;
-    --fluid-type-max-size: 3;
-  }
-
-    h3 {
-        font-size: 1.05rem;
-    }
     a {
         display: inline-block;
         text-decoration: none;
@@ -127,9 +101,7 @@ select {
         &:hover,
         &:focus {
         outline: 0;
-        }
-
-        
+        } 
     }
 
     .btn,
@@ -184,7 +156,7 @@ select {
 
 
 
-    /**************************/
+/**************************/
 /* SECTION GALLERY */
 /**************************/
 

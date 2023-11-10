@@ -72,6 +72,10 @@ const StyledSection = styled.section`
     .grid--2-cols-other {
       grid-template-columns: 1fr;
     }
+
+    .step-img-box:nth-child(1) {
+      grid-row: 2;
+    }
   }
 `
 
@@ -86,7 +90,7 @@ const Background = ({ content }) => {
         <div>
           <Heading
             sx={{
-              ...theme.styles.h3,
+              ...theme.styles.h2,
             }}
           >
             {frontmatter.title}

@@ -29,12 +29,12 @@ const theme = {
       mb: [2, 1],
     },
     h2: {
-      fontSize: [24, 32],
+      fontSize: [32, 48],
       fontFamily: "heading",
       fontWeight: "heading",
       color: "text",
       mt: [2, 1],
-      mb: 2,
+      mb: 3,
     },
     h3: {
       fontSize: [32],
@@ -42,7 +42,7 @@ const theme = {
       fontWeight: "heading",
       color: "text",
       mt: 2,
-      mb: 3,
+      mb: 2,
     },
   },
   lineHeights: {
@@ -88,9 +88,9 @@ const theme = {
       boxShadow: "inset 0 0 0 1px",
     },
   },
-  // sizes: {
-  //   container: 768,
-  // },
+  sizes: {
+    container: 768,
+  },
 }
 
 export default theme

@@ -83,12 +83,11 @@ const About = ({ content }) => {
         <div>
           <Heading
             sx={{
-              ...theme.styles.h3,
+              ...theme.styles.h2,
             }}
           >
             {frontmatter.title}
           </Heading>
-          {/* <h2 className="title fluid-type">{frontmatter.title}</h2> */}
           <Text sx={theme.text.default}>{frontmatter.life}</Text>
         </div>
         <div className="step-img-box">
