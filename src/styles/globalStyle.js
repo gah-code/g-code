@@ -273,6 +273,11 @@ body {
         .grid--4-cols {
             grid-template-columns: 1fr;
         }
+
+        .section-gallery {
+  padding: 9.6rem 0;
+  ${"" /* background-color: var(--clr-bg); */}
+}
 }
 
     

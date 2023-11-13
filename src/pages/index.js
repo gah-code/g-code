@@ -61,11 +61,13 @@ const IndexPage = ({ data }) => {
           px: 0,
           py: 6,
           textAlign: "center",
-          backgroundColor: "tomato",
+          // backgroundColor: "tomato",
         }}
       >
         <Heading
           sx={{
+            variant: "text.caps",
+
             ...theme.styles.h3,
           }}
         >
@@ -74,13 +76,13 @@ const IndexPage = ({ data }) => {
         <Paragraph
           variant="block"
           sx={{
-            ...theme.text.paragraph,
+            ...theme.text.paragraph, // Merging the theme text.heading style
           }}
         >
-          I'm currently a full-time web development at Robert Half, while
-          occasionally immersing myself in weekend wedding photography gigs. In
-          the spaces between, I eagerly delve into the ever-evolving world of
-          front-end technology and stay active building my own projects
+          I'm currently a web developer at Robert Half, while occasionally
+          immersing myself in weekend wedding photography gigs. In the spaces
+          between, I eagerly delve into the ever-evolving world of front-end
+          technology and stay active building my own projects
         </Paragraph>
       </Container>
       <Slider />

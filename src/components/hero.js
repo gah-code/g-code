@@ -11,7 +11,7 @@ const skills = [
   {
     skill: "SCSS",
     level: "advanced",
-    color: "#354c44",
+    color: " #687096",
   },
   {
     skill: "JavaScript",
@@ -79,7 +79,7 @@ const StyledSection = styled.section`
   .skill {
     font-size: 0.9rem;
     font-weight: 400;
-    padding: 0.3rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;

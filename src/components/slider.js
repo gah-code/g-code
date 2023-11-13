@@ -14,16 +14,6 @@ const Slider = props => {
   return (
     <>
       <section className="section-gallery">
-        <Heading // apply both the heading styles and the color style
-          as="h2"
-          mb="2"
-          sx={{
-            ...theme.text.heading, // Merging the theme text.heading style
-            color: "primary", // Adding additional color style
-          }}
-        >
-          Heading 2
-        </Heading>
         <div className="gallery">
           <ul className="gallery__slider" ref={ref}>
             <li className="gallery__slider-item ">test</li>
@@ -31,7 +21,6 @@ const Slider = props => {
               <img src={ImgThree} alt="" />
             </li>
             <li className="smol-transitions zoom">
-              <h1>Title</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Explicabo, inventore.

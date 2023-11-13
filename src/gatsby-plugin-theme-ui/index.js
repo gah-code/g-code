@@ -19,6 +19,14 @@ const theme = {
     heading: 700,
     display: 900,
   },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.25,
+  },
+  letterSpacings: {
+    heading: "-0.05em",
+    caps: "0.1em",
+  },
   styles: {
     h1: {
       fontSize: [48, 64],
@@ -37,18 +45,15 @@ const theme = {
       mb: 3,
     },
     h3: {
-      fontSize: [32],
+      fontSize: [24],
       fontFamily: "heading",
       fontWeight: "heading",
       color: "text",
       mt: 2,
-      mb: 2,
+      mb: 3,
     },
   },
-  lineHeights: {
-    body: 1.5,
-    heading: 1.25,
-  },
+
   text: {
     default: {
       color: "text",
@@ -68,24 +73,14 @@ const theme = {
       mt: 3,
     },
 
-    text: {
-      block: {
-        variant: "paragraph",
-        fontSize: [2, 3],
-        fontWeight: 500,
-      },
+    caps: {
+      textTransform: "uppercase",
+      letterSpacing: "caps",
     },
-  },
 
-  badges: {
-    primary: {
-      color: "background",
-      bg: "#eee",
-    },
-    outline: {
-      color: "#748",
-      bg: "transparent",
-      boxShadow: "inset 0 0 0 1px",
+    paragraph: {
+      fontSize: [3],
+      fontWeight: 400,
     },
   },
   sizes: {
