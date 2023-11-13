@@ -58,7 +58,7 @@ const theme = {
     default: {
       color: "text",
       fontSize: [2, 3],
-      fontWeight: 500,
+      fontWeight: 400,
     },
     heading: {
       fontFamily: "heading",
