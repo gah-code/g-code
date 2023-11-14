@@ -1,7 +1,7 @@
 // example theme file
 const theme = {
   colors: {
-    text: "#010B13",
+    text: "#222",
     textDark: "#f9f4e3",
     background: "#F2F3F4",
     backgroundDark: "#263147",
@@ -72,12 +72,10 @@ const theme = {
       letterSpacing: "-0.03em",
       mt: 3,
     },
-
     caps: {
       textTransform: "uppercase",
       letterSpacing: "caps",
     },
-
     paragraph: {
       fontSize: [3],
       fontWeight: 400,

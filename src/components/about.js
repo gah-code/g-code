@@ -6,6 +6,18 @@ import theme from "../gatsby-plugin-theme-ui"
 import { graphql } from "gatsby"
 
 const StyledSection = styled.section`
+  .subtitle {
+    margin-top: 2rem;
+  }
+  .highlighted {
+    color: hsl(260, 100%, 80%);
+    font-size: 1.2rem;
+    display: grid;
+    padding: 1rem 0 2rem 0;
+    /* margin-top: 2rem; */
+
+    /* box-shadow: inset 0 -2.5rem 0 hsl(260, 100%, 80%); */
+  }
   .step-img-box {
     position: relative;
     display: flex;
@@ -28,7 +40,6 @@ const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
     gap: 28px;
-
     justify-content: center;
   }
 
@@ -50,7 +61,6 @@ const StyledSection = styled.section`
 
   .project {
     border-radius: 30px;
-    /* padding: 1rem 2rem; */
     background-color: blue;
   }
 
@@ -89,7 +99,9 @@ const About = ({ content }) => {
             {frontmatter.title}
           </Heading>
           <Text sx={theme.text.default}>{frontmatter.life}</Text>
+          <span className="highlighted">{frontmatter.subtitleHighlight}</span>
         </div>
+
         <div className="step-img-box">
           <img src={aboutImg} alt="" />
         </div>

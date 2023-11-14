@@ -6,42 +6,42 @@ const skills = [
   {
     skill: "HTML+CSS",
     level: "advanced",
-    color: "#099268",
+    color: "hsl(260, 20%, 40%)",
   },
   {
     skill: "SCSS",
     level: "advanced",
-    color: " #687096",
+    color: " hsl(260, 20%, 40%)",
   },
   {
     skill: "JavaScript",
     level: "advanced",
-    color: "#233349",
+    color: "hsl(260, 20%, 40%)",
   },
   {
     skill: "React",
     level: "advanced",
-    color: "#d9a398",
+    color: "hsl(260, 20%, 40%)",
   },
   {
     skill: "Gatsby",
     level: "advanced",
-    color: "#B57EDC",
+    color: "hsl(260, 20%, 40%)",
   },
   {
     skill: "Theme UI",
     level: "intermediate",
-    color: "#E843",
+    color: "hsl(260, 20%, 40%)",
   },
   {
     skill: "GraphQL",
     level: "beginner",
-    color: "#B57EDC",
+    color: "hsl(260, 20%, 40%)",
   },
   {
-    skill: "ally",
+    skill: "a11y",
     level: "beginner",
-    color: "#585",
+    color: "hsl(260, 20%, 40%)",
   },
 ]
 
@@ -55,7 +55,8 @@ const StyledSection = styled.section`
     margin-top: 0;
   }
   .highlighted {
-    box-shadow: inset 0 -2.5rem 0 #cdf3e1;
+    color: #222;
+    box-shadow: inset 0 -2.5rem 0 hsl(260, 100%, 80%);
   }
 
   .description {
@@ -77,19 +78,20 @@ const StyledSection = styled.section`
   }
 
   .skill {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 400;
     padding: 0.5rem 1rem;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
-    box-shadow: inset 0 0 0 1.9px #444;
+    box-shadow: inset 0 0 0 2px #222;
     transition: all 0.3s;
     display: flex;
     align-items: center;
     gap: 6px;
     text-transform: uppercase;
-    color: #222;
+    color: #ffff;
+    letter-spacing: 0.4px;
   }
   @media (max-width: 34em) {
     .skill-list {
@@ -149,11 +151,11 @@ function Skill({ skill, color, level }) {
   return (
     <div className="skill" style={{ backgroundColor: color }}>
       <span>{skill}</span>
-      {/* <span>
-        {level === "beginner" && "👶"}
-        {level === "intermediate" && "👍"}
-        {level === "advanced" && "💪"}
-      </span> */}
+      <span>
+        {level === "beginner" && ""}
+        {level === "intermediate" && ""}
+        {level === "advanced" && ""}
+      </span>
     </div>
   )
 }

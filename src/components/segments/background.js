@@ -20,7 +20,7 @@ const StyledSection = styled.section`
   }
 
   .grid--2-cols-other {
-    grid-template-columns: repeat(1, 2.1fr 2fr);
+    grid-template-columns: repeat(1, 2fr 2.1fr);
   }
 
   .projects {
@@ -98,7 +98,6 @@ const Background = ({ content }) => {
           >
             {frontmatter.title}
           </Heading>
-          {/* <h2 className="title fluid-type">{frontmatter.title}</h2> */}
           <Text sx={theme.text.default}>{frontmatter.text}</Text>
         </div>
       </div>

@@ -54,8 +54,10 @@ const IndexPage = ({ data }) => {
       <Hero content={heroContent} />
       <About content={aboutContent} />
       <Background content={backgroundContent} />
+
       <Container
         sx={{
+          // minwidth: 768,
           maxWidth: 512,
           mx: "auto",
           px: 0,
@@ -76,7 +78,7 @@ const IndexPage = ({ data }) => {
         <Paragraph
           variant="block"
           sx={{
-            ...theme.text.paragraph, // Merging the theme text.heading style
+            ...theme.text.paragraph,
           }}
         >
           I'm currently a web developer at Robert Half, while occasionally
@@ -85,6 +87,7 @@ const IndexPage = ({ data }) => {
           technology and stay active building my own projects
         </Paragraph>
       </Container>
+
       <Slider />
       {/* <Update content={updateContent} /> */}
       <p>
