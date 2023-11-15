@@ -50,10 +50,7 @@ const StyledSection = styled.section`
   /**************************/
 
   @media (max-width: 34em) {
-    .grid--2-cols-other {
-      grid-template-columns: 1fr;
-    }
-    .project-box:nth-child(2) {
+    .grid-2:nth-child(2) {
       grid-row: 1;
     }
   }
@@ -78,7 +75,7 @@ const Update = ({ content }) => {
 
   return (
     <StyledSection>
-      <div className="container grid grid--2-cols-other">
+      <div className="container grid-2">
         <div className="projects project-box">
           <ul>
             <li>{frontmatter.list}</li>

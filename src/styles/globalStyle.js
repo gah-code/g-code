@@ -9,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
 }
 
-
 /* Remove default margin */
 body,
 h1,
@@ -24,7 +23,6 @@ dd {
   margin: 0;
   text-wrap: balance;
 }
-
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
@@ -90,8 +88,6 @@ body {
         line-height: 1.7;
         font-weight: 400;
     }
-
-
     a {
         display: inline-block;
         text-decoration: none;
@@ -121,7 +117,7 @@ body {
     }
 
     .container {
-        max-width: 125rem;
+        max-width: 120rem;
         padding:  5rem 0;
         margin: 0 auto;
     }
@@ -130,6 +126,13 @@ body {
         column-gap: 6.4rem;
         row-gap: 9.6rem;
     }
+
+   .grid-2 {
+    /* grid-template-columns: repeat(1, 2.1fr 2fr); */
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
 
     .grid:not(:last-child) {
         margin-bottom: 9.6rem;
@@ -231,7 +234,9 @@ body {
   }
 }
 
-    
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/    
 
     @media (max-width: 84em) {
         .container {
@@ -239,25 +244,32 @@ body {
             row-gap: 7rem;
         }
     }
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
 
     @media (max-width: 75em) {
         .container {
             column-gap: 2rem;
             row-gap: 6.9rem;
         }
-
-   
-
-      
+        
+        .grid {
+          column-gap: 4.8rem;
+          row-gap: 6.4rem;
+  }
     }
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
 
     @media (max-width: 59em) {
         .container {
             row-gap: 6rem;
             column-gap: 1rem;
         }
-
-         .grid--2-cols,
+        .grid--2-cols,
         .grid--3-cols,
         .grid--4-cols {
             grid-template-columns: 1fr;
@@ -265,6 +277,9 @@ body {
     }
 
     @media (max-width: 34em) {
+        .grid {
+    row-gap: 4.8rem;
+  }
         .container {
             row-gap: 5rem;
         }
@@ -277,7 +292,6 @@ body {
         .section-gallery {
   padding: 9.6rem 0;
   ${"" /* background-color: var(--clr-bg); */}
-}
 }
 
     

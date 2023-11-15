@@ -6,11 +6,14 @@ import theme from "../gatsby-plugin-theme-ui"
 import { graphql } from "gatsby"
 
 const StyledSection = styled.section`
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+
   .subtitle {
     margin-top: 2rem;
   }
   .highlighted {
-    color: hsl(260, 100%, 80%);
+    color: hsl(260, 20%, 40%);
     font-size: 1.2rem;
     display: grid;
     padding: 1rem 0 2rem 0;
@@ -29,10 +32,6 @@ const StyledSection = styled.section`
   img {
     max-width: 250px;
     border-radius: 10px;
-  }
-
-  .grid--2-cols-other {
-    grid-template-columns: repeat(1, 2.1fr 2fr);
   }
 
   .projects {
@@ -73,23 +72,13 @@ const StyledSection = styled.section`
     background-color: blue;
     max-width: 30rem;
   }
-
-  /**************************/
-  /* BELOW 544px (Phones) */
-  /**************************/
-
-  @media (max-width: 34em) {
-    .grid--2-cols-other {
-      grid-template-columns: 1fr;
-    }
-  }
 `
 
 const About = ({ content }) => {
   const { frontmatter, rawMarkdownBody } = content
   return (
     <StyledSection>
-      <div className="container grid grid--2-cols-other">
+      <div className="container grid-2">
         <div>
           <Heading
             sx={{

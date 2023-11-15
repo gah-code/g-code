@@ -37,7 +37,7 @@ const theme = {
       mb: [2, 1],
     },
     h2: {
-      fontSize: [24, 32],
+      fontSize: [32, 48],
       fontFamily: "heading",
       fontWeight: "heading",
       color: "text",
@@ -45,7 +45,7 @@ const theme = {
       mb: 3,
     },
     h3: {
-      fontSize: [24],
+      fontSize: [24, 32],
       fontFamily: "heading",
       fontWeight: "heading",
       color: "text",

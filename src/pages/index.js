@@ -4,16 +4,12 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import About from "../components/about"
-import Update from "../components/segments/update"
 import Background from "../components/segments/background"
 import Slider from "../components/slider"
-import { Grid, Heading, sx, Text } from "theme-ui"
+import { Heading } from "theme-ui"
 import theme from "../gatsby-plugin-theme-ui"
-import Card from "../components/card"
-import { Box } from "theme-ui"
 import styled from "styled-components"
-import { Paragraph } from "theme-ui"
-import { Container } from "theme-ui"
+import { Paragraph, Container } from "theme-ui"
 
 const samplePageLinks = [
   {
@@ -57,8 +53,7 @@ const IndexPage = ({ data }) => {
 
       <Container
         sx={{
-          // minwidth: 768,
-          maxWidth: 512,
+          // maxWidth: 512,
           mx: "auto",
           px: 0,
           py: 6,
@@ -87,7 +82,6 @@ const IndexPage = ({ data }) => {
           technology and stay active building my own projects
         </Paragraph>
       </Container>
-
       <Slider />
       {/* <Update content={updateContent} /> */}
       <p>

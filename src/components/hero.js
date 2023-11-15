@@ -4,7 +4,17 @@ import { Grid, Heading, sx, Text } from "theme-ui"
 import theme from "../gatsby-plugin-theme-ui"
 const skills = [
   {
-    skill: "HTML+CSS",
+    skill: "HTML",
+    level: "advanced",
+    color: "hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "CSS",
+    level: "advanced",
+    color: "hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "JavaScript",
     level: "advanced",
     color: "hsl(260, 20%, 40%)",
   },
@@ -12,11 +22,6 @@ const skills = [
     skill: "SCSS",
     level: "advanced",
     color: " hsl(260, 20%, 40%)",
-  },
-  {
-    skill: "JavaScript",
-    level: "advanced",
-    color: "hsl(260, 20%, 40%)",
   },
   {
     skill: "React",
@@ -80,7 +85,7 @@ const StyledSection = styled.section`
   .skill {
     font-size: 0.8rem;
     font-weight: 400;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.1rem;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
@@ -151,11 +156,11 @@ function Skill({ skill, color, level }) {
   return (
     <div className="skill" style={{ backgroundColor: color }}>
       <span>{skill}</span>
-      <span>
-        {level === "beginner" && ""}
+      {/* <span>
+       {level === "beginner" && ""}
         {level === "intermediate" && ""}
-        {level === "advanced" && ""}
-      </span>
+        {level === "advanced" && ""} 
+      </span> */}
     </div>
   )
 }
