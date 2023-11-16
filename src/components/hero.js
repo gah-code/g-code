@@ -6,7 +6,7 @@ const skills = [
   {
     skill: "HTML",
     level: "advanced",
-    color: "hsl(260, 20%, 40%)",
+    color: "#F5D7DB",
   },
   {
     skill: "CSS",
@@ -51,7 +51,13 @@ const skills = [
 ]
 
 const StyledSection = styled.section`
-  padding-bottom: 5rem;
+  background: hsl(292deg 21% 87% / 0.5);
+  background: linear-gradient(
+    0deg,
+    hsl(292deg 21% 87% / 0.5),
+    rgba(242, 243, 244, 1) 100%
+  );
+  padding: 0 2rem 8rem 2rem;
   .title {
     margin-bottom: 0.8rem;
     padding-top: 3.5rem;
@@ -61,7 +67,7 @@ const StyledSection = styled.section`
   }
   .highlighted {
     color: #222;
-    box-shadow: inset 0 -2.5rem 0 hsl(260, 100%, 80%);
+    box-shadow: inset 0 -2.5rem 0 #bd83b8;
   }
 
   .description {
@@ -84,19 +90,18 @@ const StyledSection = styled.section`
 
   .skill {
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: 700;
     padding: 0.6rem 1.1rem;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
     box-shadow: inset 0 0 0 2px #222;
     transition: all 0.3s;
     display: flex;
     align-items: center;
     gap: 6px;
     text-transform: uppercase;
-    color: #ffff;
-    letter-spacing: 0.4px;
+    color: #06142e;
+    letter-spacing: 0.5px;
   }
   @media (max-width: 34em) {
     .skill-list {
@@ -128,16 +133,16 @@ const Hero = ({ content }) => {
       </Heading>
       <Heading
         sx={{
-          ...theme.styles.h2,
+          ...theme.styles.h3,
         }}
       >
         {frontmatter.subtitlePrefix}{" "}
         <span className="highlighted">{frontmatter.subtitleHighlight}</span>
       </Heading>
       <div className="description">{rawMarkdownBody}</div>
-      <div className="data">
+      {/* <div className="data">
         <SkillList />
-      </div>
+      </div> */}
     </StyledSection>
   )
 }

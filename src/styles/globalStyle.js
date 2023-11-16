@@ -115,10 +115,11 @@ body {
       /* Put Transition on parent state */
       transition: all 0.3s;
     }
+    
 
     .container {
         max-width: 120rem;
-        padding:  5rem 0;
+        padding:  5rem 2rem;
         margin: 0 auto;
     }
     .grid {
@@ -293,7 +294,7 @@ body {
   padding: 9.6rem 0;
   ${"" /* background-color: var(--clr-bg); */}
 }
-
+    }
     
 `
 

@@ -19,7 +19,7 @@ const StyledLayout = styled.div`
     width: 100%;
     max-width: 62.5rem;
     margin: 0 auto;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
   }
 `
 

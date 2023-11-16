@@ -5,6 +5,54 @@ import { Heading, Text, sx, Container } from "theme-ui"
 import theme from "../../gatsby-plugin-theme-ui"
 import { graphql } from "gatsby"
 
+const skills = [
+  {
+    skill: "HTML",
+    level: "advanced",
+    color: "#F5D7DB",
+  },
+  {
+    skill: "CSS",
+    level: "advanced",
+    color: "hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "JavaScript",
+    level: "advanced",
+    color: "hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "SCSS",
+    level: "advanced",
+    color: " hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "React",
+    level: "advanced",
+    color: "hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "Gatsby",
+    level: "advanced",
+    color: "hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "Theme UI",
+    level: "intermediate",
+    color: "hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "GraphQL",
+    level: "beginner",
+    color: "hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "a11y",
+    level: "beginner",
+    color: "hsl(260, 20%, 40%)",
+  },
+]
+
 const StyledSection = styled.section`
   .step-img-box {
     position: relative;
@@ -63,6 +111,45 @@ const StyledSection = styled.section`
     background-color: blue;
     max-width: 30rem;
   }
+  .data {
+    padding: 32px 0;
+    padding-top: 10px;
+  }
+
+  .skill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 2rem;
+    max-width: 32rem;
+  }
+
+  .skill {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 2px #222;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: uppercase;
+    color: #06142e;
+    letter-spacing: 0.5px;
+  }
+  @media (max-width: 34em) {
+    .skill-list {
+      gap: 6px;
+      margin-top: 1.5rem;
+    }
+    .skill {
+      padding: 0.4rem 0.81rem;
+      font-size: 0.7rem;
+    }
+  }
 
   /**************************/
   /* BELOW 544px (Phones) */
@@ -99,10 +186,34 @@ const Background = ({ content }) => {
             {frontmatter.title}
           </Heading>
           <Text sx={theme.text.default}>{frontmatter.text}</Text>
+          <div className="data">
+            <SkillList />
+          </div>
         </div>
       </div>
     </StyledSection>
   )
 }
+function SkillList() {
+  return (
+    <div className="skill-list">
+      {skills.map(skill => (
+        <Skill skill={skill.skill} color={skill.color} level={skill.level} />
+      ))}
+    </div>
+  )
+}
 
+function Skill({ skill, color, level }) {
+  return (
+    <div className="skill" style={{ backgroundColor: color }}>
+      <span>{skill}</span>
+      {/* <span>
+       {level === "beginner" && ""}
+        {level === "intermediate" && ""}
+        {level === "advanced" && ""} 
+      </span> */}
+    </div>
+  )
+}
 export default Background

@@ -82,7 +82,7 @@ const IndexPage = ({ data }) => {
           technology and stay active building my own projects
         </Paragraph>
       </Container>
-      <Slider />
+      {/* <Slider /> */}
       {/* <Update content={updateContent} /> */}
       <p>
         <b>Example pages:</b>{" "}

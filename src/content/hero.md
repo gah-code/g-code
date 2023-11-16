@@ -2,9 +2,9 @@
 id: 0
 greetings: "Hola"
 emoji: ""
-title: "I'm Gilbert"
-subtitlePrefix: "Surfing The World Wide Web"
-subtitleHighlight: "for all front-end topics"
+title: "I'm Gilbert Haro"
+subtitlePrefix: "Surfing the world wide web"
+subtitleHighlight: "for all front-end dev insight"
 ---
 
-Here are some things I been spending time with
+Thank you for stopping by
