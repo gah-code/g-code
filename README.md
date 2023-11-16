@@ -35,3 +35,28 @@ In this code:
 3. The `?.` operator is used to handle cases where no matching content is found, ensuring that you won't run into errors.
 
 4. Finally, you can call `findContentById` for each category to get the corresponding content.
+
+-
+
+# To-Do List
+
+- [x] theme ui font responsive design
+- [x] two column grid responsive design
+- [ ] Footer styles
+- [ ] add multimedia content
+- [ ] color scheme and typography
+- [x] organize content into categories.
+- [ ] navigation structure
+- [ ] interactivity
+- [ ] Implement a blog post listing page.
+- [ ] file clean up
+
+Blog Features:
+
+Implement a blog post listing page.
+Create individual blog post pages.
+Add tags and categories for each blog post.
+
+SEO Optimization:
+
+Optimize meta tags (title, description) for search engines.
