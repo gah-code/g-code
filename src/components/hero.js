@@ -2,62 +2,16 @@ import React from "react"
 import styled from "styled-components"
 import { Grid, Heading, sx, Text } from "theme-ui"
 import theme from "../gatsby-plugin-theme-ui"
-const skills = [
-  {
-    skill: "HTML",
-    level: "advanced",
-    color: "#F5D7DB",
-  },
-  {
-    skill: "CSS",
-    level: "advanced",
-    color: "hsl(260, 20%, 40%)",
-  },
-  {
-    skill: "JavaScript",
-    level: "advanced",
-    color: "hsl(260, 20%, 40%)",
-  },
-  {
-    skill: "SCSS",
-    level: "advanced",
-    color: " hsl(260, 20%, 40%)",
-  },
-  {
-    skill: "React",
-    level: "advanced",
-    color: "hsl(260, 20%, 40%)",
-  },
-  {
-    skill: "Gatsby",
-    level: "advanced",
-    color: "hsl(260, 20%, 40%)",
-  },
-  {
-    skill: "Theme UI",
-    level: "intermediate",
-    color: "hsl(260, 20%, 40%)",
-  },
-  {
-    skill: "GraphQL",
-    level: "beginner",
-    color: "hsl(260, 20%, 40%)",
-  },
-  {
-    skill: "a11y",
-    level: "beginner",
-    color: "hsl(260, 20%, 40%)",
-  },
-]
 
 const StyledSection = styled.section`
-  background: hsl(292deg 21% 87% / 0.5);
+  /* background: hsl(292deg 21% 87% / 0.5);
   background: linear-gradient(
     0deg,
     hsl(292deg 21% 87% / 0.5),
     rgba(242, 243, 244, 1) 100%
-  );
-  padding: 0 2rem 8rem 2rem;
+  ); */
+  padding: 0 0 8rem 2rem;
+
   .title {
     margin-bottom: 0.8rem;
     padding-top: 3.5rem;
@@ -140,33 +94,7 @@ const Hero = ({ content }) => {
         <span className="highlighted">{frontmatter.subtitleHighlight}</span>
       </Heading>
       <div className="description">{rawMarkdownBody}</div>
-      {/* <div className="data">
-        <SkillList />
-      </div> */}
     </StyledSection>
-  )
-}
-
-function SkillList() {
-  return (
-    <div className="skill-list">
-      {skills.map(skill => (
-        <Skill skill={skill.skill} color={skill.color} level={skill.level} />
-      ))}
-    </div>
-  )
-}
-
-function Skill({ skill, color, level }) {
-  return (
-    <div className="skill" style={{ backgroundColor: color }}>
-      <span>{skill}</span>
-      {/* <span>
-       {level === "beginner" && ""}
-        {level === "intermediate" && ""}
-        {level === "advanced" && ""} 
-      </span> */}
-    </div>
   )
 }
 

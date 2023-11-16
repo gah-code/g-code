@@ -53,7 +53,7 @@ const IndexPage = ({ data }) => {
 
       <Container
         sx={{
-          // maxWidth: 512,
+          maxWidth: "62.5rem",
           mx: "auto",
           px: 0,
           py: 6,

@@ -119,7 +119,7 @@ body {
 
     .container {
         max-width: 120rem;
-        padding:  5rem 2rem;
+        padding:  0 2rem;
         margin: 0 auto;
     }
     .grid {

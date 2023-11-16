@@ -45,7 +45,7 @@ const theme = {
       mb: 3,
     },
     h3: {
-      fontSize: [24, 32],
+      fontSize: [24],
       fontFamily: "heading",
       fontWeight: "heading",
       color: "text",
