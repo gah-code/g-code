@@ -10,7 +10,7 @@ const StyledSection = styled.section`
     hsl(292deg 21% 87% / 0.5),
     rgba(242, 243, 244, 1) 100%
   ); */
-  padding: 0 0 8rem 2rem;
+  padding: 0 2rem 8rem 2rem;
 
   .title {
     margin-bottom: 0.8rem;

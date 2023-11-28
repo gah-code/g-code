@@ -14,17 +14,22 @@ const skills = [
   {
     skill: "CSS",
     level: "advanced",
-    color: "hsl(260, 20%, 40%)",
-  },
-  {
-    skill: "JavaScript",
-    level: "advanced",
-    color: "hsl(260, 20%, 40%)",
+    color: "",
   },
   {
     skill: "SCSS",
     level: "advanced",
     color: " hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "Responsive Design",
+    level: "advanced",
+    color: " hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "JavaScript",
+    level: "advanced",
+    color: "hsl(260, 20%, 40%)",
   },
   {
     skill: "React",
@@ -50,6 +55,41 @@ const skills = [
     skill: "a11y",
     level: "beginner",
     color: "hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "Node Js",
+    level: "beginner",
+    color: "hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "Jamstack",
+    level: "beginner",
+    color: "hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "Cyber Security",
+    level: "beginner",
+    color: "hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "Mongo DB",
+    level: "beginner",
+    color: "hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "Supabase",
+    level: "beginner",
+    color: "hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "Photography",
+    level: "beginner",
+    color: "hsl(260, 20%, 40%)",
+  },
+  {
+    skill: "Color Theory",
+    level: "advanced",
+    color: " hsl(260, 20%, 40%)",
   },
 ]
 
@@ -126,7 +166,7 @@ const StyledSection = styled.section`
   }
 
   .skill {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 700;
     padding: 0.5rem 1rem;
     border-radius: 25px;
@@ -146,7 +186,7 @@ const StyledSection = styled.section`
       margin-top: 1.5rem;
     }
     .skill {
-      padding: 0.4rem 0.81rem;
+      padding: 0.5rem 0.9rem;
       font-size: 0.7rem;
     }
   }

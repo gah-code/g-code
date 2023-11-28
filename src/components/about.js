@@ -87,7 +87,7 @@ const About = ({ content }) => {
             {frontmatter.title}
           </Heading>
           <Text sx={theme.text.default}>{frontmatter.life}</Text>
-          <span className="highlighted">{frontmatter.subtitleHighlight}</span>
+          {/* <span className="highlighted">{frontmatter.subtitleHighlight}</span> */}
         </div>
 
         <div className="step-img-box">

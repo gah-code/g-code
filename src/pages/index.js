@@ -50,41 +50,46 @@ const IndexPage = ({ data }) => {
       <Hero content={heroContent} />
       <About content={aboutContent} />
       <Background content={backgroundContent} />
-
-      <Container
-        sx={{
-          maxWidth: "62.5rem",
-          mx: "auto",
-          px: 0,
-          py: 6,
-          textAlign: "center",
-          // backgroundColor: "tomato",
-        }}
-      >
-        <Heading
+      <div className="container">
+        <Container
           sx={{
-            variant: "text.caps",
-
-            ...theme.styles.h3,
+            maxWidth: "62.5rem",
+            mx: "auto",
+            px: 0,
+            py: 6,
+            textAlign: "center",
+            // backgroundColor: "tomato",
           }}
         >
-          What I've been up to 2023
-        </Heading>
-        <Paragraph
-          variant="block"
-          sx={{
-            ...theme.text.paragraph,
-          }}
-        >
-          I'm currently a web developer at Robert Half, while occasionally
-          immersing myself in weekend wedding photography gigs. In the spaces
-          between, I eagerly delve into the ever-evolving world of front-end
-          technology and stay active building my own projects
-        </Paragraph>
-      </Container>
+          <Heading
+            sx={{
+              variant: "text.caps",
+
+              ...theme.styles.h3,
+            }}
+          >
+            What I've been up to 2023
+          </Heading>
+          <Paragraph
+            variant="block"
+            sx={{
+              ...theme.text.paragraph,
+            }}
+          >
+            Right now, I'm rocking the role of a web developer on the marketing
+            team at Robert Half. On the side, I dabble in weekend photography
+            gigs as a freelancer. In those in-between moments, I dive headfirst
+            into the ever-evolving world of front-end technology. You can catch
+            me staying active, building my own projects, and leveling up with
+            courses in React, CSS, and even some hack the box (CTF and Pen test
+            tooling) challenges. Always keeping it exciting!
+          </Paragraph>
+        </Container>
+      </div>
+
       {/* <Slider /> */}
       {/* <Update content={updateContent} /> */}
-      <p>
+      {/* <p>
         <b>Example pages:</b>{" "}
         {samplePageLinks.map((link, i) => (
           <React.Fragment key={link.url}>
@@ -93,8 +98,8 @@ const IndexPage = ({ data }) => {
           </React.Fragment>
         ))}
         <br />
-        {/* Edit <code>src/pages/index.js</code> to update this page. */}
-      </p>
+        Edit <code>src/pages/index.js</code> to update this page.
+      </p> */}
     </Layout>
   )
 }

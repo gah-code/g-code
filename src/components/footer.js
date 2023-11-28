@@ -20,7 +20,7 @@ const StyledFooter = styled.footer`
 const Footer = () => (
   <StyledFooter>
     <a
-      href="https://github.com/konstantinmuenster/how-to-gatsby-portfolio"
+      href="https://github.com/gah-code"
       target="_blank"
       rel="nofollow noopener noreferrer"
       aria-label="External Link"
@@ -28,7 +28,7 @@ const Footer = () => (
       <span role="img" aria-label="emoji">
         👏
       </span>{" "}
-      Visit on GitHub
+      Visit my GitHub
     </a>
   </StyledFooter>
 )
