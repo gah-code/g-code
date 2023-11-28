@@ -5,12 +5,41 @@
   </a>
 </p>
 <h1 align="center">
- Gilbert A. Haro Website
+ Gilbert A. Haro Website 2023 - In Progress
 </h1>
 
-Netlify
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f2ecbaf1-b540-48fd-82fd-b0d389e98a81/deploy-status)](https://app.netlify.com/sites/ubiquitous-cat-ade1f1/deploys)
+
+# To-Do List: 12 15 23 🎯
+
+- [x] theme ui font responsive design
+- [x] two column grid responsive design
+- [x] organize content into categories.
+- [ ] file organize and clean up
+- [ ] Footer styles
+- [ ] add multimedia content
+- [ ] Read article for centerd grid/flex and replace theme UI centered container with reusable styled component (<https://moderncss.dev/complete-guide-to-centering-in-css/>)
+- [ ] color scheme and typography
+- [ ] navigation structure
+- [ ] interactivity
+- [ ] Implement a blog post listing page.
+- [ ] Domain update
+
+Other personal task
+
+- [ ] Read and update (https://dev.to/supritha/how-to-have-an-awesome-github-profile-1969)
+
+---
+
+---
+
+# To-Do List : 02 24 🎯
+
+- [ ] Blog Features - Implement a blog post listing page. Create individual blog post pages. Add tags and categories for each blog post.
+
+SEO Optimization:
+
+Optimize meta tags (title, description) for search engines.
 
 Function that takes `data` and `id` as parameters and returns the corresponding content. Here's the simplified code:
 
@@ -37,26 +66,3 @@ In this code:
 4. Finally, you can call `findContentById` for each category to get the corresponding content.
 
 -
-
-# To-Do List
-
-- [x] theme ui font responsive design
-- [x] two column grid responsive design
-- [ ] Footer styles
-- [ ] add multimedia content
-- [ ] color scheme and typography
-- [x] organize content into categories.
-- [ ] navigation structure
-- [ ] interactivity
-- [ ] Implement a blog post listing page.
-- [ ] file clean up
-
-Blog Features:
-
-Implement a blog post listing page.
-Create individual blog post pages.
-Add tags and categories for each blog post.
-
-SEO Optimization:
-
-Optimize meta tags (title, description) for search engines.
