@@ -4,7 +4,7 @@ import aboutImg from "../../images/about.jpg"
 import theme from "../../gatsby-plugin-theme-ui"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
-import { Heading, Text, sx, Container, Grid, Box } from "theme-ui"
+import { Heading, Text, sx, Grid, Box } from "theme-ui"
 
 const StyledSection = styled.section`
   .step-img-box {

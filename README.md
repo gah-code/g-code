@@ -5,41 +5,55 @@
   </a>
 </p>
 <h1 align="center">
- Gilbert A. Haro Website 2023 - In Progress
+ Gilbert A. Haro Website 2024
 </h1>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f2ecbaf1-b540-48fd-82fd-b0d389e98a81/deploy-status)](https://app.netlify.com/sites/ubiquitous-cat-ade1f1/deploys)
 
 # To-Do List: 12 15 23 🎯
 
-- [x] theme ui font responsive design
+- [x] theme ui spacing
 - [x] two column grid responsive design
-- [x] organize content into categories.
+- [x] organize content into categories
+- [ ] Footer
+- [ ] remove all unused components imports
+- [ ] links and gather content (endpoint)
+- [ ] highlight text
+- [ ] tag links
+- [ ] Social links
+- [ ] theme ui spacing clean up
+- [ ] theme ui spacing color scheme clean up
+- [ ] theme ui typography clean up
 - [ ] file organize and clean up
-- [ ] Footer styles
-- [ ] add multimedia content
-- [ ] Read article for centerd grid/flex and replace theme UI centered container with reusable styled component (<https://moderncss.dev/complete-guide-to-centering-in-css/>)
-- [ ] color scheme and typography
+- [ ] Footer
+- [ ] add starter multimedia content
+- [x] Center theme ui component
 - [ ] navigation structure
-- [ ] interactivity
-- [ ] Implement a blog post listing page.
 - [ ] Domain update
+- [ ] Implement gallery page
 
-Other personal task
+## Other task
 
 - [ ] Read and update (https://dev.to/supritha/how-to-have-an-awesome-github-profile-1969)
+- [ ] Read article for centerd grid/flex and replace theme UI centered container with reusable styled component (<https://moderncss.dev/complete-guide-to-centering-in-css/>)
 
 ---
 
 ---
 
-# To-Do List : 02 24 🎯
+# To-Do List : 01 15 🎯
 
+- [ ] theme ui spacing for smaller screens
 - [ ] Blog Features - Implement a blog post listing page. Create individual blog post pages. Add tags and categories for each blog post.
+- [ ] interactivity map
+- [ ] Implement a blog post listing page.
+- [ ] slider
 
 SEO Optimization:
 
 Optimize meta tags (title, description) for search engines.
+
+# Docs - base
 
 Function that takes `data` and `id` as parameters and returns the corresponding content. Here's the simplified code:
 

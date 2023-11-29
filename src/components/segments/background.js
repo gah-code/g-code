@@ -1,15 +1,15 @@
 import React from "react"
 import styled from "styled-components"
-import aboutImg from "../../images/about.jpg"
-import { Heading, Text, sx, Container } from "theme-ui"
+// import { graphql } from "gatsby"
+// import aboutImg from "../../images/about.jpg"
+import { Heading, Text } from "theme-ui"
 import theme from "../../gatsby-plugin-theme-ui"
-import { graphql } from "gatsby"
 
 const skills = [
   {
     skill: "HTML",
     level: "advanced",
-    color: "#F5D7DB",
+    color: "",
   },
   {
     skill: "CSS",
@@ -19,81 +19,87 @@ const skills = [
   {
     skill: "SCSS",
     level: "advanced",
-    color: " hsl(260, 20%, 40%)",
+    color: "",
   },
   {
     skill: "Responsive Design",
     level: "advanced",
-    color: " hsl(260, 20%, 40%)",
+    color: "",
   },
   {
     skill: "JavaScript",
     level: "advanced",
-    color: "hsl(260, 20%, 40%)",
+    color: "",
   },
   {
     skill: "React",
     level: "advanced",
-    color: "hsl(260, 20%, 40%)",
+    color: "",
   },
   {
     skill: "Gatsby",
     level: "advanced",
-    color: "hsl(260, 20%, 40%)",
+    color: "",
   },
   {
     skill: "Theme UI",
     level: "intermediate",
-    color: "hsl(260, 20%, 40%)",
+    color: "",
   },
   {
     skill: "GraphQL",
     level: "beginner",
-    color: "hsl(260, 20%, 40%)",
+    color: "",
   },
   {
     skill: "a11y",
     level: "beginner",
-    color: "hsl(260, 20%, 40%)",
+    color: "",
   },
   {
     skill: "Node Js",
     level: "beginner",
-    color: "hsl(260, 20%, 40%)",
+    color: "",
   },
   {
     skill: "Jamstack",
     level: "beginner",
-    color: "hsl(260, 20%, 40%)",
+    color: "",
   },
   {
     skill: "Cyber Security",
     level: "beginner",
-    color: "hsl(260, 20%, 40%)",
-  },
-  {
-    skill: "Mongo DB",
-    level: "beginner",
-    color: "hsl(260, 20%, 40%)",
-  },
-  {
-    skill: "Supabase",
-    level: "beginner",
-    color: "hsl(260, 20%, 40%)",
+    color: "",
   },
   {
     skill: "Photography",
     level: "beginner",
-    color: "hsl(260, 20%, 40%)",
+    color: "",
+  },
+  {
+    skill: "Mongo DB",
+    level: "beginner",
+    color: "",
+  },
+  {
+    skill: "Supabase",
+    level: "beginner",
+    color: "",
   },
   {
     skill: "Color Theory",
     level: "advanced",
-    color: " hsl(260, 20%, 40%)",
+    color: " ",
+  },
+  {
+    skill: "Photoshop",
+    level: "advanced",
+    color: " ",
   },
 ]
 
 const StyledSection = styled.section`
+  padding: 5rem 0 6rem 0;
   .step-img-box {
     position: relative;
     display: flex;
@@ -116,7 +122,6 @@ const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
     gap: 28px;
-
     justify-content: center;
   }
 
@@ -154,6 +159,11 @@ const StyledSection = styled.section`
   .data {
     padding: 32px 0;
     padding-top: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
   }
 
   .skill-list {
@@ -183,7 +193,7 @@ const StyledSection = styled.section`
   @media (max-width: 34em) {
     .skill-list {
       gap: 6px;
-      margin-top: 1.5rem;
+      margin: 2rem 0 5rem 0;
     }
     .skill {
       padding: 0.5rem 0.9rem;
@@ -200,12 +210,12 @@ const StyledSection = styled.section`
       grid-template-columns: 1fr;
     }
 
-    .step-img-box:nth-child(1) {
+    .data:nth-child(1) {
       grid-row: 2;
     }
-    .step-img-box {
+    /* .step-img-box {
       transform: translateY(2.4rem);
-    }
+    } */
   }
 `
 
@@ -214,9 +224,12 @@ const Background = ({ content }) => {
   return (
     <StyledSection>
       <div className="container grid grid--2-cols-other">
-        <div className="step-img-box">
-          <img src={aboutImg} alt="" />
+        <div className="data">
+          <SkillList />
         </div>
+        {/* <div className="step-img-box">
+          <img src={aboutImg} alt="" />
+        </div> */}
         <div>
           <Heading
             sx={{
@@ -226,9 +239,9 @@ const Background = ({ content }) => {
             {frontmatter.title}
           </Heading>
           <Text sx={theme.text.default}>{frontmatter.text}</Text>
-          <div className="data">
+          {/* <div className="data">
             <SkillList />
-          </div>
+          </div> */}
         </div>
       </div>
     </StyledSection>
@@ -248,11 +261,11 @@ function Skill({ skill, color, level }) {
   return (
     <div className="skill" style={{ backgroundColor: color }}>
       <span>{skill}</span>
-      {/* <span>
-       {level === "beginner" && ""}
+      <span>
+        {level === "beginner" && ""}
         {level === "intermediate" && ""}
-        {level === "advanced" && ""} 
-      </span> */}
+        {level === "advanced" && "x"}
+      </span>
     </div>
   )
 }

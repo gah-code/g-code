@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => {
       <About content={aboutContent} />
       <Background content={backgroundContent} />
       <div className="container">
-        <Container
+        {/* <Container
           sx={{
             maxWidth: "62.5rem",
             mx: "auto",
@@ -84,7 +84,40 @@ const IndexPage = ({ data }) => {
             courses in React, CSS, and even some hack the box (CTF and Pen test
             tooling) challenges. Always keeping it exciting!
           </Paragraph>
-        </Container>
+        </Container> */}
+      </div>
+      <div>
+        <Heading
+          sx={{
+            variant: "text.caps",
+            textAlign: "center",
+
+            ...theme.styles.h3,
+          }}
+        >
+          What I've been up to 2023
+        </Heading>
+
+        <Paragraph
+          variant="block"
+          sx={{
+            textAlign: "center",
+            px: 2,
+            py: 2,
+            mb: 6,
+            mt: 1,
+
+            ...theme.text.paragraph,
+          }}
+        >
+          Right now, I'm rocking the role of a web developer on the marketing
+          team at Robert Half. On the side, I dabble in weekend photography gigs
+          as a freelancer. In those in-between moments, I dive headfirst into
+          the ever-evolving world of front-end technology. You can catch me
+          staying active, building my own projects, and leveling up with courses
+          in React, CSS, and even some hack the box (CTF and Pen test tooling)
+          challenges. Always keeping it exciting!
+        </Paragraph>
       </div>
 
       {/* <Slider /> */}
