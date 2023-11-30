@@ -16,21 +16,21 @@
 - [x] two column grid responsive design
 - [x] organize content into categories
 - [x] Center theme ui component
+- [x] links and gather content (endpoint)
 - [ ] Footer
 - [ ] social links
 - [ ] theme ui spacing clean up
-- [ ] theme ui spacing color scheme clean up
-- [ ] theme ui typography clean up
-- [ ] remove all unused components imports
-- [ ] links and gather content (endpoint)
+- [ ] StyledSection component base across all pages - IN PROGRESS
+- [ ] theme ui spacing color scheme clean up - IN PROGRESS
+- [ ] theme ui typography clean up - IN PROGRESS
 - [ ] highlight text styles
-- [ ] tag link endpoints
 - [ ] file organize and clean up
-- [ ] navigation structure
-- [ ] Domain update
-- [ ] Implement base for gallery page
-- [ ] Netlify funcations
+- [x] Domain setup first step
 - [ ] attach Figma to repo
+
+- [ ] update hero content
+- [ ] Implement base for gallery page
+- [ ] remove all unused components imports
 
 ## Other task
 
@@ -41,7 +41,7 @@
 
 ---
 
-# To-Do List : 01 10 🎯
+# To-Do List : 01 10 24 🎯
 
 - [ ] theme ui spacing for smaller screen optimizations
 - [ ] interactivity map and rendering modifcations
@@ -50,6 +50,10 @@
 - [ ] slider for blogs or photos
 - [ ] graphql update
 - [ ] Blog Features - Implement a blog post listing page. Create individual blog post pages. Add tags and categories for each blog post.
+- [ ] Netlify funcations -
+- [ ] navigation structure
+
+# To-Do List : 02 5 24🎯
 
 SEO Optimization:
 

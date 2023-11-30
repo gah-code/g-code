@@ -7,4 +7,4 @@ subtitlePrefix: "Surfing the world wide web"
 subtitleHighlight: "for all front-end dev insight"
 ---
 
-Thanks for stopping by my website!
+Thanks for stopping by!

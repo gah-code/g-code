@@ -77,6 +77,8 @@ select {
   }
 }
 
+
+
 body {
         width: 100%;
         height: 100%;
@@ -118,6 +120,7 @@ body {
     
 
     .container {
+       /* 1140px */
         max-width: 120rem;
         padding:  0 2rem;
         margin: 0 auto;
@@ -151,13 +154,9 @@ body {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .center {
-      max-width:768px ;
-      margin: 0 auto;
-      text-align: center;
-      
-    }
-
+.grid--center-v {
+  align-items: center;
+}
 
 
 /**************************/

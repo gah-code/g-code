@@ -22,6 +22,7 @@ const theme = {
   lineHeights: {
     body: 1.5,
     heading: 1.25,
+    medium: 1.1,
   },
   letterSpacings: {
     heading: "-0.05em",
@@ -29,12 +30,13 @@ const theme = {
   },
   styles: {
     h1: {
-      fontSize: [48, 64],
+      fontSize: [48, 72],
       fontFamily: "heading",
       fontWeight: "heading",
+      lineHeight: "medium",
       color: "text",
       mt: 5,
-      mb: [2, 1],
+      // mb: [2, 1],
     },
     h2: {
       fontSize: [32, 48],
@@ -45,11 +47,11 @@ const theme = {
       mb: 3,
     },
     h3: {
-      fontSize: [24],
+      fontSize: [24, 32],
       fontFamily: "heading",
       fontWeight: "heading",
       color: "text",
-      mt: 2,
+      mt: 3,
       mb: 3,
     },
   },

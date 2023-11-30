@@ -86,7 +86,7 @@ const IndexPage = ({ data }) => {
           </Paragraph>
         </Container> */}
       </div>
-      <div className="container">
+      {/* <div className="container">
         <Heading
           sx={{
             variant: "text.caps",
@@ -118,7 +118,7 @@ const IndexPage = ({ data }) => {
           in React, CSS, and even some hack the box (CTF and Pen test tooling)
           challenges. Always keeping it exciting!
         </Paragraph>
-      </div>
+      </div> */}
 
       {/* <Slider /> */}
       {/* <Update content={updateContent} /> */}
