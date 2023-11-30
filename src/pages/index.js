@@ -50,7 +50,7 @@ const IndexPage = ({ data }) => {
       <Hero content={heroContent} />
       <About content={aboutContent} />
       <Background content={backgroundContent} />
-      <div className="container">
+      <div className="container grid">
         {/* <Container
           sx={{
             maxWidth: "62.5rem",
@@ -86,7 +86,7 @@ const IndexPage = ({ data }) => {
           </Paragraph>
         </Container> */}
       </div>
-      <div>
+      <div className="container">
         <Heading
           sx={{
             variant: "text.caps",
@@ -102,7 +102,7 @@ const IndexPage = ({ data }) => {
           variant="block"
           sx={{
             textAlign: "center",
-            px: 2,
+            px: 0,
             py: 2,
             mb: 6,
             mt: 1,

@@ -282,6 +282,7 @@ body {
     row-gap: 4.8rem;
   }
         .container {
+        padding: 0 1.5rem;
             row-gap: 5rem;
         }
         .grid--2-cols,
