@@ -7,9 +7,9 @@ Currently working full time as a web developer at Robert Half. On the weekends, 
 
 Links:
 
-- https://www.roberthalf.com/us/en
+- https://www.roberthalf.com/us/en - done
 
-- https://www.georgestreetphoto.com/
+- https://www.georgestreetphoto.com/ - done
 
 ## About
 

@@ -10,12 +10,12 @@ import Footer from "./footer"
 const StyledLayout = styled.div`
   width: 100%;
   min-height: 100vh;
-  background: hsl(292deg 21% 87% / 0.5);
+  /* background: hsl(292deg 21% 87% / 0.5);
   background: linear-gradient(
     0deg,
     hsl(292deg 21% 87% / 0.5),
     rgba(242, 243, 244, 1) 100%
-  );
+  ); */
 
   margin: 0 auto;
   display: grid;

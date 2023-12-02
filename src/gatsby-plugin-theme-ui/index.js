@@ -1,12 +1,14 @@
 // example theme file
 const theme = {
   colors: {
-    text: "#222",
+    text: "#333",
     textDark: "#f9f4e3",
-    background: "#F2F3F4",
+    background: "#ddf3e4",
     backgroundDark: "#263147",
     primary: "#2A3439",
     secondary: "#6C3082",
+    highlight: "",
+    link: "#28b485",
   },
   fonts: {
     body: "system-ui, sans-serif",
@@ -85,6 +87,15 @@ const theme = {
   },
   sizes: {
     container: 768,
+  },
+  links: {
+    bold: {
+      fontWeight: "bold",
+      color: "link",
+      "&:hover": {
+        color: "text",
+      },
+    },
   },
 }
 

@@ -16,7 +16,6 @@ const StyledHeader = styled.header`
 const StyledLogo = styled.div`
   font-size: 2rem;
   font-weight: 900;
-  color: black;
 `
 
 const Header = () => {

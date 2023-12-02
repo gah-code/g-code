@@ -17,6 +17,7 @@
 - [x] organize content into categories
 - [x] Center theme ui component
 - [x] links and gather content (endpoint)
+- [ ] colors
 - [ ] Footer
 - [ ] social links
 - [ ] theme ui spacing clean up

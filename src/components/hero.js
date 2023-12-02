@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Heading, sx, Text } from "theme-ui"
+import { Heading, sx, Text, Link } from "theme-ui"
 import theme from "../gatsby-plugin-theme-ui"
 
 const StyledSection = styled.section`
@@ -14,8 +14,7 @@ const StyledSection = styled.section`
     margin-top: 0;
   }
   .highlighted {
-    color: #222;
-    box-shadow: inset 0 -2.5rem 0 #bd83b8;
+    box-shadow: inset 0 -2.5rem 0 #55c57a;
   }
 
   .description {
@@ -23,9 +22,19 @@ const StyledSection = styled.section`
     font-family: system-ui, sans-serif;
     font-size: 24px;
     font-weight: 700;
-    color: #bd83b8;
+    /* color: #777; */
     line-height: 1;
   }
+  /* 
+  a {
+    color: deeppink;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: deeppink;
+    text-decoration: underline;
+  } */
 
   /**************************/
   /* BELOW 944px (Tablets) */
@@ -104,14 +113,32 @@ const Hero = ({ content }) => {
       </Heading>
       <div className="description">{rawMarkdownBody}</div>
       <Text>
-        Currently working full time as a web developer at Robert Half. On the
-        weekends, I work as a photographer both indepently and as a lead at
-        George Street photography a company that specialies in weddings. In
-        those in-between moments, I dive headfirst into the ever-evolving world
-        of front-end technology. You can catch me staying active, building my
-        own projects, and leveling up with courses in React, CSS, and even some
-        hack the box (CTF and Pen test tooling) challenges. Always keeping it
-        exciting and mixing it up!
+        Currently working full time as a web developer at{" "}
+        <Link
+          href="https://www.roberthalf.com/us/en"
+          sx={{
+            variant: "links.bold",
+          }}
+        >
+          {" "}
+          Robert Half.{" "}
+        </Link>{" "}
+        On the weekends, I work as a photographer both indepently and as a lead
+        at{" "}
+        <Link
+          href="https://www.georgestreetphoto.com/"
+          sx={{
+            variant: "links.bold",
+          }}
+        >
+          {" "}
+          George Street
+        </Link>{" "}
+        a company that specialies in weddings. In those in-between moments, I
+        dive headfirst into the ever-evolving world of front-end technology. You
+        can catch me staying active, building my own projects, and leveling up
+        with courses in React, CSS, and even some hack the box (CTF and Pen test
+        tooling) challenges. Always keeping it exciting and mixing it up!
       </Text>
     </StyledSection>
   )

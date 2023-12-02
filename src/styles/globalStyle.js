@@ -84,7 +84,6 @@ body {
         height: 100%;
         margin: 0;
         padding: 0;
-        color: black;
         font-size: 1.128rem;
         font-family: "Roboto", Arial, Helvetica, sans-serif;
         line-height: 1.7;
