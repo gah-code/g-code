@@ -121,7 +121,7 @@ body {
     .container {
        /* 1140px */
         max-width: 120rem;
-        padding:  0 2rem;
+        padding:  1rem 2rem;
         margin: 0 auto;
     }
     .grid {
@@ -281,7 +281,7 @@ body {
   }
         .container {
         padding: 0 1.5rem;
-            row-gap: 5rem;
+        row-gap: 5rem;
         }
         .grid--2-cols,
         .grid--3-cols,

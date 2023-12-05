@@ -199,6 +199,10 @@ const StyledSection = styled.section`
       padding: 0.5rem 0.9rem;
       font-size: 0.7rem;
     }
+
+    .data {
+      padding: 0;
+    }
   }
 
   /**************************/
@@ -213,6 +217,11 @@ const StyledSection = styled.section`
     .data:nth-child(1) {
       grid-row: 2;
     }
+
+    .skill-list {
+      margin-top: 0;
+      /* max-width: 32rem; */
+    }
     /* .step-img-box {
       transform: translateY(2.4rem);
     } */
@@ -223,7 +232,7 @@ const Background = ({ content }) => {
   const { frontmatter, rawMarkdownBody } = content
   return (
     <StyledSection>
-      <div className="container grid grid--2-cols-other">
+      <div className="container grid-2">
         <div className="data">
           <SkillList />
         </div>

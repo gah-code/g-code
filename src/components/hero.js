@@ -123,8 +123,8 @@ const Hero = ({ content }) => {
           {" "}
           Robert Half.{" "}
         </Link>{" "}
-        On the weekends, I work as a photographer both indepently and as a lead
-        at{" "}
+        On weekends, I wear a different hat as a passionate photographer. I work
+        independently and lead photography projects at{" "}
         <Link
           href="https://www.georgestreetphoto.com/"
           sx={{
@@ -134,11 +134,12 @@ const Hero = ({ content }) => {
           {" "}
           George Street
         </Link>{" "}
-        a company that specialies in weddings. In those in-between moments, I
-        dive headfirst into the ever-evolving world of front-end technology. You
-        can catch me staying active, building my own projects, and leveling up
-        with courses in React, CSS, and even some hack the box (CTF and Pen test
-        tooling) challenges. Always keeping it exciting and mixing it up!
+        , a company renowned for capturing magical wedding moments. In those
+        in-between moments, I dive headfirst into the ever-evolving world of
+        front-end technology. You can catch me staying active, building my own
+        projects, and leveling up with courses in React, CSS, and even some hack
+        the box (CTF and Pen test tooling) challenges. Always keeping it
+        exciting and mixing it up!
       </Text>
     </StyledSection>
   )
