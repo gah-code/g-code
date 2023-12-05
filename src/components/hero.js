@@ -18,23 +18,13 @@ const StyledSection = styled.section`
   }
 
   .description {
-    padding: 2rem 0 1rem 0;
+    padding: 8rem 0 1rem 0;
     font-family: system-ui, sans-serif;
-    font-size: 24px;
+    /* font-size: 24px; */
     font-weight: 700;
     /* color: #777; */
     line-height: 1;
   }
-  /* 
-  a {
-    color: deeppink;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: deeppink;
-    text-decoration: underline;
-  } */
 
   /**************************/
   /* BELOW 944px (Tablets) */
@@ -42,7 +32,7 @@ const StyledSection = styled.section`
 
   @media (max-width: 59em) {
     .description {
-      padding: 3rem 0 1rem 0;
+      padding: 5rem 0 1rem 0;
     }
   }
 
@@ -90,7 +80,7 @@ const StyledSection = styled.section`
 const Hero = ({ content }) => {
   const { frontmatter, rawMarkdownBody } = content
   return (
-    <StyledSection id="hero">
+    <StyledSection>
       <Heading
         sx={{
           ...theme.styles.h1,
@@ -111,7 +101,13 @@ const Hero = ({ content }) => {
         {frontmatter.subtitlePrefix}{" "}
         <span className="highlighted">{frontmatter.subtitleHighlight}</span>
       </Heading>
-      <div className="description">{rawMarkdownBody}</div>
+      <Heading
+        sx={{
+          ...theme.styles.h4,
+        }}
+      >
+        {rawMarkdownBody}
+      </Heading>
       <Text>
         Currently working full time as a web developer at{" "}
         <Link
@@ -131,8 +127,7 @@ const Hero = ({ content }) => {
             variant: "links.bold",
           }}
         >
-          {" "}
-          George Street
+          George Street{" "}
         </Link>{" "}
         , a company renowned for capturing magical wedding moments. In those
         in-between moments, I dive headfirst into the ever-evolving world of
@@ -141,6 +136,14 @@ const Hero = ({ content }) => {
         the box (CTF and Pen test tooling) challenges. Always keeping it
         exciting and mixing it up!
       </Text>
+
+      {/* <div className="description">random things</div>
+      <ul>
+        <li>My very first job was working as a photographer </li>
+        <li>My dog's name is burrito</li>
+        <li>Mr. Robot is my fav</li>
+        <li>Currenly reading </li>
+      </ul> */}
     </StyledSection>
   )
 }

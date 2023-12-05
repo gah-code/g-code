@@ -56,6 +56,22 @@ const theme = {
       mt: 3,
       mb: 3,
     },
+
+    h4: {
+      fontSize: [18, 24],
+      fontFamily: "heading",
+      fontWeight: "heading",
+      color: "text",
+      mt: [5, 6],
+      mb: 3,
+    },
+
+    hr: {
+      bg: "primary",
+      border: "1px",
+      height: "1px",
+      m: 3,
+    },
   },
 
   text: {

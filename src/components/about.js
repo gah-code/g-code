@@ -6,7 +6,7 @@ import theme from "../gatsby-plugin-theme-ui"
 import { graphql } from "gatsby"
 
 const StyledSection = styled.section`
-  /* padding: 4rem 0 9.6rem 0; */
+  padding: 4rem 0;
 
   .subtitle {
     margin-top: 2rem;

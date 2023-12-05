@@ -9,7 +9,7 @@ import Slider from "../components/slider"
 import { Heading } from "theme-ui"
 import theme from "../gatsby-plugin-theme-ui"
 import styled from "styled-components"
-import { Paragraph, Container } from "theme-ui"
+import { Paragraph, Container, Divider } from "theme-ui"
 
 const samplePageLinks = [
   {
@@ -48,6 +48,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Hero content={heroContent} />
+      <Divider />
       <About content={aboutContent} />
       <Background content={backgroundContent} />
       <div className="container grid">
