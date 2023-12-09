@@ -10,10 +10,10 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Gilberts 2023 Blog project `,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Gilberts 2024 Web App Project`,
+    description: `web developer that loves styles`,
     author: `Gilbert A. Haro`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://gilbertaharo.com/`,
   },
   plugins: [
     `gatsby-plugin-image`,

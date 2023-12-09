@@ -109,7 +109,7 @@ const Hero = ({ content }) => {
         {rawMarkdownBody}
       </Heading>
       <Text>
-        Currently working full time as a web developer at{" "}
+        Currently, I work full-time as a web developer at{" "}
         <Link
           href="https://www.roberthalf.com/us/en"
           sx={{
@@ -119,8 +119,7 @@ const Hero = ({ content }) => {
           {" "}
           Robert Half.{" "}
         </Link>{" "}
-        On weekends, I wear a different hat as a passionate photographer. I work
-        independently and lead photography projects at{" "}
+        On the side, I also work as a photographer at{" "}
         <Link
           href="https://www.georgestreetphoto.com/"
           sx={{
@@ -129,12 +128,11 @@ const Hero = ({ content }) => {
         >
           George Street{" "}
         </Link>{" "}
-        , a company renowned for capturing magical wedding moments. In those
-        in-between moments, I dive headfirst into the ever-evolving world of
-        front-end technology. You can catch me staying active, building my own
-        projects, and leveling up with courses in React, CSS, and even some hack
-        the box (CTF and Pen test tooling) challenges. Always keeping it
-        exciting and mixing it up!
+        , a renowned company specializing in capturing wedding moments. During
+        my free time, I immerse myself in the ever-evolving world of front-end
+        technology. I stay active by building my own projects, taking courses to
+        improve my web development skills, and some hack the box every so often.
+        I always keep things exciting by mixing it up!
       </Text>
 
       {/* <div className="description">random things</div>

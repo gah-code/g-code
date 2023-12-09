@@ -1,15 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import About from "../components/about"
 import Background from "../components/segments/background"
-import Slider from "../components/slider"
-import { Heading } from "theme-ui"
-import theme from "../gatsby-plugin-theme-ui"
-import styled from "styled-components"
-import { Paragraph, Container, Divider } from "theme-ui"
+// import Slider from "../components/slider"
+// import theme from "../gatsby-plugin-theme-ui"
+import { Container, Divider } from "theme-ui"
 
 const samplePageLinks = [
   {
@@ -42,7 +39,6 @@ const IndexPage = ({ data }) => {
   const aboutContent = findContentById(data, 1, "about")
   const updateContent = findContentById(data, 2, "update")
   const backgroundContent = findContentById(data, 3, "background")
-
   const aboutRawMarkdownBody = aboutContent.rawMarkdownBody
 
   return (
