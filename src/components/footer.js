@@ -15,6 +15,10 @@ const StyledFooter = styled.footer`
   text-transform: uppercase;
   letter-spacing: +1px;
   font-weight: 700;
+
+  a {
+    padding-right: 1rem;
+  }
 `
 
 const Footer = () => (
@@ -26,9 +30,20 @@ const Footer = () => (
       aria-label="External Link"
     >
       <span role="img" aria-label="emoji">
-        👏
+        –
       </span>{" "}
       Visit my GitHub
+    </a>
+    <a
+      href="https://www.linkedin.com/in/gilbert-haro-2b108222b/"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+      aria-label="External Link"
+    >
+      <span role="img" aria-label="emoji">
+        –
+      </span>{" "}
+      Visit my Linkedin
     </a>
   </StyledFooter>
 )

@@ -45,10 +45,7 @@ const StyledSection = styled.section`
     align-items: center;
   }
 
-  /**************************/
   /* BELOW 544px (Phones) */
-  /**************************/
-
   @media (max-width: 34em) {
     .grid-2:nth-child(2) {
       grid-row: 1;

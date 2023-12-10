@@ -2,11 +2,11 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
-import About from "../components/about"
+import About from "../components/segments/about"
 import Background from "../components/segments/background"
+import { Divider } from "theme-ui"
 // import Slider from "../components/slider"
 // import theme from "../gatsby-plugin-theme-ui"
-import { Container, Divider } from "theme-ui"
 
 const samplePageLinks = [
   {
@@ -47,42 +47,6 @@ const IndexPage = ({ data }) => {
       <Divider />
       <About content={aboutContent} />
       <Background content={backgroundContent} />
-      <div className="container grid">
-        {/* <Container
-          sx={{
-            maxWidth: "62.5rem",
-            mx: "auto",
-            px: 0,
-            py: 6,
-            textAlign: "center",
-            // backgroundColor: "tomato",
-          }}
-        >
-          <Heading
-            sx={{
-              variant: "text.caps",
-
-              ...theme.styles.h3,
-            }}
-          >
-            What I've been up to 2023
-          </Heading>
-          <Paragraph
-            variant="block"
-            sx={{
-              ...theme.text.paragraph,
-            }}
-          >
-            Right now, I'm rocking the role of a web developer on the marketing
-            team at Robert Half. On the side, I dabble in weekend photography
-            gigs as a freelancer. In those in-between moments, I dive headfirst
-            into the ever-evolving world of front-end technology. You can catch
-            me staying active, building my own projects, and leveling up with
-            courses in React, CSS, and even some hack the box (CTF and Pen test
-            tooling) challenges. Always keeping it exciting!
-          </Paragraph>
-        </Container> */}
-      </div>
       {/* <div className="container">
         <Heading
           sx={{

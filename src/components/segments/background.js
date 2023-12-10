@@ -143,7 +143,6 @@ const StyledSection = styled.section`
 
   .project {
     border-radius: 30px;
-    /* padding: 1rem 2rem; */
     background-color: blue;
   }
 
@@ -205,10 +204,7 @@ const StyledSection = styled.section`
     }
   }
 
-  /**************************/
   /* BELOW 544px (Phones) */
-  /**************************/
-
   @media (max-width: 34em) {
     .grid--2-cols-other {
       grid-template-columns: 1fr;
@@ -220,7 +216,6 @@ const StyledSection = styled.section`
 
     .skill-list {
       margin-top: 0;
-      /* max-width: 32rem; */
     }
     /* .step-img-box {
       transform: translateY(2.4rem);
@@ -236,9 +231,6 @@ const Background = ({ content }) => {
         <div className="data">
           <SkillList />
         </div>
-        {/* <div className="step-img-box">
-          <img src={aboutImg} alt="" />
-        </div> */}
         <div>
           <Heading
             sx={{
@@ -248,9 +240,6 @@ const Background = ({ content }) => {
             {frontmatter.title}
           </Heading>
           <Text sx={theme.text.default}>{frontmatter.text}</Text>
-          {/* <div className="data">
-            <SkillList />
-          </div> */}
         </div>
       </div>
     </StyledSection>

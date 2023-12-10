@@ -31,12 +31,14 @@ Headline:
 
 Brand colors: in progress
 
-    text: "#222",
+    text: "#333",
     textDark: "#f9f4e3",
-    background: "#F2F3F4",
+    background: "#ddf3e4",
     backgroundDark: "#263147",
     primary: "#2A3439",
     secondary: "#6C3082",
+    highlight: "",
+    link: "#28b485",
 
 ## Website Content
 

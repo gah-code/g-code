@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import aboutImg from "../images/about.jpg"
-import { Heading, Text, sx, Container } from "theme-ui"
-import theme from "../gatsby-plugin-theme-ui"
+import aboutImg from "../../images/about.jpg"
+import { Heading, Text } from "theme-ui"
+import theme from "../../gatsby-plugin-theme-ui"
 import { graphql } from "gatsby"
 
 const StyledSection = styled.section`

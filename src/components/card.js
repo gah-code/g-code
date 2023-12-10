@@ -3,8 +3,6 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 
-// import "./card.scss"
-
 const StyledArticle = styled.article`
    {
     color: #fff;

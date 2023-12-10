@@ -8,6 +8,10 @@
  Gilbert A. Haro Website 2024
 </h1>
 
+## Lighthouse Score
+
+Performance: 90, Accessibility: 94, Best Practices: 100, SEO: 75, PWA: 80
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f2ecbaf1-b540-48fd-82fd-b0d389e98a81/deploy-status)](https://app.netlify.com/sites/ubiquitous-cat-ade1f1/deploys)
 
 # To-Do List: 12 15 23 🎯
@@ -18,16 +22,16 @@
 - [x] Center theme ui component
 - [x] Domain setup first step
 - [x] links and gather content (endpoint)
+- [x] file organize and clean up
+- [x] colors
 - [ ] StyledSection component base across all pages - IN PROGRESS
 - [ ] theme ui spacing color scheme clean up - IN PROGRESS
 - [ ] theme ui typography clean up - IN PROGRESS
-- [ ] colors
+- [ ] SEO
 - [ ] Footer
 - [ ] social links
 - [ ] theme ui spacing clean up
 - [ ] highlight text styles
-- [ ] file organize and clean up
-- [ ] attach Figma to repo
 - [ ] remove all unused components imports
 
 ## Other task
@@ -39,7 +43,7 @@
 
 ---
 
-# To-Do List : 01 10 24 🎯
+# To-Do List : 01 05 24 🎯
 
 - [ ] theme ui spacing for smaller screen optimizations
 - [ ] interactivity map and rendering modifcations
@@ -52,8 +56,9 @@
 - [ ] navigation structure
 - [ ] update hero content
 - [ ] Implement base for gallery page
+- [ ] attach Figma to repo
 
-# To-Do List : 01 15 24🎯
+# To-Do List : 01 20 24 🎯
 
 SEO Optimization:
 
