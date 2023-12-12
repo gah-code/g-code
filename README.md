@@ -28,8 +28,8 @@ Performance: 90, Accessibility: 94, Best Practices: 100, SEO: 75, PWA: 80
 - [ ] theme ui spacing color scheme clean up - IN PROGRESS
 - [ ] theme ui typography clean up - IN PROGRESS
 - [ ] SEO
-- [ ] Footer
-- [ ] social links
+- [x] Footer
+- [x] social links
 - [ ] theme ui spacing clean up
 - [ ] highlight text styles
 - [ ] remove all unused components imports

@@ -293,6 +293,9 @@ body {
   padding: 9.6rem 0;
   ${"" /* background-color: var(--clr-bg); */}
 }
+
+
+
     }
     
 `
