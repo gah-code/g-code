@@ -49,3 +49,85 @@ Brand colors: in progress
 ### Inspo
 
 ### photoloop
+
+# To-Do List: 12 15 23 🎯
+
+- [x] theme ui spacing
+- [x] two column grid responsive design
+- [x] organize content into categories
+- [x] Center theme ui component
+- [x] Domain setup first step
+- [x] links and gather content (endpoint)
+- [x] file organize and clean up
+- [x] colors
+- [x] Footer
+- [x] social links
+
+## Other task
+
+- [ ] Read and update (https://dev.to/supritha/how-to-have-an-awesome-github-profile-1969)
+- [ ] Read article for centerd grid/flex and replace theme UI centered container with reusable styled component (<https://moderncss.dev/complete-guide-to-centering-in-css/>)
+
+---
+
+---
+
+# To-Do List : 12 25 24 🎯
+
+- [ ] StyledSection component base across all pages - IN PROGRESS
+- [ ] theme ui spacing color scheme clean up - IN PROGRESS
+- [ ] theme ui typography clean up - IN PROGRESS
+- [ ] SEO
+- [ ] theme ui spacing clean up
+- [ ] highlight text styles
+- [ ] remove all unused components imports
+
+# To-Do List : 01 20 24 🎯
+
+- [ ] graphql update
+- [ ] Blog Features - Implement a blog post listing page. Create individual blog post pages. Add tags and categories for each blog post.
+- [ ] Netlify funcations -
+- [ ] navigation structure
+- [ ] update hero content
+- [ ] theme ui spacing for smaller screen optimizations
+- [ ] interactivity map and rendering modifcations
+- [ ] add starter multimedia content
+- [ ] Implement a blog post listing page.
+- [ ] slider for blogs or photos
+
+# To-Do List : 02 15 24 🎯
+
+- [ ] Implement base for gallery page
+- [ ] attach Figma to repo
+
+SEO Optimization:
+
+Optimize meta tags (title, description) for search engines.
+
+# Docs - base
+
+Function that takes `data` and `id` as parameters and returns the corresponding content. Here's the simplified code:
+
+```javascript
+const findContentById = (data, id, category) => {
+  return data[category].edges.find(edge => edge.node.frontmatter.id === id)
+    ?.node
+}
+
+const heroContent = findContentById(data, 0, "hero")
+const aboutContent = findContentById(data, 1, "about")
+const updateContent = findContentById(data, 2, "update")
+const backgroundContent = findContentById(data, 3, "background")
+```
+
+In this code:
+
+1. The `findContentById` function takes `data`, `id`, and `category` as parameters. It uses the `category` parameter to access the appropriate category within the `data` object.
+
+2. Within the function, it uses the `find()` method to search for the content with the specified `id`.
+
+3. The `?.` operator is used to handle cases where no matching content is found, ensuring that you won't run into errors.
+
+4. Finally, you can call `findContentById` for each category to get the corresponding content.
+
+-
