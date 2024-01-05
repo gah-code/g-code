@@ -50,60 +50,6 @@ Brand colors: in progress
 
 ### photoloop
 
-# To-Do List: 12 15 23 🎯
-
-- [x] theme ui spacing
-- [x] two column grid responsive design
-- [x] organize content into categories
-- [x] Center theme ui component
-- [x] Domain setup first step
-- [x] links and gather content (endpoint)
-- [x] file organize and clean up
-- [x] colors
-- [x] Footer
-- [x] social links
-
-## Other task
-
-- [ ] Read and update (https://dev.to/supritha/how-to-have-an-awesome-github-profile-1969)
-- [ ] Read article for centerd grid/flex and replace theme UI centered container with reusable styled component (<https://moderncss.dev/complete-guide-to-centering-in-css/>)
-
----
-
----
-
-# To-Do List : 12 25 24 🎯
-
-- [ ] StyledSection component base across all pages - IN PROGRESS
-- [ ] theme ui spacing color scheme clean up - IN PROGRESS
-- [ ] theme ui typography clean up - IN PROGRESS
-- [ ] SEO
-- [ ] theme ui spacing clean up
-- [ ] highlight text styles
-- [ ] remove all unused components imports
-
-# To-Do List : 01 20 24 🎯
-
-- [ ] graphql update
-- [ ] Blog Features - Implement a blog post listing page. Create individual blog post pages. Add tags and categories for each blog post.
-- [ ] Netlify funcations -
-- [ ] navigation structure
-- [ ] update hero content
-- [ ] theme ui spacing for smaller screen optimizations
-- [ ] interactivity map and rendering modifcations
-- [ ] add starter multimedia content
-- [ ] Implement a blog post listing page.
-- [ ] slider for blogs or photos
-
-# To-Do List : 02 15 24 🎯
-
-- [ ] Implement base for gallery page
-- [ ] attach Figma to repo
-
-SEO Optimization:
-
-Optimize meta tags (title, description) for search engines.
-
 # Docs - base
 
 Function that takes `data` and `id` as parameters and returns the corresponding content. Here's the simplified code:

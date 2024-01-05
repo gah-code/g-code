@@ -12,7 +12,7 @@ const StyledFooter = styled.footer`
   display: grid;
   padding: 9rem 0 6rem 0;
   grid-template-columns: 1fr;
-
+  margin: 0 auto;
   text-align: center;
   justify-items: center;
   justify-content: center;
@@ -69,7 +69,7 @@ const Footer = () => (
         <Link to="/terms-of-use" sx={{ color: "inherit" }}>
           Terms of Use
         </Link> */}
-        <div sx={{ mx: 1 }} />© 2023 Website by Gilberto A. Haro
+        <div sx={{ mx: 1 }} />© 2024 Website by Gilberto A. Haro
       </div>
     </footer>
   </StyledFooter>
