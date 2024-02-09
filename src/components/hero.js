@@ -86,8 +86,8 @@ const Hero = ({ content }) => {
         >
           George Street{" "}
         </Link>{" "}
-        , a renowned company specializing in capturing wedding moments. During
-        my free time, I immerse myself in the ever-evolving world of front-end
+        , a company specializing in capturing wedding events. During my free
+        time, I immerse myself in the ever-evolving world of front-end
         technology. I stay active by building my own projects, taking courses to
         improve my web development skills, and some hack the box every so often.
         I always keep things exciting by mixing it up!
