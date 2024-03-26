@@ -1,7 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-// import { graphql } from "gatsby"
-// import aboutImg from "../../images/about.jpg"
 import { Heading, Text } from "theme-ui"
 import theme from "../../gatsby-plugin-theme-ui"
 
@@ -9,7 +7,7 @@ const skills = [
   {
     skill: "HTML",
     level: "advanced",
-    color: "",
+    color: "hsl(260, 20%, 70%)",
   },
   {
     skill: "CSS",
@@ -19,7 +17,7 @@ const skills = [
   {
     skill: "SCSS",
     level: "advanced",
-    color: "",
+    color: "hsl(260, 20%, 70%)",
   },
   {
     skill: "Responsive Design",
@@ -34,6 +32,11 @@ const skills = [
   {
     skill: "React",
     level: "advanced",
+    color: "",
+  },
+  {
+    skill: "AEM",
+    level: "beginner",
     color: "",
   },
   {
@@ -98,8 +101,32 @@ const skills = [
   },
 ]
 
+const Background = ({ content }) => {
+  const { frontmatter, rawMarkdownBody } = content
+  return (
+    <StyledSection>
+      <div className="container grid-2">
+        <div className="data">
+          <SkillList />
+        </div>
+        <div>
+          <Heading
+            sx={{
+              ...theme.styles.h2,
+            }}
+          >
+            {frontmatter.title}
+          </Heading>
+          <Text sx={theme.text.default}>{frontmatter.text}</Text>
+        </div>
+      </div>
+    </StyledSection>
+  )
+}
+
 const StyledSection = styled.section`
-  padding: 5rem 0 6rem 0;
+  position: relative;
+  padding: 6rem 0 6rem 0;
   .step-img-box {
     position: relative;
     display: flex;
@@ -223,28 +250,6 @@ const StyledSection = styled.section`
   }
 `
 
-const Background = ({ content }) => {
-  const { frontmatter, rawMarkdownBody } = content
-  return (
-    <StyledSection>
-      <div className="container grid-2">
-        <div className="data">
-          <SkillList />
-        </div>
-        <div>
-          <Heading
-            sx={{
-              ...theme.styles.h2,
-            }}
-          >
-            {frontmatter.title}
-          </Heading>
-          <Text sx={theme.text.default}>{frontmatter.text}</Text>
-        </div>
-      </div>
-    </StyledSection>
-  )
-}
 function SkillList() {
   return (
     <div className="skill-list">
@@ -267,4 +272,5 @@ function Skill({ skill, color, level }) {
     </div>
   )
 }
+
 export default Background

@@ -11,7 +11,7 @@
 module.exports = {
   siteMetadata: {
     title: `Gilberts 2024 Web App Project`,
-    description: `web developer that loves styles`,
+    description: `web developer that loves building company UIs`,
     author: `Gilbert A. Haro`,
     siteUrl: `https://gilbertaharo.com/`,
   },

@@ -5,6 +5,30 @@ import { Heading, Text } from "theme-ui"
 import theme from "../../gatsby-plugin-theme-ui"
 import { graphql } from "gatsby"
 
+const About = ({ content, alt, maxWidth }) => {
+  const { frontmatter, rawMarkdownBody } = content
+  return (
+    <StyledSection>
+      <div className="container grid-2">
+        <div>
+          <Heading
+            sx={{
+              ...theme.styles.h2,
+            }}
+          >
+            {frontmatter.title}
+          </Heading>
+          <Text sx={theme.text.default}>{frontmatter.life}</Text>
+          {/* <span className="highlighted">{frontmatter.subtitleHighlight}</span> */}
+        </div>
+        <PhotoWrapper>
+          <Photo src={aboutImg} alt={alt} maxWidth={maxWidth} />
+        </PhotoWrapper>
+      </div>
+    </StyledSection>
+  )
+}
+
 const StyledSection = styled.section`
   padding: 4rem 0;
 
@@ -17,22 +41,8 @@ const StyledSection = styled.section`
     display: grid;
     padding: 1rem 0 2rem 0;
     /* margin-top: 2rem; */
-
     /* box-shadow: inset 0 -2.5rem 0 hsl(260, 100%, 80%); */
   }
-  .step-img-box {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s;
-  }
-
-  img {
-    max-width: 250px;
-    border-radius: 10px;
-  }
-
   .projects {
     width: 444px;
     display: flex;
@@ -56,46 +66,19 @@ const StyledSection = styled.section`
     align-items: center;
     background: #7887;
   }
-
-  .project {
-    border-radius: 30px;
-    background-color: blue;
-  }
-
-  ul {
-    background-color: red;
-  }
-
-  li {
-    color: #263147;
-    background-color: blue;
-    max-width: 30rem;
-  }
 `
 
-const About = ({ content }) => {
-  const { frontmatter, rawMarkdownBody } = content
-  return (
-    <StyledSection>
-      <div className="container grid-2">
-        <div>
-          <Heading
-            sx={{
-              ...theme.styles.h2,
-            }}
-          >
-            {frontmatter.title}
-          </Heading>
-          <Text sx={theme.text.default}>{frontmatter.life}</Text>
-          {/* <span className="highlighted">{frontmatter.subtitleHighlight}</span> */}
-        </div>
+const PhotoWrapper = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+`
 
-        <div className="step-img-box">
-          <img src={aboutImg} alt="" />
-        </div>
-      </div>
-    </StyledSection>
-  )
-}
+const Photo = styled.img`
+  max-width: ${p => p.maxWidth};
+  border-radius: 10px;
+`
 
 export default About

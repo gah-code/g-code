@@ -5,8 +5,6 @@ import Hero from "../components/hero"
 import About from "../components/segments/about"
 import Background from "../components/segments/background"
 import { Divider } from "theme-ui"
-// import Slider from "../components/slider"
-// import theme from "../gatsby-plugin-theme-ui"
 
 const samplePageLinks = [
   {
@@ -45,7 +43,11 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Hero content={heroContent} />
       <Divider />
-      <About content={aboutContent} />
+      <About
+        content={aboutContent}
+        alt="Gilberto A. Haro web developer and creative"
+        maxWidth="250px"
+      />
       <Background content={backgroundContent} />
       {/* <div className="container">
         <Heading
