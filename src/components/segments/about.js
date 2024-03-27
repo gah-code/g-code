@@ -30,7 +30,15 @@ const About = ({ content, alt, maxWidth }) => {
 }
 
 const StyledSection = styled.section`
-  padding: 4rem 0;
+  max-width: 120rem;
+  padding: 3.9rem 0.9rem;
+
+  /* BELOW 1344px (Smaller desktops) */
+
+  @media (max-width: 84em) {
+    column-gap: 5rem;
+    row-gap: 7rem;
+  }
 
   .subtitle {
     margin-top: 2rem;
@@ -40,8 +48,6 @@ const StyledSection = styled.section`
     font-size: 1.2rem;
     display: grid;
     padding: 1rem 0 2rem 0;
-    /* margin-top: 2rem; */
-    /* box-shadow: inset 0 -2.5rem 0 hsl(260, 100%, 80%); */
   }
   .projects {
     width: 444px;

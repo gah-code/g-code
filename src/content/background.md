@@ -2,9 +2,9 @@
 id: 3
 greetings: ""
 emoji: ""
-title: "Expertise and interest"
+title: "Topics"
 subtitlePrefix: "I've been surfing the web for all Front-End topics,"
-subtitleHighlight: "exploring & always stoked to learn sick ticks"
+subtitleHighlight: "Some subjects I been digging into this year, my development core stack is highlighted in purple."
 update: ""
 text: ""
 ---

@@ -48,7 +48,9 @@ const IndexPage = ({ data }) => {
         alt="Gilberto A. Haro web developer and creative"
         maxWidth="250px"
       />
+
       <Background content={backgroundContent} />
+      <Divider />
       {/* <div className="container">
         <Heading
           sx={{

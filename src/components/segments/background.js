@@ -7,42 +7,47 @@ const skills = [
   {
     skill: "HTML",
     level: "advanced",
-    color: "hsl(260, 20%, 70%)",
+    color: "rgb(236 201 137)",
   },
   {
     skill: "CSS",
     level: "advanced",
-    color: "",
+    color: "rgb(236 201 137)",
   },
   {
     skill: "SCSS",
     level: "advanced",
-    color: "hsl(260, 20%, 70%)",
+    color: "rgb(236 201 137)",
+  },
+  {
+    skill: "Styled Components",
+    level: "intermediate",
+    color: "rgb(236 201 137)",
   },
   {
     skill: "Responsive Design",
     level: "advanced",
-    color: "",
+    color: "rgb(236 201 137)",
   },
   {
     skill: "JavaScript",
-    level: "advanced",
-    color: "",
+    level: "intermediate",
+    color: "rgb(236 201 137)",
   },
   {
     skill: "React",
     level: "advanced",
-    color: "",
+    color: "rgb(236 201 137)",
   },
   {
     skill: "AEM",
     level: "beginner",
-    color: "",
+    color: "rgb(236 201 137)",
   },
   {
     skill: "Gatsby",
-    level: "advanced",
-    color: "",
+    level: "intermediate",
+    color: "rgb(236 201 137)",
   },
   {
     skill: "Theme UI",
@@ -51,8 +56,8 @@ const skills = [
   },
   {
     skill: "GraphQL",
-    level: "beginner",
-    color: "",
+    level: "intermediate",
+    color: "rgb(236 201 137)",
   },
   {
     skill: "a11y",
@@ -65,20 +70,21 @@ const skills = [
     color: "",
   },
   {
-    skill: "Jamstack",
+    skill: "MDX",
     level: "beginner",
     color: "",
   },
   {
-    skill: "Cyber Security",
+    skill: "Hack The Box",
     level: "beginner",
     color: "",
   },
   {
-    skill: "Photography",
-    level: "beginner",
+    skill: "Netlify",
+    level: "intermediate",
     color: "",
   },
+
   {
     skill: "Mongo DB",
     level: "beginner",
@@ -90,13 +96,28 @@ const skills = [
     color: "",
   },
   {
-    skill: "Color Theory",
-    level: "advanced",
+    skill: "JCR",
+    level: "intermediate",
     color: " ",
   },
   {
     skill: "Photoshop",
-    level: "advanced",
+    level: "intermediate",
+    color: " ",
+  },
+  {
+    skill: "Storybook",
+    level: "beginner",
+    color: " ",
+  },
+  {
+    skill: "Redux",
+    level: "beginner",
+    color: " ",
+  },
+  {
+    skill: "WordPress",
+    level: "beginner",
     color: " ",
   },
 ]
@@ -118,38 +139,42 @@ const Background = ({ content }) => {
             {frontmatter.title}
           </Heading>
           <Text sx={theme.text.default}>{frontmatter.text}</Text>
+          <span className="highlighted">{frontmatter.subtitleHighlight}</span>
         </div>
       </div>
     </StyledSection>
   )
 }
 
+function SkillList() {
+  return (
+    <div className="skill-list">
+      {skills.map(skill => (
+        <Skill skill={skill.skill} color={skill.color} level={skill.level} />
+      ))}
+    </div>
+  )
+}
+
+function Skill({ skill, color, level }) {
+  return (
+    <div className="skill" style={{ backgroundColor: color }}>
+      <span>{skill}</span>
+      <span>
+        {level === "beginner" && ""}
+        {level === "intermediate" && "#"}
+        {level === "advanced" && "#"}
+      </span>
+    </div>
+  )
+}
+
 const StyledSection = styled.section`
   position: relative;
   padding: 6rem 0 6rem 0;
-  .step-img-box {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s;
-  }
 
-  img {
-    max-width: 250px;
-    border-radius: 10px;
-  }
-
-  .grid--2-cols-other {
-    grid-template-columns: repeat(1, 2fr 2.1fr);
-  }
-
-  .projects {
-    width: 444px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    justify-content: center;
+  @media (max-width: 84em) {
+    padding: 5.8rem 0;
   }
 
   .item {
@@ -222,7 +247,7 @@ const StyledSection = styled.section`
       margin: 2rem 0 5rem 0;
     }
     .skill {
-      padding: 0.5rem 0.9rem;
+      padding: 0.5rem 0.8rem;
       font-size: 0.7rem;
     }
 
@@ -242,35 +267,13 @@ const StyledSection = styled.section`
     }
 
     .skill-list {
-      margin-top: 0;
+      margin-top: 1.5rem;
     }
+
     /* .step-img-box {
       transform: translateY(2.4rem);
     } */
   }
 `
-
-function SkillList() {
-  return (
-    <div className="skill-list">
-      {skills.map(skill => (
-        <Skill skill={skill.skill} color={skill.color} level={skill.level} />
-      ))}
-    </div>
-  )
-}
-
-function Skill({ skill, color, level }) {
-  return (
-    <div className="skill" style={{ backgroundColor: color }}>
-      <span>{skill}</span>
-      <span>
-        {level === "beginner" && ""}
-        {level === "intermediate" && ""}
-        {level === "advanced" && "x"}
-      </span>
-    </div>
-  )
-}
 
 export default Background

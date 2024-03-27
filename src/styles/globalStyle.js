@@ -118,12 +118,6 @@ body {
     }
     
 
-    .container {
-       /* 1140px */
-        max-width: 120rem;
-        padding:  1rem 2rem;
-        margin: 0 auto;
-    }
     .grid {
         display: grid;
         column-gap: 6.4rem;
@@ -240,10 +234,7 @@ body {
 /**************************/    
 
     @media (max-width: 84em) {
-        .container {
-            column-gap: 5rem;
-            row-gap: 7rem;
-        }
+       
     }
 /**************************/
 /* BELOW 1200px (Landscape Tablets) */
