@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import { Heading, Text, Link } from "theme-ui"
-import theme from "../gatsby-plugin-theme-ui"
+import React from 'react'
+import styled from 'styled-components'
+import { Heading, Text, Link } from 'theme-ui'
+import theme from '../gatsby-plugin-theme-ui'
 
 const StyledSection = styled.section`
   padding: 5rem 2rem 8rem 2rem;
@@ -56,8 +56,7 @@ const Hero = ({ content }) => {
           ...theme.styles.h3,
         }}
       >
-        {frontmatter.subtitlePrefix}{" "}
-        <span className="highlighted">{frontmatter.subtitleHighlight}</span>
+        {frontmatter.subtitlePrefix} <span className="highlighted">{frontmatter.subtitleHighlight}</span>
       </Heading>
       <Heading
         sx={{
@@ -66,31 +65,29 @@ const Hero = ({ content }) => {
       >
         {rawMarkdownBody}
       </Heading>
-      <Text>
-        Currently, I work full-time as a web developer at{" "}
+      <Text sx={theme.text.paragraph}>
+        Currently, I work full-time as a web developer at{' '}
         <Link
           href="https://www.roberthalf.com/us/en"
           sx={{
-            variant: "links.bold",
+            variant: 'links.bold',
           }}
         >
-          {" "}
-          Robert Half.{" "}
-        </Link>{" "}
-        On the side, I also work as a photographer at{" "}
+          {' '}
+          Robert Half.{' '}
+        </Link>{' '}
+        On the side, I also work as a photographer at{' '}
         <Link
           href="https://www.georgestreetphoto.com/"
           sx={{
-            variant: "links.bold",
+            variant: 'links.bold',
           }}
         >
-          George Street{" "}
-        </Link>{" "}
-        , a company specializing in capturing wedding events. During my free
-        time, I immerse myself in the ever-evolving world of front-end
-        technology. I stay active by building my own projects, taking courses to
-        improve my web development skills, and some hack the box every so often.
-        I always keep things exciting by mixing it up!
+          George Street{' '}
+        </Link>{' '}
+        , a company specializing in capturing wedding events. During my free time, I immerse myself in the ever-evolving
+        world of front-end technology. I stay active by building my own projects, taking courses to improve my web
+        development skills, and some hack the box every so often. I always keep things exciting by mixing it up!
       </Text>
 
       {/* <div className="description">random things</div>
@@ -105,3 +102,4 @@ const Hero = ({ content }) => {
 }
 
 export default Hero
+

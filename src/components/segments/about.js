@@ -18,7 +18,7 @@ const About = ({ content, alt, maxWidth }) => {
           >
             {frontmatter.title}
           </Heading>
-          <Text sx={theme.text.default}>{frontmatter.life}</Text>
+          <Text sx={theme.text.paragraph}>{frontmatter.life}</Text>
           {/* <span className="highlighted">{frontmatter.subtitleHighlight}</span> */}
         </div>
         <PhotoWrapper>
