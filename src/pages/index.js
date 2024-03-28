@@ -1,24 +1,23 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import Hero from "../components/hero"
-import About from "../components/segments/about"
-import Background from "../components/segments/background"
-import { Divider } from "theme-ui"
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import Hero from '../components/hero'
+import About from '../components/segments/about'
+import Background from '../components/segments/background'
+import { Divider } from 'theme-ui'
 
 const samplePageLinks = [
   {
-    text: "About",
-    url: "about-page",
+    text: 'About',
+    url: 'about-page',
     badge: false,
-    description: "Hello from the about page",
+    description: 'Hello from the about page',
   },
   {
-    text: "Page 2",
-    url: "page-2",
+    text: 'Page 2',
+    url: 'page-2',
     badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
+    description: 'A simple example of linking to another page within a Gatsby site',
   },
   // { text: "TypeScript", url: "using-typescript" },
   // { text: "Server Side Rendering", url: "using-ssr" },
@@ -29,25 +28,20 @@ const samplePageLinks = [
 
 const IndexPage = ({ data }) => {
   const findContentById = (data, id, category) => {
-    return data[category].edges.find(edge => edge.node.frontmatter.id === id)
-      ?.node
+    return data[category].edges.find((edge) => edge.node.frontmatter.id === id)?.node
   }
 
-  const heroContent = findContentById(data, 0, "hero")
-  const aboutContent = findContentById(data, 1, "about")
-  const updateContent = findContentById(data, 2, "update")
-  const backgroundContent = findContentById(data, 3, "background")
+  const heroContent = findContentById(data, 0, 'hero')
+  const aboutContent = findContentById(data, 1, 'about')
+  const updateContent = findContentById(data, 2, 'update')
+  const backgroundContent = findContentById(data, 3, 'background')
   const aboutRawMarkdownBody = aboutContent.rawMarkdownBody
 
   return (
     <Layout>
       <Hero content={heroContent} />
       <Divider />
-      <About
-        content={aboutContent}
-        alt="Gilberto A. Haro web developer and creative"
-        maxWidth="250px"
-      />
+      <About content={aboutContent} alt="Gilberto A. Haro web developer and creative" maxWidth="250px" />
 
       <Background content={backgroundContent} />
       <Divider />
@@ -188,3 +182,4 @@ export const pageQuery = graphql`
 // const backgroundContent = data.background.edges.find(
 //   edge => edge.node.frontmatter.id === 3
 // ).node
+

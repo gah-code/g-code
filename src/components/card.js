@@ -1,21 +1,18 @@
-import React from "react"
-import styled from "styled-components"
-import { motion } from "framer-motion"
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
+import React from 'react'
+import styled from 'styled-components'
+import { motion } from 'framer-motion'
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 const StyledArticle = styled.article`
-   {
-    color: #fff;
-    padding: 2rem;
-    max-width: 25.22222rem;
-    background: #252525;
-    position: relative;
-    border-radius: 10px;
-    box-shadow: none;
+  color: #fff;
+  padding: 2rem;
+  max-width: 25.22222rem;
+  background: #252525;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: none;
 
-    transition: transform 300ms ease-in-out, box-shadow 400ms ease,
-      background 100ms ease;
-  }
+  transition: transform 300ms ease-in-out, box-shadow 400ms ease, background 100ms ease;
 
   [data-interactive]:hover,
   [data-interactive]:focus-within {
@@ -45,7 +42,7 @@ const StyledArticle = styled.article`
   }
 
   .breakout-button::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: 0;
@@ -108,9 +105,8 @@ const Card = ({ data }) => {
         <StyledArticle>
           <h3>A semantic, breakout button</h3>
           <p>
-            This whole box is clickable, but still uses a button element,
-            correctly. It also only behaves like this <i>if</i> JavaScript is
-            available and working.
+            This whole box is clickable, but still uses a button element, correctly. It also only behaves like this{' '}
+            <i>if</i> JavaScript is available and working.
           </p>
           <button className="breakout-button" type="button">
             Say Hi 👋
@@ -122,3 +118,4 @@ const Card = ({ data }) => {
 }
 
 export default Card
+

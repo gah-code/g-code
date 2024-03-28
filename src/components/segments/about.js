@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import aboutImg from "../../images/about.jpg"
-import { Heading, Text } from "theme-ui"
-import theme from "../../gatsby-plugin-theme-ui"
-import { graphql } from "gatsby"
+import React from 'react'
+import styled from 'styled-components'
+import aboutImg from '../../images/about.jpg'
+import { Heading, Text } from 'theme-ui'
+import theme from '../../gatsby-plugin-theme-ui'
+import { graphql } from 'gatsby'
 
 const About = ({ content, alt, maxWidth }) => {
   const { frontmatter, rawMarkdownBody } = content
@@ -33,11 +33,24 @@ const StyledSection = styled.section`
   max-width: 120rem;
   padding: 3.9rem 0.9rem;
 
-  /* BELOW 1344px (Smaller desktops) */
-
   @media (max-width: 84em) {
     column-gap: 5rem;
     row-gap: 7rem;
+  }
+
+  @media (max-width: 75em) {
+    column-gap: 2rem;
+    row-gap: 6.9rem;
+  }
+
+  @media (max-width: 59em) {
+    column-gap: 1rem;
+    row-gap: 6rem;
+  }
+
+  @media (max-width: 34em) {
+    padding: 3rem 0.8rem 2rem 0.8rem;
+    row-gap: 5rem;
   }
 
   .subtitle {
@@ -83,8 +96,9 @@ const PhotoWrapper = styled.div`
 `
 
 const Photo = styled.img`
-  max-width: ${p => p.maxWidth};
+  max-width: ${(p) => p.maxWidth};
   border-radius: 10px;
 `
 
 export default About
+
