@@ -31,7 +31,7 @@ const About = ({ content, alt, maxWidth }) => {
 
 const StyledSection = styled.section`
   max-width: 120rem;
-  padding: 3.9rem 0.9rem;
+  padding: 3.9rem 2rem;
 
   @media (max-width: 84em) {
     column-gap: 5rem;

@@ -181,7 +181,7 @@ function Skill({ skill, color, level }) {
 
 const StyledSection = styled.section`
   position: relative;
-  padding: 3.9rem 0.9rem;
+  padding: 3.9rem 2rem;
 
   @media (max-width: 84em) {
     padding: 5.8rem 0;
