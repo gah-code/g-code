@@ -52,7 +52,7 @@ const skills = [
   {
     skill: 'Theme UI',
     level: 'intermediate',
-    color: '',
+    color: 'rgb(236 201 137)',
   },
   {
     skill: 'GraphQL',
@@ -62,73 +62,73 @@ const skills = [
   {
     skill: 'a11y',
     level: 'beginner',
-    color: '',
+    color: 'rgb(236 201 137)',
   },
   {
     skill: 'Node Js',
     level: 'beginner',
-    color: '',
+    color: 'rgb(236 201 137)',
   },
   {
     skill: 'MDX',
     level: 'beginner',
-    color: '',
+    color: 'rgb(236 201 137)',
   },
   {
     skill: 'Hack The Box',
     level: 'beginner',
-    color: '',
+    color: 'rgb(236 201 137)',
   },
   {
-    skill: 'Netlify',
+    skill: 'Astro',
     level: 'intermediate',
-    color: '',
+    color: 'rgb(236 201 137)',
   },
 
   {
     skill: 'Mongo DB',
     level: 'beginner',
-    color: '',
+    color: 'rgb(236 201 137)',
   },
   {
     skill: 'UX',
     level: 'beginner',
-    color: ' ',
+    color: 'rgb(236 201 137)',
   },
   {
     skill: 'Supabase',
     level: 'beginner',
-    color: '',
+    color: 'rgb(236 201 137)',
   },
   {
     skill: 'JCR',
     level: 'intermediate',
-    color: ' ',
+    color: 'rgb(236 201 137)',
   },
   {
     skill: 'Photoshop',
     level: 'intermediate',
-    color: ' ',
+    color: 'rgb(236 201 137)',
   },
   {
     skill: 'Storybook',
     level: 'beginner',
-    color: ' ',
+    color: 'rgb(236 201 137)',
   },
   {
-    skill: 'SSR',
+    skill: 'SSG',
     level: 'beginner',
-    color: ' ',
+    color: 'rgb(236 201 137)',
   },
   {
     skill: 'Redux',
     level: 'beginner',
-    color: ' ',
+    color: 'rgb(236 201 137)',
   },
   {
     skill: 'WordPress',
     level: 'beginner',
-    color: ' ',
+    color: 'rgb(236 201 137)',
   },
 ]
 

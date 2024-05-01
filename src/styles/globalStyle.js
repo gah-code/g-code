@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 
@@ -201,7 +201,7 @@ body {
     flex: 0 0 230px;
     margin: 0 50px 10px 0;
     transition: transform 0.3s, -webkit-transform 0.3s;
-    ${"" /* transform: rotateZ(-3deg); */}
+    ${'' /* transform: rotateZ(-3deg); */}
   }
 
   li:last-of-type {
@@ -284,7 +284,7 @@ body {
 
         .section-gallery {
   padding: 9.6rem 0;
-  ${"" /* background-color: var(--clr-bg); */}
+  ${'' /* background-color: var(--clr-bg); */}
 }
 
 
@@ -294,3 +294,4 @@ body {
 `
 
 export default GlobalStyle
+

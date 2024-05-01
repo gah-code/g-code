@@ -7,7 +7,7 @@ const theme = {
     backgroundDark: '#263147',
     primary: '#2A3439',
     secondary: '#6C3082',
-    highlight: '',
+    highlight: 'rgb(236 201 137)',
     link: '#28b485',
   },
   fonts: {
@@ -110,7 +110,7 @@ const theme = {
       fontWeight: 'bold',
       color: 'link',
       '&:hover': {
-        color: 'text',
+        color: 'highlight',
       },
     },
   },

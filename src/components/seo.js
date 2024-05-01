@@ -5,8 +5,10 @@
  * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
  */
 
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from 'react'
+import { Helmet } from 'react-helmet'
+
+import { useStaticQuery, graphql } from 'gatsby'
 
 function Seo({ description, title, children }) {
   const { site } = useStaticQuery(
@@ -29,7 +31,7 @@ function Seo({ description, title, children }) {
   // const defaultSeo = site.siteMetadata?.siteUrl
 
   return (
-    <>
+    <Helmet>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
@@ -42,8 +44,9 @@ function Seo({ description, title, children }) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       {children}
-    </>
+    </Helmet>
   )
 }
 
 export default Seo
+

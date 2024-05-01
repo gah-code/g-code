@@ -14,11 +14,12 @@ module.exports = {
     description: `web developer that loves building company UIs`,
     author: `Gilbert A. Haro`,
     siteUrl: `https://gilbertaharo.com/`,
+    logo: `.gah`,
   },
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
-    "gatsby-plugin-theme-ui",
+    'gatsby-plugin-theme-ui',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -26,6 +27,7 @@ module.exports = {
         name: `content`,
       },
     },
+    'gatsby-plugin-react-helmet',
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -52,3 +54,4 @@ module.exports = {
     `gatsby-plugin-styled-components`, // I AM NEW
   ],
 }
+
