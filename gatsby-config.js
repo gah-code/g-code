@@ -11,7 +11,7 @@
 module.exports = {
   siteMetadata: {
     title: `Frontend Things`,
-    description: `Front End Developer based out of San Jose CA, thanks for stopping by`,
+    description: `Front End Developer located in San Jose Ca Bay Area, passionate about transforming ideas into reality through coding, thanks for stopping by `,
     author: `Gilbert A. Haro`,
     siteUrl: `https://gilbertaharo.com`,
     logo: `.gah`,

@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet'
 
 import { useStaticQuery, graphql } from 'gatsby'
 
-function Seo({ description, title, children }) {
+function Seo({ description, title, children, author, siteUrl }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -28,11 +28,15 @@ function Seo({ description, title, children }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const canonical = site.siteMetadata?.siteUrl
   // const defaultSeo = site.siteMetadata?.siteUrl
 
   return (
     <Helmet>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      <meta name="robots" content="index,follow" />
+      <link rel="canonical" href={canonical} />
+
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />

@@ -41,9 +41,13 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <Seo
+        title="Home"
+        description="This is the homepage for a my website, I'm Front End Developer located in San Jose Ca Bay Area, passionate about transforming ideas into reality through coding, thanks for stopping by!"
+      />
       <Hero content={heroContent} />
       <Divider />
-      <About content={aboutContent} alt="Gilberto A. Haro web developer and creative" maxWidth="250px" />
+      <About content={aboutContent} alt="Gilberto A. Haro web developer and photographer" maxWidth="250px" />
 
       <Background content={backgroundContent} />
       <Divider />
@@ -99,7 +103,7 @@ const IndexPage = ({ data }) => {
 }
 
 export default IndexPage
-export const Head = () => <Seo title="Home" />
+// export const Head = () => <Seo title="Home" />
 export const pageQuery = graphql`
   query {
     site {
