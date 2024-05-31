@@ -4,6 +4,8 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import About from '../components/segments/about'
 import Background from '../components/segments/background'
+import Seo from '../components/seo'
+
 import { Divider } from 'theme-ui'
 
 const samplePageLinks = [
@@ -97,8 +99,18 @@ const IndexPage = ({ data }) => {
 }
 
 export default IndexPage
+export const Head = () => <Seo title="Home" />
 export const pageQuery = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+        description
+        author
+        logo
+        siteUrl
+      }
+    }
     hero: allMarkdownRemark {
       edges {
         node {

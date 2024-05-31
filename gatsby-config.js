@@ -10,8 +10,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Gilberts 2024 Web App Project`,
-    description: `web developer that loves building company UIs`,
+    title: `Gilbert A. Haro Web Developer`,
+    description: `Building websites and learning everything frontend`,
     author: `Gilbert A. Haro`,
     siteUrl: `https://gilbertaharo.com/`,
     logo: `.gah`,
