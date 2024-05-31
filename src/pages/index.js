@@ -14,7 +14,7 @@ const samplePageLinks = [
     description: 'Hello from the about page',
   },
   {
-    text: 'Page 2',
+    text: 'Home',
     url: 'page-2',
     badge: false,
     description: 'A simple example of linking to another page within a Gatsby site',
