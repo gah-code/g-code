@@ -10,10 +10,10 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Gilbert A. Haro Web Developer`,
-    description: `Building websites and learning everything frontend`,
+    title: `Frontend Things`,
+    description: `Front End Developer based out of San Jose CA, thanks for stopping by`,
     author: `Gilbert A. Haro`,
-    siteUrl: `https://gilbertaharo.com/`,
+    siteUrl: `https://gilbertaharo.com`,
     logo: `.gah`,
   },
   plugins: [
@@ -45,13 +45,21 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#28b485`,
+        theme_color: `#28b485`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-styled-components`, // I AM NEW
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://gilbertaharo.com',
+        sitemap: 'https://gilbertaharo.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
   ],
 }
 
