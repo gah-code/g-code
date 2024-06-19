@@ -1,10 +1,10 @@
-import React from "react"
-import { ThemeProvider } from "theme-ui"
-import theme from "../gatsby-plugin-theme-ui"
-import styled from "styled-components"
-import GlobalStyle from "../styles/globalStyle"
-import Header from "./header"
-import Footer from "./footer"
+import React from 'react'
+import { ThemeUIProvider } from 'theme-ui'
+import theme from '../gatsby-plugin-theme-ui'
+import styled from 'styled-components'
+import GlobalStyle from '../styles/globalStyle'
+import Header from './header'
+import Footer from './footer'
 
 const StyledLayout = styled.div`
   width: 100%;
@@ -23,7 +23,7 @@ const StyledLayout = styled.div`
 
 const Layout = ({ children }) => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeUIProvider theme={theme}>
       <StyledLayout>
         <GlobalStyle />
         <Header />
@@ -32,8 +32,9 @@ const Layout = ({ children }) => {
 
         <Footer />
       </StyledLayout>
-    </ThemeProvider>
+    </ThemeUIProvider>
   )
 }
 
 export default Layout
+

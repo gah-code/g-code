@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text } from 'theme-ui'
+import { Heading, Text, Container } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
 
 const skills = [
@@ -40,8 +40,28 @@ const skills = [
     color: 'rgb(236 201 137)',
   },
   {
+    skill: 'JAM Stack',
+    level: 'beginner',
+    color: 'rgb(236 201 137)',
+  },
+  {
     skill: 'AEM',
     level: 'beginner',
+    color: 'rgb(236 201 137)',
+  },
+  {
+    skill: 'Astro',
+    level: 'intermediate',
+    color: 'rgb(236 201 137)',
+  },
+  {
+    skill: 'Excel',
+    level: 'intermediate',
+    color: 'rgb(236 201 137)',
+  },
+  {
+    skill: 'SEO',
+    level: 'intermediate',
     color: 'rgb(236 201 137)',
   },
   {
@@ -65,8 +85,13 @@ const skills = [
     color: 'rgb(236 201 137)',
   },
   {
-    skill: 'Node Js',
+    skill: 'Progressive enhancement',
     level: 'beginner',
+    color: 'rgb(236 201 137)',
+  },
+  {
+    skill: 'Design Graph',
+    level: 'intermediate',
     color: 'rgb(236 201 137)',
   },
   {
@@ -79,12 +104,6 @@ const skills = [
     level: 'beginner',
     color: 'rgb(236 201 137)',
   },
-  {
-    skill: 'Astro',
-    level: 'intermediate',
-    color: 'rgb(236 201 137)',
-  },
-
   {
     skill: 'Mongo DB',
     level: 'beginner',
@@ -101,7 +120,12 @@ const skills = [
     color: 'rgb(236 201 137)',
   },
   {
-    skill: 'JCR',
+    skill: 'Java Content Repository',
+    level: 'intermediate',
+    color: 'rgb(236 201 137)',
+  },
+  {
+    skill: 'ACS Commons tools',
     level: 'intermediate',
     color: 'rgb(236 201 137)',
   },
@@ -126,6 +150,21 @@ const skills = [
     color: 'rgb(236 201 137)',
   },
   {
+    skill: 'Art Direction',
+    level: 'beginner',
+    color: 'rgb(236 201 137)',
+  },
+  {
+    skill: 'Next Js',
+    level: 'beginner',
+    color: 'rgb(236 201 137)',
+  },
+  {
+    skill: 'Tailwind CSS',
+    level: 'beginner',
+    color: 'rgb(236 201 137)',
+  },
+  {
     skill: 'WordPress',
     level: 'beginner',
     color: 'rgb(236 201 137)',
@@ -141,6 +180,13 @@ const Background = ({ content }) => {
           <SkillList />
         </div>
         <div>
+          <Text
+            sx={{
+              ...theme.styles.paragraph,
+            }}
+          >
+            {frontmatter.subtitle}
+          </Text>
           <Heading
             sx={{
               ...theme.styles.h2,

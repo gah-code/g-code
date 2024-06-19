@@ -3,10 +3,11 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import About from '../components/segments/about'
+import theme from '../gatsby-plugin-theme-ui/index'
 import Background from '../components/segments/background'
 import Seo from '../components/seo'
 
-import { Divider } from 'theme-ui'
+import { Divider, Heading, sx, Container } from 'theme-ui'
 
 const samplePageLinks = [
   {
@@ -48,6 +49,17 @@ const IndexPage = ({ data }) => {
       <Hero content={heroContent} />
       <Divider />
       <About content={aboutContent} alt="Gilberto A. Haro web developer and photographer" maxWidth="250px" />
+      {/* <h3>Topics I'm In To</h3> */}
+      {/* <Heading
+        sx={{
+          variant: 'text.caps',
+          textAlign: 'center',
+
+          ...theme.styles.h3,
+        }}
+      >
+        What I've been up to 2023
+      </Heading> */}
 
       <Background content={backgroundContent} />
       <Divider />
@@ -167,6 +179,7 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
+            subtitle
             title
             greetings
             emoji
