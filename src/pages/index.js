@@ -115,7 +115,13 @@ const IndexPage = ({ data }) => {
 }
 
 export default IndexPage
-// export const Head = () => <Seo title="Home" />
+export const Head = () => (
+  <Seo
+    title="Home"
+    description="This is the homepage for a my website, I'm Front End Developer located in San Jose Ca Bay Area, passionate about transforming ideas into reality through coding, thanks for stopping by!"
+  />
+)
+
 export const pageQuery = graphql`
   query {
     site {
