@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import aboutImg from '../../images/about.jpg'
 import { Heading, Text } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 const About = ({ content, alt, maxWidth }) => {
   const { frontmatter, rawMarkdownBody } = content
@@ -19,6 +19,10 @@ const About = ({ content, alt, maxWidth }) => {
             {frontmatter.title}
           </Heading>
           <Text sx={theme.text.paragraph}>{frontmatter.life}</Text>
+          {/* <br /> */}
+          {/* <Link style={{ paddingTop: '1rem' }} to="/about-page/">
+            Read More
+          </Link> */}
           {/* <span className="highlighted">{frontmatter.subtitleHighlight}</span> */}
         </div>
         <PhotoWrapper>

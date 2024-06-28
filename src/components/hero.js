@@ -66,28 +66,31 @@ const Hero = ({ content }) => {
         {rawMarkdownBody}
       </Heading>
       <Text sx={theme.text.paragraph}>
-        Currently, I work full-time as a web developer at{' '}
-        <Link
-          href="https://www.roberthalf.com/us/en"
-          sx={{
-            variant: 'links.bold',
-          }}
-        >
-          {' '}
-          Robert Half.{' '}
-        </Link>{' '}
-        On the side, I also work as a photographer at{' '}
+        From a young age, I was doodling in my notebook, creating makeshift comic books experimenting with themed fonts,
+        and always exploring ways to express my creativity. A passion for digital expression grew during the MySpace era
+        and later led me to professional{' '}
         <Link
           href="https://www.georgestreetphoto.com/"
           sx={{
             variant: 'links.bold',
           }}
         >
-          George Street{' '}
+          {' '}
+          photography.{' '}
         </Link>{' '}
-        , a company specializing in capturing wedding events. During my free time, I immerse myself in the ever-evolving
-        world of front-end technology. I stay active by building my own projects, taking courses to improve my web
-        development skills, and some hack the box every so often. I always keep things exciting by mixing it up!
+        But I yearned for something more later soon after - a platform for showcasing my work. That's when I discovered
+        the world of web development. It offered not only a platform for my photography but also opened up countless
+        opportunities, landing me gigs that allowed me to combine all my interests and skills. Today, as a{' '}
+        <Link
+          href="https://www.roberthalf.com/us/en"
+          sx={{
+            variant: 'links.bold',
+          }}
+        >
+          Web Developer{' '}
+        </Link>{' '}
+        , I merge my love for design patterns, typography, digital creativity, branding, and photography to create
+        unique and impactful digital experiences.
       </Text>
 
       {/* <div className="description">random things</div>

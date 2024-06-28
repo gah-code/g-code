@@ -1,10 +1,10 @@
-import React from "react"
-import styled from "styled-components"
-import aboutImg from "../../images/about.jpg"
-import theme from "../../gatsby-plugin-theme-ui"
-import { graphql } from "gatsby"
-import { Link } from "gatsby"
-import { Heading, Text, sx, Grid, Box } from "theme-ui"
+import React from 'react'
+import styled from 'styled-components'
+import aboutImg from '../../images/about.jpg'
+import theme from '../../gatsby-plugin-theme-ui'
+import { graphql } from 'gatsby'
+import { Link } from 'gatsby'
+import { Heading, Text, sx, Grid, Box } from 'theme-ui'
 
 const posts = [
   // An array of post objects with properties like id, slug, title, date, and excerpt
@@ -13,10 +13,10 @@ const posts = [
 
   {
     id: 1,
-    slug: "/post-1",
-    title: "Post 1",
-    date: "2023-08-28",
-    excerpt: "...",
+    slug: '/post-1',
+    title: 'Post 1',
+    date: '2023-08-28',
+    excerpt: '...',
   },
 ]
 
@@ -55,3 +55,4 @@ const StyledSection = styled.section`
 `
 
 export default Update
+

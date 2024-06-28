@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 import { Heading, Text, Container } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
 
@@ -196,6 +197,10 @@ const Background = ({ content }) => {
           </Heading>
           <Text sx={theme.text.paragraph}>{frontmatter.text}</Text>
           <span className="highlighted">{frontmatter.subtitleHighlight}</span>
+          <br />
+          <Link style={{ paddingTop: '1rem' }} to="/topics/">
+            LATEST TOPICS
+          </Link>
         </div>
       </div>
     </StyledSection>

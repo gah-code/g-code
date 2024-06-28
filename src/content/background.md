@@ -2,10 +2,10 @@
 id: 3
 greetings: ''
 emoji: ''
-subtitle: 'TOPICS'
-title: 'Freedom in design'
+subtitle: 'FRONT END OCEAN'
+title: 'Fast Moveing Streams'
 subtitlePrefix: "I've been surfing the web for all Front-End topics,"
-subtitleHighlight: ' I found it challenging to know where to start. One thing was clear: I wanted the ability to create free-flowing layouts to display my work as I wished. This desire for customization led me from Squarespace, Adobe Muse (which is no longer available), to frameworks like Bootstrap, and finally to the world of Flexbox and CSS Grid.'
+subtitleHighlight: 'I struggled to figure out where to begin, but one thing was clear: I wanted the ability to create free-flowing layouts to display my work as I wished. Reliability, fast load speeds, and a fun user experience were my top priorities.'
 update: ''
 text: 'Like many developers,'
 ---
