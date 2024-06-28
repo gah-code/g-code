@@ -6,14 +6,14 @@ import About from '../components/segments/about'
 import theme from '../gatsby-plugin-theme-ui/index'
 import Background from '../components/segments/background'
 import Seo from '../components/seo'
-import StyledSection from '../components/segments/about'
+// import StyledSection from '../components/segments/about'
 // import Slider from '../components/slider'
 
 import { Divider, Heading, sx, Container, Paragraph } from 'theme-ui'
 
 const PageLinks = [
   {
-    text: 'Comming Soon',
+    text: 'Coming Soon',
     url: '',
     badge: false,
     description: 'Hello from the blog page',
