@@ -100,7 +100,7 @@ const IndexPage = ({ data }) => {
 
       {/* <Update content={updateContent} /> */}
 
-      <Container sx={{ padding: 3 }}>
+      {/* <Container sx={{ padding: 3 }}>
         <b>Read More:</b>{' '}
         {PageLinks.map((link, i) => (
           <React.Fragment key={link.url}>
@@ -109,8 +109,8 @@ const IndexPage = ({ data }) => {
           </React.Fragment>
         ))}
         <br />
-        {/* Edit <code>src/pages/index.js</code> to update this page. */}
-      </Container>
+        Edit <code>src/pages/index.js</code> to update this page.
+      </Container> */}
     </Layout>
   )
 }

@@ -114,6 +114,19 @@ const theme = {
       },
     },
   },
+  buttons: {
+    primary: {
+      color: 'textDark',
+      bg: 'backgroundDark',
+      '&:hover': {
+        bg: 'link',
+      },
+    },
+    secondary: {
+      color: 'background',
+      bg: 'secondary',
+    },
+  },
 }
 
 export default theme

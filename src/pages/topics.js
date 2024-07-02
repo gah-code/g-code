@@ -54,11 +54,34 @@ const Topics = () => (
           <li>SEO</li>
         </ul>
         <br />
-        <ul>
-          <li>Projects</li>
-        </ul>
 
-        <p>more soon</p>
+        <Heading
+          as="h2"
+          sx={{
+            fontSize: [5, 5],
+            color: 'primary',
+            fontFamily: 'heading',
+            mb: 3, // margin-bottom
+            mt: 4,
+          }}
+        >
+          {/* Sparks  */}
+          Side Quest
+        </Heading>
+        <ul>
+          <li>
+            <Link
+              href="https://github.com/gah-code/g-code"
+              sx={{
+                variant: 'links.defult',
+              }}
+            >
+              g-code
+            </Link>
+            <br />
+            Build with Gatsby, design system Theme UI.
+          </li>
+        </ul>
       </Box>
 
       {/* <Box
