@@ -4,7 +4,7 @@ import aboutImg from '../../images/about.jpg'
 import theme from '../../gatsby-plugin-theme-ui'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
-import { Heading, Text, sx, Grid, Box } from 'theme-ui'
+import { Heading, Text, sx, Grid, Box, Paragraph } from 'theme-ui'
 
 const posts = [
   // An array of post objects with properties like id, slug, title, date, and excerpt

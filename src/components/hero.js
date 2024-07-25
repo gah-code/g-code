@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, Link } from 'theme-ui'
+import { Heading, Text, Link, sx, Paragraph } from 'theme-ui'
 import theme from '../gatsby-plugin-theme-ui'
 
 const StyledSection = styled.section`
@@ -22,6 +22,9 @@ const StyledSection = styled.section`
     font-family: system-ui, sans-serif;
     font-weight: 700;
     line-height: 1;
+  }
+  span {
+    padding: 3rem 0 1rem 0;
   }
 
   /**************************/
@@ -65,7 +68,34 @@ const Hero = ({ content }) => {
       >
         {rawMarkdownBody}
       </Heading>
-      <Text sx={theme.text.paragraph}>
+      <Text
+        sx={{
+          ...theme.text.paragraph,
+          mb: 3, // Bottom margin for spacing
+        }}
+      >
+        It's mind-boggling how active the front-end development ecosystem has been. It feels like not so long ago I
+        stumbled upon this world while needing a solution to market my photography services at the time.
+      </Text>
+      <Text
+        sx={{
+          ...theme.text.paragraph,
+          mb: 3, // Bottom margin for spacing
+        }}
+      >
+        The variety of frameworks that have come, gone, and remained the most used before I began even began my
+        front-end journey is remarkable.
+      </Text>
+      <Text
+        sx={{
+          ...theme.text.paragraph,
+          mt: 3, // Top margin for spacing before the last paragraph
+        }}
+      >
+        This is where I compile some of my favorite discoveries and concepts.
+      </Text>
+
+      {/* <Text sx={theme.text.paragraph}>
         From a young age, I was doodling in my notebook, creating makeshift comic books experimenting with themed fonts,
         and always exploring ways to express my creativity. A passion for digital expression grew during the MySpace era
         and later led me to professional{' '}
@@ -91,7 +121,7 @@ const Hero = ({ content }) => {
         </Link>{' '}
         , I merge my love for design patterns, typography, digital creativity, branding, and photography to create
         unique and impactful digital experiences.
-      </Text>
+      </Text> */}
 
       {/* <div className="description">random things</div>
       <ul>

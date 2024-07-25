@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { Heading, Text, Container, Button } from 'theme-ui'
+import { Heading, Text, Container, Button, sx, Paragraph } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
 
 const skills = [
@@ -181,23 +181,34 @@ const Background = ({ content }) => {
           <SkillList />
         </div>
         <div>
-          <Text
+          {/* <Text
             sx={{
               ...theme.styles.paragraph,
             }}
           >
             {frontmatter.subtitle}
-          </Text>
+          </Text> */}
           <Heading
             sx={{
-              ...theme.styles.h2,
+              ...theme.styles.h3,
             }}
           >
-            {frontmatter.title}
+            Syntax and Systems I've Used These Last Few Years
+            {/* {frontmatter.title} */}
           </Heading>
-          <Text sx={theme.text.paragraph}>{frontmatter.text}</Text>
-          <span className="highlighted">{frontmatter.subtitleHighlight}</span>
+          <Text sx={theme.text.paragraph}>
+            With many possible solutions for building modern web applications, developer experience could be considered
+            like never before.
+          </Text>
+          {/* <span className="highlighted">{frontmatter.subtitleHighlight}</span> */}
+          <Text sx={theme.text.paragraph}>What I've digging into this year:</Text>
           <br />
+          <ul>
+            <li>Headless Content Modeling </li>
+            <li>Component driven architecture </li>
+            <li>Node types </li>
+          </ul>
+
           <Button variant="primary" sx={{ mt: 3 }}>
             <Link to="/topics/">topics & side quest</Link>
           </Button>
@@ -256,7 +267,7 @@ const StyledSection = styled.section`
     column-gap: 24px;
     row-gap: 32px;
     align-items: center;
-    background: #7887;
+    /* background: #7887; */
   }
 
   .project {
@@ -265,12 +276,19 @@ const StyledSection = styled.section`
   }
 
   ul {
-    background-color: red;
+    margin-top: 1rem;
   }
 
   li {
     color: #263147;
-    background-color: blue;
+    padding-right: 1rem;
+
+    /* background-color: blue; */
+    max-width: 30rem;
+  }
+  li:first-of-type {
+    color: #263147;
+    /* background-color: blue; */
     max-width: 30rem;
   }
   .data {
