@@ -60,6 +60,13 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `blogs`,
+    //     path: `${__dirname}/src/content/blog`,
+    //   },
+    // },
   ],
 }
 

@@ -32,6 +32,8 @@ const PageLinks = [
 // import { motion } from "framer-motion"
 
 const IndexPage = ({ data }) => {
+  // const siteTitle = data.site.siteMetadata?.title || `Title`
+  // const posts = data.allMarkdownRemark.nodes
   const findContentById = (data, id, category) => {
     return data[category].edges.find((edge) => edge.node.frontmatter.id === id)?.node
   }
