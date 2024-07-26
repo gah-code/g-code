@@ -23,9 +23,6 @@ const StyledSection = styled.section`
     font-weight: 700;
     line-height: 1;
   }
-  span {
-    padding: 3rem 0 1rem 0;
-  }
 
   /**************************/
   /* BELOW 944px (Tablets) */
@@ -88,8 +85,11 @@ const Hero = ({ content }) => {
       </Text>
       <Text
         sx={{
-          ...theme.text.paragraph,
-          mt: 3, // Top margin for spacing before the last paragraph
+          // textAlign: 'center',
+
+          mt: 4,
+          display: 'block',
+          ...theme.text.heading,
         }}
       >
         This is where I compile some of my favorite discoveries and concepts.

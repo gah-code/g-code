@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { Grid, Heading, sx, Text, Paragraph } from 'theme-ui'
+import { Grid, Heading, Text, Paragraph } from 'theme-ui'
 import theme from '../gatsby-plugin-theme-ui'
 
 import { Box } from 'theme-ui'
@@ -10,6 +10,15 @@ import Seo from '../components/seo'
 
 const Topics = () => (
   <Layout>
+    {/* <Heading
+      sx={{
+        fontSize: [3, 4, 5],
+        mb: 3,
+      }}
+    >
+      Frontend Things
+    </Heading> */}
+
     <Grid
       columns={['1fr', '1fr 2fr 1fr']} // One column on small screens, three columns on larger screens
       gap={[3, 4]} // Adjust spacing for better readability on small screens
@@ -22,7 +31,7 @@ const Topics = () => (
         sx={{
           gridColumn: ['1 / -1', '1 / span 3'],
 
-          padding: 1,
+          padding: 3,
         }}
       >
         <Heading

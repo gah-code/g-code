@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { Heading, Text, Container, Button, sx, Paragraph } from 'theme-ui'
+import { Heading, Text, Container, Button, Paragraph } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
 
 const skills = [
@@ -55,21 +55,13 @@ const skills = [
     level: 'intermediate',
     color: 'rgb(236 201 137)',
   },
-  {
-    skill: 'Excel',
-    level: 'intermediate',
-    color: 'rgb(236 201 137)',
-  },
+
   {
     skill: 'SEO',
     level: 'intermediate',
     color: 'rgb(236 201 137)',
   },
-  {
-    skill: 'Gatsby',
-    level: 'intermediate',
-    color: 'rgb(236 201 137)',
-  },
+
   {
     skill: 'Theme UI',
     level: 'intermediate',
@@ -100,11 +92,7 @@ const skills = [
     level: 'beginner',
     color: 'rgb(236 201 137)',
   },
-  {
-    skill: 'Hack The Box',
-    level: 'beginner',
-    color: 'rgb(236 201 137)',
-  },
+
   {
     skill: 'Mongo DB',
     level: 'beginner',
@@ -150,11 +138,7 @@ const skills = [
     level: 'beginner',
     color: 'rgb(236 201 137)',
   },
-  {
-    skill: 'Art Direction',
-    level: 'beginner',
-    color: 'rgb(236 201 137)',
-  },
+
   {
     skill: 'Next Js',
     level: 'beginner',
@@ -165,15 +149,10 @@ const skills = [
     level: 'beginner',
     color: 'rgb(236 201 137)',
   },
-  {
-    skill: 'WordPress',
-    level: 'beginner',
-    color: 'rgb(236 201 137)',
-  },
 ]
 
 const Background = ({ content }) => {
-  const { frontmatter, rawMarkdownBody } = content
+  // const { frontmatter, rawMarkdownBody } = content
   return (
     <StyledSection>
       <div className="container grid-2">
@@ -201,8 +180,15 @@ const Background = ({ content }) => {
             like never before.
           </Text>
           {/* <span className="highlighted">{frontmatter.subtitleHighlight}</span> */}
-          <Text sx={theme.text.paragraph}>What I've digging into this year:</Text>
-          <br />
+          <Text
+            sx={{
+              mt: 3,
+              display: 'block',
+              ...theme.text.heading,
+            }}
+          >
+            What I've digging into this year:
+          </Text>
           <ul>
             <li>Headless Content Modeling </li>
             <li>Component driven architecture </li>
@@ -273,10 +259,6 @@ const StyledSection = styled.section`
   .project {
     border-radius: 30px;
     background-color: blue;
-  }
-
-  ul {
-    margin-top: 1rem;
   }
 
   li {
