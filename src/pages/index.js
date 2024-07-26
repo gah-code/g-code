@@ -50,9 +50,9 @@ const IndexPage = ({ data }) => {
       />
       <Hero content={heroContent} />
       <Divider />
+      <Background content={backgroundContent} />
       <About content={aboutContent} alt="Gilberto A. Haro web developer and photographer" maxWidth="250px" />
 
-      <Background content={backgroundContent} />
       <Divider />
     </Layout>
   )

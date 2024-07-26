@@ -40,11 +40,7 @@ const skills = [
     level: 'advanced',
     color: 'rgb(236 201 137)',
   },
-  {
-    skill: 'JAM Stack',
-    level: 'beginner',
-    color: 'rgb(236 201 137)',
-  },
+
   {
     skill: 'AEM',
     level: 'beginner',
@@ -98,11 +94,7 @@ const skills = [
     level: 'beginner',
     color: 'rgb(236 201 137)',
   },
-  {
-    skill: 'UX',
-    level: 'beginner',
-    color: 'rgb(236 201 137)',
-  },
+
   {
     skill: 'Supabase',
     level: 'beginner',
@@ -123,11 +115,11 @@ const skills = [
     level: 'intermediate',
     color: 'rgb(236 201 137)',
   },
-  {
-    skill: 'Storybook',
-    level: 'beginner',
-    color: 'rgb(236 201 137)',
-  },
+  // {
+  //   skill: 'Storybook',
+  //   level: 'beginner',
+  //   color: 'rgb(236 201 137)',
+  // },
   {
     skill: 'SSG',
     level: 'beginner',
@@ -172,7 +164,7 @@ const Background = ({ content }) => {
               ...theme.styles.h3,
             }}
           >
-            Syntax and Systems I've Used These Last Few Years
+            Syntax and Systems
             {/* {frontmatter.title} */}
           </Heading>
           <Text sx={theme.text.paragraph}>
@@ -187,7 +179,7 @@ const Background = ({ content }) => {
               ...theme.text.heading,
             }}
           >
-            What I've digging into this year:
+            What I've been digging into this year:
           </Text>
           <ul>
             <li>Headless Content Modeling </li>
@@ -195,9 +187,9 @@ const Background = ({ content }) => {
             <li>Node types </li>
           </ul>
 
-          <Button variant="primary" sx={{ mt: 3 }}>
+          {/* <Button variant="primary" sx={{ mt: 3 }}>
             <Link to="/topics/">topics & side quest</Link>
-          </Button>
+          </Button> */}
         </div>
       </div>
     </StyledSection>
@@ -218,11 +210,11 @@ function Skill({ skill, color, level }) {
   return (
     <div className="skill" style={{ backgroundColor: color }}>
       <span>{skill}</span>
-      <span>
+      {/* <span>
         {level === 'beginner' && ''}
         {level === 'intermediate' && ''}
         {level === 'advanced' && ''}
-      </span>
+      </span> */}
     </div>
   )
 }

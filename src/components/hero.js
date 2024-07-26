@@ -68,16 +68,17 @@ const Hero = ({ content }) => {
       <Text
         sx={{
           ...theme.text.paragraph,
-          mb: 3, // Bottom margin for spacing
         }}
       >
         It's mind-boggling how active the front-end development ecosystem has been. It feels like not so long ago I
         stumbled upon this world while needing a solution to market my photography services at the time.
       </Text>
+      <br />
       <Text
         sx={{
           ...theme.text.paragraph,
           mb: 3, // Bottom margin for spacing
+          mt: 1,
         }}
       >
         The variety of frameworks that have come, gone, and remained the most used before I began even began my
