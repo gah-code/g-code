@@ -10,7 +10,10 @@
 
 ## Lighthouse Score
 
-Performance: 90, Accessibility: 94, Best Practices: 100, SEO: 92, PWA: 80
+Performance: 90
+Accessibility: 97
+Best Practices: 100
+SEO: 93
 
 ## V2 Build
 
