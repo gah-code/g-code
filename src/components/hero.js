@@ -81,8 +81,8 @@ const Hero = ({ content }) => {
           mt: 1,
         }}
       >
-        The variety of frameworks that have come, gone, and remained the most used before I began even began my
-        front-end journey is remarkable.
+        The variety of frameworks that have come, gone, and remained the most used before I even began my front-end
+        journey is remarkable.
       </Text>
       <Text
         sx={{
