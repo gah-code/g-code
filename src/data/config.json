@@ -1,0 +1,61 @@
+{
+  "siteTitle": "Hola",
+  "siteTitleTwo": "I'm Gilbert",
+  "siteDescription": "Surfing the world wide web for all front end dev insight",
+  "author": "Gilberto A Haro",
+  "hero": {
+    "image": "https://example.com/hero-image.jpg",
+    "altText": "A visual representation of front-end development",
+    "heroHeading": "Exploring the World of Front-End Development",
+    "heroSubheading": "A Journey Through Evolving Technologies",
+    "heroDescription": "It's mind-boggling how active the front-end development ecosystem has been. It feels like not so long ago I stumbled upon this world while needing a solution to market my photography services at the time. The variety of frameworks that have come, gone, and remained the most used before I even began my front-end journey is remarkable."
+  },
+
+  "intro": {
+    "heading": "A Remarkable Evolution",
+    "content": "The variety of frameworks that have come, gone, and remained the most used before I began even began my front-end journey is remarkable."
+  },
+  "content": [
+    {
+      "type": "h2",
+      "text": "Discoveries and Concepts"
+    },
+    {
+      "type": "p",
+      "text": "This is where I compile some of my favorite discoveries and concepts."
+    }
+  ],
+  "tech": {
+    "heading": "Syntax and Systems",
+    "text": "With many possible solutions for building modern web applications, developer experience could be considered like never before.",
+    "listTitle": "What I've been digging into this year:",
+    "list": [
+      {
+        "id": 0,
+
+        "type": "li",
+        "text": "Headless Content Modeling"
+      },
+      {
+        "id": 1,
+        "type": "li",
+        "text": "Component driven architecture"
+      },
+      {
+        "id": 3,
+        "type": "li",
+        "text": "Node types"
+      }
+    ]
+  },
+  "socialLinks": [
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/johndoe"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/johndoe"
+    }
+  ]
+}
