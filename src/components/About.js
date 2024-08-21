@@ -108,4 +108,3 @@ const Photo = styled.img`
 `
 
 export default About
-

@@ -7,4 +7,3 @@ subtitlePrefix: "I've been surfing the web for all Front-End topics,"
 subtitleHighlight: 'exploring & always stoked to learn sick ticks'
 list: 'photoloop app project'
 ---
-

@@ -328,4 +328,3 @@ const StyledSection = styled.section`
 `
 
 export default Tech
-

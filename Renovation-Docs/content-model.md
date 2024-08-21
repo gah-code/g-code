@@ -90,4 +90,3 @@ The `Tag` content type represents tags that can be assigned to blog posts for ca
   - Description: Blogs associated with this tag.
   - Required: No
   - Multiple: Yes
-

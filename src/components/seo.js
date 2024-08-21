@@ -72,4 +72,3 @@ const SEO = ({ title, description, children, author, siteUrl }) => {
 }
 
 export default SEO
-

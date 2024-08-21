@@ -16,4 +16,3 @@ exports.createPages = async ({ actions }) => {
     defer: true,
   })
 }
-

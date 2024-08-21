@@ -24,4 +24,3 @@ const UsingDSG = () => (
 export const Head = () => <SEO title="Using DSG" />
 
 export default UsingDSG
-

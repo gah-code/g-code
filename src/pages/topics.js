@@ -1,11 +1,12 @@
 import * as React from 'react'
+import Layout from '../components/Layout'
+
 import { Link } from 'gatsby'
 import { Grid, Heading, Text, Paragraph } from 'theme-ui'
 import theme from '../gatsby-plugin-theme-ui'
 
 import { Box } from 'theme-ui'
 
-import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
 const Topics = () => (
@@ -147,4 +148,3 @@ const Topics = () => (
 export const Head = () => <SEO title="Topics" />
 
 export default Topics
-

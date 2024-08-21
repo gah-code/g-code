@@ -294,4 +294,3 @@ body {
 `
 
 export default GlobalStyle
-

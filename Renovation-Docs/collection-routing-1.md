@@ -30,4 +30,3 @@ In your Gatsby project, install the necessary plugins for sourcing data from Con
 ```bash
 npm install gatsby-source-contentful gatsby-plugin-sharp gatsby-transformer-sharp
 ```
-

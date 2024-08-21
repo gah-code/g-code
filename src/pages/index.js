@@ -2,21 +2,17 @@ import * as React from 'react'
 import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import { Text, Link, Divider } from 'theme-ui'
-import theme from '../gatsby-plugin-theme-ui'
-import styled from 'styled-components'
 import About from '../components/About'
 import Tech from '../components/Tech'
-import { StaticImage } from 'gatsby-plugin-image'
-// import AllRecipes from '../components/AllRecipes'
 import Hero from '../components/Hero'
-// import HomeTagsList from '../components/HomeTagsList'
 import SEO from '../components/SEO'
+import { useRef } from 'react'
+import { useInView } from 'framer-motion'
+// import HomeTagsList from '../components/HomeTagsList'
 // import AllBlogs from '../components/AllBlogs'
 // import Slider from '../components/temp/Slider'
 // import CardSlider from '../components/CardSlider'
 // import ComponentData from '../components/ComponentData'
-import { useRef } from 'react'
-import { useInView } from 'framer-motion'
 
 function Section({ children }) {
   const ref = useRef(null)
@@ -48,14 +44,13 @@ const IndexPage = ({ data }) => {
         {/* <Section>
           <CardSlider />
         </Section> */}
+        <Section>
+          <Tech />
+        </Section>
         <Divider />
 
         <About />
         <Divider />
-
-        <Section>
-          <Tech />
-        </Section>
       </main>
     </Layout>
   )
@@ -77,4 +72,3 @@ export const query = graphql`
     }
   }
 `
-

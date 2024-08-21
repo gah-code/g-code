@@ -9,4 +9,3 @@ subtitleHighlight: 'I struggled to figure out where to begin, but one thing was 
 update: ''
 text: 'Like many developers,'
 ---
-

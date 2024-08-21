@@ -1,14 +1,14 @@
-import React from "react"
-import { useRef } from "react"
-import { motion, useScroll } from "framer-motion"
-import { Grid } from "theme-ui"
-import { Box, Heading } from "theme-ui"
-import styled from "styled-components"
-import ImgThree from "../images/about.jpg"
-import theme from "../gatsby-plugin-theme-ui"
-import Card from "../components/card"
+import React from 'react'
+import { useRef } from 'react'
+import { motion, useScroll } from 'framer-motion'
+import { Grid } from 'theme-ui'
+import { Box, Heading } from 'theme-ui'
+import styled from 'styled-components'
+import ImgThree from '../images/about.jpg'
+import theme from '../gatsby-plugin-theme-ui'
+import Card from '../components/card'
 
-const Slider = props => {
+const Slider = (props) => {
   const ref = useRef(null)
   const { scrollXProgress } = useScroll({ container: ref })
   return (
@@ -21,10 +21,7 @@ const Slider = props => {
               <img src={ImgThree} alt="" />
             </li>
             <li className="smol-transitions zoom">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Explicabo, inventore.
-              </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, inventore.</p>
             </li>
 
             <li>test</li>

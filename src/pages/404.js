@@ -13,4 +13,3 @@ const NotFoundPage = () => (
 export const Head = () => <SEO title="404: Not Found" />
 
 export default NotFoundPage
-
