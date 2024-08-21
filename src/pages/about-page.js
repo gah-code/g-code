@@ -5,48 +5,11 @@ import theme from '../gatsby-plugin-theme-ui'
 
 import { Box } from 'theme-ui'
 
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 const AboutPage = () => (
   <Layout>
-    {/* <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p> */}
-
-    {/* <div>
-      <Heading
-        sx={{
-          variant: 'text.caps',
-          // textAlign: 'left',
-          px: 3,
-          mt: 4,
-
-          ...theme.styles.h3,
-        }}
-      >
-        What I've been digging into this year
-      </Heading>
-
-      <Text
-        variant="block"
-        sx={{
-          textAlign: 'left',
-          // px: 2,
-          py: 2,
-          mb: 6,
-          mt: 1,
-
-          ...theme.text.paragraph,
-        }}
-      >
-        Right now, I'm rocking the role of a web developer on the marketing team at Robert Half. On the side, I dabble
-        in weekend photography gigs as a freelancer. In those in-between moments, I dive headfirst into the
-        ever-evolving world of front-end technology. You can catch me staying active, building my own projects, and
-        leveling up with courses in React, CSS, and even some hack the box (CTF and Pen test tooling) challenges. Always
-        keeping it exciting!
-      </Text>
-    </div> */}
-
     <Grid
       columns={['1fr', '1fr 2fr 1fr']} // One column on small screens, three columns on larger screens
       gap={[3, 4]} // Adjust spacing for better readability on small screens
@@ -136,7 +99,7 @@ const AboutPage = () => (
   </Layout>
 )
 
-export const Head = () => <Seo title="About Page" />
+export const Head = () => <SEO title="About Page" />
 
 export default AboutPage
 

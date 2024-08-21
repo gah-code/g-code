@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import aboutImg from '../../images/about.jpg'
+import aboutImg from '../images/about.jpg'
 import { Heading, Text } from 'theme-ui'
-import theme from '../../gatsby-plugin-theme-ui'
+import theme from '../gatsby-plugin-theme-ui'
 import { graphql, Link } from 'gatsby'
 
-const About = ({ content, alt, maxWidth }) => {
-  const { frontmatter, rawMarkdownBody } = content
+const About = ({ alt, maxWidth }) => {
   return (
     <StyledSection>
       <div className="container grid-2">
@@ -16,9 +15,13 @@ const About = ({ content, alt, maxWidth }) => {
               ...theme.styles.h2,
             }}
           >
-            {frontmatter.title}
+            About
           </Heading>
-          <Text sx={theme.text.paragraph}>{frontmatter.life}</Text>
+          <Text sx={theme.text.paragraph}>
+            {' '}
+            San Jose, CA with my girlfriend and our adorable pup named 🌯. Our weekdays are filled with work, study, and
+            workouts, but on the weekends, we love hanging out with friends and indulging in some delicious tacos!
+          </Text>
           {/* <br /> */}
           {/* <Link style={{ paddingTop: '1rem' }} to="/about-page/">
             Read More

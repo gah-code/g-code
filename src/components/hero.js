@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, Link, sx, Paragraph } from 'theme-ui'
+import { Heading, Text } from 'theme-ui'
 import theme from '../gatsby-plugin-theme-ui'
+import { graphql, useStaticQuery } from 'gatsby'
 
 const StyledSection = styled.section`
-  padding: 5rem 2rem 8rem 2rem;
+  padding: 5rem 1rem 8rem 1rem;
 
   .title {
     margin-bottom: 0.8rem;
@@ -30,13 +31,39 @@ const StyledSection = styled.section`
 
   @media (max-width: 59em) {
     .description {
-      padding: 5rem 0 1rem 0;
+      padding: 5rem 0 3rem 0;
     }
   }
 `
 
-const Hero = ({ content }) => {
-  const { frontmatter, rawMarkdownBody } = content
+const Hero = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allDataJson {
+        nodes {
+          author
+          siteDescription
+          siteTitle
+          siteTitleTwo
+          hero {
+            heroHeading
+          }
+          socialLinks {
+            platform
+            url
+          }
+        }
+      }
+    }
+  `)
+
+  console.log(data)
+
+  const configHero = data?.allDataJson?.nodes[0]
+
+  if (!configHero) {
+    return <div>No data found</div>
+  }
   return (
     <StyledSection>
       <Heading
@@ -44,27 +71,30 @@ const Hero = ({ content }) => {
           ...theme.styles.h1,
         }}
       >
-        {frontmatter.greetings}
-        <span role="img" aria-label="emoji">
-          {frontmatter.emoji}
-        </span>
+        {configHero.siteTitle}
+        {/* <span></span> */}
+        <span role="img" aria-label="emoji"></span>
+
         <br />
-        {frontmatter.title}
+        {configHero.siteTitleTwo}
       </Heading>
       <Heading
         sx={{
           ...theme.styles.h3,
         }}
       >
-        {frontmatter.subtitlePrefix} <span className="highlighted">{frontmatter.subtitleHighlight}</span>
-      </Heading>
+        Surfing the world wide web
+        <br />
+        <span className="highlighted">for all front end dev insight</span>
+      </Heading>{' '}
       <Heading
         sx={{
           ...theme.styles.h4,
         }}
       >
-        {rawMarkdownBody}
+        Thanks for stopping by!
       </Heading>
+      <Text sx={theme.text.paragraph}>{configHero.heroDescription}</Text>{' '}
       <Text
         sx={{
           ...theme.text.paragraph,
@@ -95,42 +125,6 @@ const Hero = ({ content }) => {
       >
         This is where I compile some of my favorite discoveries and concepts.
       </Text>
-
-      {/* <Text sx={theme.text.paragraph}>
-        From a young age, I was doodling in my notebook, creating makeshift comic books experimenting with themed fonts,
-        and always exploring ways to express my creativity. A passion for digital expression grew during the MySpace era
-        and later led me to professional{' '}
-        <Link
-          href="https://www.georgestreetphoto.com/"
-          sx={{
-            variant: 'links.bold',
-          }}
-        >
-          {' '}
-          photography.{' '}
-        </Link>{' '}
-        But I yearned for something more later soon after - a platform for showcasing my work. That's when I discovered
-        the world of web development. It offered not only a platform for my photography but also opened up countless
-        opportunities, landing me gigs that allowed me to combine all my interests and skills. Today, as a{' '}
-        <Link
-          href="https://www.roberthalf.com/us/en"
-          sx={{
-            variant: 'links.bold',
-          }}
-        >
-          Web Developer{' '}
-        </Link>{' '}
-        , I merge my love for design patterns, typography, digital creativity, branding, and photography to create
-        unique and impactful digital experiences.
-      </Text> */}
-
-      {/* <div className="description">random things</div>
-      <ul>
-        <li>My very first job was working as a photographer </li>
-        <li>My dog's name is burrito</li>
-        <li>Mr. Robot is my fav</li>
-        <li>Currenly reading </li>
-      </ul> */}
     </StyledSection>
   )
 }

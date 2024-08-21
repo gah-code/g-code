@@ -5,8 +5,8 @@ import theme from '../gatsby-plugin-theme-ui'
 
 import { Box } from 'theme-ui'
 
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 const Topics = () => (
   <Layout>
@@ -144,7 +144,7 @@ const Topics = () => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Topics" />
+export const Head = () => <SEO title="Topics" />
 
 export default Topics
 

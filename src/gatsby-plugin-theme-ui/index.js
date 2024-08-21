@@ -38,7 +38,6 @@ const theme = {
       lineHeight: 'medium',
       color: 'text',
       mt: 5,
-      // mb: [2, 1],
     },
     h2: {
       fontSize: [32, 48],

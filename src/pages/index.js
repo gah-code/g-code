@@ -1,164 +1,80 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/layout'
-import Hero from '../components/hero'
-import About from '../components/segments/about'
+import * as React from 'react'
+import Layout from '../components/Layout'
+import { graphql } from 'gatsby'
+import { Text, Link, Divider } from 'theme-ui'
 import theme from '../gatsby-plugin-theme-ui'
-import Background from '../components/segments/background'
-import Seo from '../components/seo'
-// import StyledSection from '../components/segments/about'
-// import Slider from '../components/slider'
+import styled from 'styled-components'
+import About from '../components/About'
+import Tech from '../components/Tech'
+import { StaticImage } from 'gatsby-plugin-image'
+// import AllRecipes from '../components/AllRecipes'
+import Hero from '../components/Hero'
+// import HomeTagsList from '../components/HomeTagsList'
+import SEO from '../components/SEO'
+// import AllBlogs from '../components/AllBlogs'
+// import Slider from '../components/temp/Slider'
+// import CardSlider from '../components/CardSlider'
+// import ComponentData from '../components/ComponentData'
+import { useRef } from 'react'
+import { useInView } from 'framer-motion'
 
-import { Divider, Heading, sx, Container, Paragraph } from 'theme-ui'
-
-const PageLinks = [
-  {
-    text: 'Coming Soon',
-    url: '',
-    badge: false,
-    description: 'Hello from the blog page',
-  },
-  // {
-  //   text: 'Home',
-  //   url: 'page-2',
-  //   badge: false,
-  //   description: 'A simple example of linking to another page within a Gatsby site',
-  // },
-  // { text: "TypeScript", url: "using-typescript" },
-  // { text: "Server Side Rendering", url: "using-ssr" },
-  // { text: "Deferred Static Generation", url: "using-dsg" },
-]
-
-// import { motion } from "framer-motion"
-
-const IndexPage = ({ data }) => {
-  const findContentById = (data, id, category) => {
-    return data[category].edges.find((edge) => edge.node.frontmatter.id === id)?.node
-  }
-
-  const heroContent = findContentById(data, 0, 'hero')
-  const aboutContent = findContentById(data, 1, 'about')
-  const updateContent = findContentById(data, 2, 'update')
-  const backgroundContent = findContentById(data, 3, 'background')
-  const aboutRawMarkdownBody = aboutContent.rawMarkdownBody
+function Section({ children }) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
 
   return (
+    <section ref={ref}>
+      <span
+        style={{
+          transform: isInView ? 'none' : 'translateX(-200px)',
+          opacity: isInView ? 1 : 0,
+          transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+        }}
+      >
+        {children}
+      </span>
+    </section>
+  )
+}
+const IndexPage = ({ data }) => {
+  return (
     <Layout>
-      <Seo
-        title="Home"
-        description="This is the homepage for a my website, I'm Front End Developer located in San Jose Ca Bay Area, passionate about transforming ideas into reality through coding, thanks for stopping by!"
-      />
-      <Hero content={heroContent} />
-      <Divider />
-      <Background content={backgroundContent} />
-      <About content={aboutContent} alt="Gilberto A. Haro web developer and photographer" maxWidth="250px" />
+      <SEO title="Home Page" />
+      <main className="page">
+        <Section>
+          <Hero />
+        </Section>
 
-      <Divider />
+        {/* <Section>
+          <CardSlider />
+        </Section> */}
+        <Divider />
+
+        <About />
+        <Divider />
+
+        <Section>
+          <Tech />
+        </Section>
+      </main>
     </Layout>
   )
 }
 
 export default IndexPage
-export const Head = () => (
-  <Seo
-    title="Home"
-    description="This is the homepage for a my website, I'm Front End Developer located in San Jose Ca Bay Area, passionate about transforming ideas into reality through coding, thanks for stopping by!"
-  />
-)
 
-export const pageQuery = graphql`
+export const query = graphql`
   query {
-    site {
-      siteMetadata {
+    hero: markdownRemark(frontmatter: { title: { eq: "Welcome to My Blog" } }) {
+      frontmatter {
+        greetings
+        emoji
         title
-        description
-        author
-        logo
-        siteUrl
+        subtitlePrefix
+        subtitleHighlight
       }
-    }
-    hero: allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            title
-            greetings
-            emoji
-            subtitlePrefix
-            subtitleHighlight
-            id
-          }
-          rawMarkdownBody
-        }
-      }
-    }
-    about: allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            title
-            greetings
-            emoji
-            subtitlePrefix
-            subtitleHighlight
-            update
-            life
-            id
-          }
-          rawMarkdownBody
-        }
-      }
-    }
-    update: allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            title
-            greetings
-            emoji
-            subtitlePrefix
-            subtitleHighlight
-            list
-            id
-          }
-          rawMarkdownBody
-        }
-      }
-    }
-    background: allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            subtitle
-            title
-            greetings
-            emoji
-            subtitlePrefix
-            subtitleHighlight
-            update
-            text
-            id
-          }
-          rawMarkdownBody
-        }
-      }
+      rawMarkdownBody
     }
   }
 `
-
-// const heroContent = data.hero.edges[0].node
-// const aboutContent = data.about.edges[1].node
-// const heroContent = data.hero.edges.find(
-//   edge => edge.node.frontmatter.id === 0
-// ).node
-
-// const aboutContent = data.about.edges.find(
-//   edge => edge.node.frontmatter.id === 1
-// ).node
-// const updateContent = data.update.edges.find(
-//   edge => edge.node.frontmatter.id === 2
-// ).node
-// const backgroundContent = data.background.edges.find(
-//   edge => edge.node.frontmatter.id === 3
-// ).node
 

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { Heading, Text, Container, Button, Paragraph } from 'theme-ui'
-import theme from '../../gatsby-plugin-theme-ui'
+import theme from '../gatsby-plugin-theme-ui'
 
 const skills = [
   {
@@ -143,8 +143,7 @@ const skills = [
   },
 ]
 
-const Background = ({ content }) => {
-  // const { frontmatter, rawMarkdownBody } = content
+const Tech = ({ content }) => {
   return (
     <StyledSection>
       <div className="container grid-2">
@@ -152,13 +151,6 @@ const Background = ({ content }) => {
           <SkillList />
         </div>
         <div>
-          {/* <Text
-            sx={{
-              ...theme.styles.paragraph,
-            }}
-          >
-            {frontmatter.subtitle}
-          </Text> */}
           <Heading
             sx={{
               ...theme.styles.h3,
@@ -171,7 +163,7 @@ const Background = ({ content }) => {
             With many possible solutions for building modern web applications, developer experience could be considered
             like never before.
           </Text>
-          {/* <span className="highlighted">{frontmatter.subtitleHighlight}</span> */}
+
           <Text
             sx={{
               mt: 3,
@@ -187,9 +179,9 @@ const Background = ({ content }) => {
             <li>Node types </li>
           </ul>
 
-          {/* <Button variant="primary" sx={{ mt: 3 }}>
-            <Link to="/topics/">topics & side quest</Link>
-          </Button> */}
+          <Button variant="primary" sx={{ mt: 3 }}>
+            <Link to="/topics/">Read more</Link>
+          </Button>
         </div>
       </div>
     </StyledSection>
@@ -221,14 +213,14 @@ function Skill({ skill, color, level }) {
 
 const StyledSection = styled.section`
   position: relative;
-  padding: 3.9rem 2rem;
+  padding: 3.5rem 0;
 
   @media (max-width: 84em) {
     padding: 5.8rem 0;
   }
 
   @media (max-width: 34em) {
-    padding: 3rem 0.8rem 2rem 0.8rem;
+    padding: 1rem 1.2rem 1rem 1.2rem;
     row-gap: 5rem;
   }
 
@@ -255,15 +247,10 @@ const StyledSection = styled.section`
 
   li {
     color: #263147;
-    padding-right: 1rem;
-
-    /* background-color: blue; */
-    max-width: 30rem;
+    list-style-type: disc;
   }
   li:first-of-type {
     color: #263147;
-    /* background-color: blue; */
-    max-width: 30rem;
   }
   .data {
     padding: 32px 0;
@@ -285,7 +272,7 @@ const StyledSection = styled.section`
   }
 
   .skill {
-    font-size: 0.7rem;
+    font-size: 0.71rem;
     font-weight: 700;
     padding: 0.5rem 1rem;
     border-radius: 25px;
@@ -340,5 +327,5 @@ const StyledSection = styled.section`
   }
 `
 
-export default Background
+export default Tech
 
