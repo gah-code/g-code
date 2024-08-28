@@ -8,7 +8,8 @@
     "altText": "A visual representation of front-end development",
     "heroHeading": "Exploring the World of Front-End Development",
     "heroSubheading": "A Journey Through Evolving Technologies",
-    "heroDescription": "It's mind-boggling how active the front-end development ecosystem has been. It feels like not so long ago I stumbled upon this world while needing a solution to market my photography services at the time. The variety of frameworks that have come, gone, and remained the most used before I even began my front-end journey is remarkable."
+    "heroDescription": "It's mind-boggling how active the front-end development ecosystem has been. It feels like not so long ago I stumbled upon this world while needing a solution to market my photography services at the time. The variety of frameworks that have come, gone, and remained the most used before I even began my front-end journey is remarkable.",
+    "heroSubdescription": "This is where I compile some of my favorite discoveries and concepts."
   },
 
   "intro": {
@@ -32,7 +33,6 @@
     "list": [
       {
         "id": 0,
-
         "type": "li",
         "text": "Headless Content Modeling"
       },

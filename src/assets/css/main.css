@@ -138,11 +138,11 @@ ul {
 a {
   text-decoration: none;
 }
-.img {
+/* .img {
   width: 100%;
   display: block;
   object-fit: cover;
-}
+} */
 .form {
   width: 100%;
   background: var(--white);
@@ -241,9 +241,9 @@ button.block {
   background-color: var(--red-light);
 }
 
-.container {
+/* .container {
   padding: 5rem 0;
-}
+} */
 .container-center {
   width: 90vw;
   max-width: var(--max-width);

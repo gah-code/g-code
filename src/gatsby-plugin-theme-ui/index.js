@@ -115,10 +115,19 @@ const theme = {
   },
   buttons: {
     primary: {
+      fontSize: 'inherit',
       color: 'textDark',
       bg: 'backgroundDark',
+      mt: [2, 3],
+      px: 3,
+      py: 1,
+      borderRadius: 10,
+
       '&:hover': {
-        bg: 'link',
+        bg: 'highlight',
+        color: 'backgroundDark',
+        borderColor: 'secondary',
+        border: '2px',
       },
     },
     secondary: {

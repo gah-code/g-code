@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { Heading, Text, Container, Button, Paragraph } from 'theme-ui'
-import theme from '../gatsby-plugin-theme-ui'
+import { Heading, Text, Button, Paragraph } from 'theme-ui'
+import theme from '../../gatsby-plugin-theme-ui'
 
 const skills = [
   {
@@ -179,7 +179,7 @@ const Tech = ({ content }) => {
             <li>Node types </li>
           </ul>
 
-          <Button variant="primary" sx={{ mt: 3 }}>
+          <Button variant="primary">
             <Link to="/topics/">Read more</Link>
           </Button>
         </div>
@@ -213,14 +213,14 @@ function Skill({ skill, color, level }) {
 
 const StyledSection = styled.section`
   position: relative;
-  padding: 3.5rem 0;
+  padding: 3.5rem 2rem;
 
   @media (max-width: 84em) {
     padding: 5.8rem 0;
   }
 
   @media (max-width: 34em) {
-    padding: 1rem 1.2rem 1rem 1.2rem;
+    padding: 3rem 0.8rem 2rem 0.8rem;
     row-gap: 5rem;
   }
 
@@ -272,7 +272,7 @@ const StyledSection = styled.section`
   }
 
   .skill {
-    font-size: 0.71rem;
+    font-size: 0.7rem;
     font-weight: 700;
     padding: 0.5rem 1rem;
     border-radius: 25px;

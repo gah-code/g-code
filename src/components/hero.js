@@ -5,7 +5,7 @@ import theme from '../gatsby-plugin-theme-ui'
 import { graphql, useStaticQuery } from 'gatsby'
 
 const StyledSection = styled.section`
-  padding: 5rem 1rem 8rem 1rem;
+  padding: 5rem 2rem 8rem 2rem;
 
   .title {
     margin-bottom: 0.8rem;
@@ -47,6 +47,8 @@ const Hero = () => {
           siteTitleTwo
           hero {
             heroHeading
+            heroDescription
+            heroSubdescription
           }
           socialLinks {
             platform
@@ -72,9 +74,7 @@ const Hero = () => {
         }}
       >
         {configHero.siteTitle}
-        {/* <span></span> */}
         <span role="img" aria-label="emoji"></span>
-
         <br />
         {configHero.siteTitleTwo}
       </Heading>
@@ -94,36 +94,15 @@ const Hero = () => {
       >
         Thanks for stopping by!
       </Heading>
-      <Text sx={theme.text.paragraph}>{configHero.heroDescription}</Text>{' '}
+      <Text sx={theme.text.paragraph}>{configHero.hero.heroDescription}</Text>{' '}
       <Text
         sx={{
-          ...theme.text.paragraph,
-        }}
-      >
-        It's mind-boggling how active the front-end development ecosystem has been. It feels like not so long ago I
-        stumbled upon this world while needing a solution to market my photography services at the time.
-      </Text>
-      <br />
-      <Text
-        sx={{
-          ...theme.text.paragraph,
-          mb: 3, // Bottom margin for spacing
-          mt: 1,
-        }}
-      >
-        The variety of frameworks that have come, gone, and remained the most used before I even began my front-end
-        journey is remarkable.
-      </Text>
-      <Text
-        sx={{
-          // textAlign: 'center',
-
           mt: 4,
           display: 'block',
           ...theme.text.heading,
         }}
       >
-        This is where I compile some of my favorite discoveries and concepts.
+        {configHero.hero.heroSubdescription}
       </Text>
     </StyledSection>
   )

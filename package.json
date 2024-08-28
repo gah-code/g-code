@@ -5,7 +5,9 @@
   "version": "0.1.0",
   "author": "Gilbert Haro",
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.22.10",
     "@theme-ui/preset-base": "^0.16.1",
+    "babel-plugin-styled-components": "^2.0.7",
     "framer-motion": "^10.10.0",
     "gatsby": "^5.12.1",
     "gatsby-plugin-image": "^3.12.0",
@@ -23,10 +25,13 @@
     "gatsby-transformer-json": "^5.13.1",
     "gatsby-transformer-remark": "^6.8.0",
     "gatsby-transformer-sharp": "^5.13.1",
+    "node": "^19.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.12.0",
+    "slugify": "^1.6.6",
+    "styled-components": "^5.3.9",
     "theme-ui": "^0.16.1"
   },
   "devDependencies": {

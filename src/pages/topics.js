@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 
 import { Link } from 'gatsby'
 import { Grid, Heading, Text, Paragraph } from 'theme-ui'
