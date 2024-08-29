@@ -2,9 +2,8 @@ import React from 'react'
 import { ThemeUIProvider } from 'theme-ui'
 import theme from '../gatsby-plugin-theme-ui'
 import styled from 'styled-components'
-import GlobalStyle from '../styles/globalStyle'
-import Header from './header'
-import Footer from './footer'
+import GlobalStyle from '../styles/globalStyle' // Ensure this path is correct
+// import '../assets/css/main.css' // Ensure this file exists and path is correct
 
 const StyledLayout = styled.div`
   width: 100%;
