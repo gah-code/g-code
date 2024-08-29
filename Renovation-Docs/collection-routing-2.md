@@ -85,4 +85,3 @@ The query fetches the following data from Contentful:
 
 - **Collection Title and Description:** Displayed at the top of the page.
 - **Items List:** Each item within the collection is listed with its title and description. Each item includes a link to its detailed page based on the item's slug and its associated collection's slug.
-

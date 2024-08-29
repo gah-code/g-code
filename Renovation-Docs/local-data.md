@@ -134,4 +134,3 @@ my-gatsby-project/
 ├── gatsby-config.js
 ├── package.json
 └── README.md
-

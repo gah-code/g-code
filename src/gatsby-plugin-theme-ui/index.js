@@ -38,7 +38,6 @@ const theme = {
       lineHeight: 'medium',
       color: 'text',
       mt: 5,
-      // mb: [2, 1],
     },
     h2: {
       fontSize: [32, 48],
@@ -116,10 +115,19 @@ const theme = {
   },
   buttons: {
     primary: {
+      fontSize: 'inherit',
       color: 'textDark',
       bg: 'backgroundDark',
+      mt: [2, 3],
+      px: 3,
+      py: 1,
+      borderRadius: 10,
+
       '&:hover': {
-        bg: 'link',
+        bg: 'highlight',
+        color: 'backgroundDark',
+        borderColor: 'secondary',
+        border: '2px',
       },
     },
     secondary: {
@@ -130,4 +138,3 @@ const theme = {
 }
 
 export default theme
-

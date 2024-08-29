@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+
 import { useStaticQuery, graphql } from 'gatsby'
 
 const StyledHeader = styled.header`
@@ -18,7 +19,6 @@ const StyledLogo = styled.div`
   font-size: 2rem;
   font-weight: 900;
 `
-
 const Header = () => {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
@@ -31,13 +31,14 @@ const Header = () => {
   `)
 
   return (
-    <StyledHeader>
-      <Link to="/" aria-label="home">
-        <StyledLogo>{data.site.siteMetadata.logo}</StyledLogo>
-      </Link>
-    </StyledHeader>
+    <>
+      <StyledHeader>
+        <Link to="/" aria-label="home">
+          <StyledLogo>{data.site.siteMetadata.logo}</StyledLogo>
+        </Link>
+      </StyledHeader>
+    </>
   )
 }
 
 export default Header
-

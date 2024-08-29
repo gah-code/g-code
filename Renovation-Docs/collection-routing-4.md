@@ -66,4 +66,3 @@ src/
 │ ├── collection.js
 │ └── item.js
 gatsby-node.js
-
