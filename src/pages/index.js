@@ -8,12 +8,10 @@ import Hero from '../components/hero'
 import SEO from '../components/SEO'
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
-import AllNotes from '../components/AllNotes'
+// import AllNotes from '../components/AllNotes'
 // import HomeTagsList from '../components/HomeTagsList'
 // import AllBlogs from '../components/AllBlogs'
-// import Slider from '../components/temp/Slider'
 import CardSlider from '../components/CardSlider'
-// import ComponentData from '../components/ComponentData'
 
 function Section({ children }) {
   const ref = useRef(null)
@@ -37,21 +35,19 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home Page" />
-      {/* <main className="page"> */}
       <Section>
         <Hero />
       </Section>
       <Section>
         <CardSlider />
       </Section>
-      <AllNotes />
+      {/* <AllNotes /> */}
       <Section>
         <Tech />
       </Section>
       <Divider />
       <About maxWidth="250px" />
       <Divider />
-      {/* </main> */}
     </Layout>
   )
 }

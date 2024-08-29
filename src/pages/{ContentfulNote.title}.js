@@ -5,6 +5,8 @@ import { BsClockHistory, BsClock, BsPeople } from 'react-icons/bs'
 import Layout from '../components/layout'
 import slugify from 'slugify'
 
+import '../assets/css/main.css'
+
 const NoteTemplate = ({ data }) => {
   const {
     title,
@@ -49,7 +51,7 @@ const NoteTemplate = ({ data }) => {
                   const slug = slugify(tag, { lower: true })
 
                   return (
-                    <Link to={`/tags/${slug}`} key={index}>
+                    <Link to={`/noteTags/${slug}`} key={index}>
                       {tag}
                     </Link>
                   )

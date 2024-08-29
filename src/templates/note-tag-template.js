@@ -11,7 +11,6 @@ const NoteTagTemplate = ({ data, pageContext }) => {
       <main className="page">
         <h2>{pageContext.tag}</h2>
         <div className="tag-recipes">
-          {/* <RecipesList recipes={recipes} /> */}
           <NotesList notes={notes} />
         </div>
       </main>

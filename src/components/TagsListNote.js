@@ -4,6 +4,7 @@ import setupNoteTags from '../utils/setupNoteTags'
 import { Link } from 'gatsby'
 import slugify from 'slugify'
 import styled from 'styled-components'
+import '../assets/css/main.css'
 
 // const TagsListBlog = ({ blogs }) => {
 //   const newTags = setupBlogTags(blogs);
@@ -67,8 +68,8 @@ const TagsListNote = ({ notes }) => {
 
   return (
     <div className="tag-container">
-      <h4>Blogs</h4>
-      <div className="tags-list">
+      <h4>My Notes</h4>
+      <TagList className="tags-list">
         {newNoteTags.map((tag, index) => {
           const [text, value] = tag
           const slug = slugify(text, { lower: true })
@@ -79,9 +80,10 @@ const TagsListNote = ({ notes }) => {
             </Link>
           )
         })}
-      </div>
+      </TagList>
     </div>
   )
 }
 
 export default TagsListNote
+

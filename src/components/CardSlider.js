@@ -56,8 +56,8 @@ const ArticlesWrapper = styled.div`
 `
 
 const Card = styled.div`
-  width: 16.42rem;
-  height: 12.1rem;
+  width: 16.45rem;
+  height: 12.8rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,7 +72,7 @@ const Card = styled.div`
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: #fff;
   }
   .title {
@@ -103,10 +103,10 @@ const CardSlider = () => {
   return (
     <StyledSection initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7 }}>
       <StyledContentWrapper>
-        <h3 className="section-title">Latest Blogs</h3>
+        <h3 className="section-title">Notes</h3>
         <ArticlesWrapper>
           {notes.map((note) => {
-            const { id, title, content } = note
+            const { id, title, content, description } = note
             const slug = slugify(title, { lower: true })
             const firstTag = content.tags?.[0] || 'No Tag' // Get the first tag or default to 'No Tag'
 
@@ -119,9 +119,10 @@ const CardSlider = () => {
                     alt={title}
                     style={{ borderRadius: '20px', height: '8rem', marginBottom: '0.5rem' }}
                   /> */}
-
+                  {/* <p>{description.description}</p> */}
                   <span className="category">{firstTag}</span>
                   <h4 className="title">{title}</h4>
+                  <span className="category">what it means</span>
                 </Card>
               </Link>
             )

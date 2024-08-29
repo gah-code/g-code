@@ -8,7 +8,7 @@ import { Box } from 'theme-ui'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 
-const AboutPage = () => (
+const About = () => (
   <Layout>
     <Grid
       columns={['1fr', '1fr 2fr 1fr']} // One column on small screens, three columns on larger screens
@@ -66,4 +66,4 @@ const AboutPage = () => (
 
 export const Head = () => <SEO title="About Page" />
 
-export default AboutPage
+export default About

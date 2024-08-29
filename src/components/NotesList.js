@@ -1,10 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-
 import slugify from 'slugify'
 import '../assets/css/main.css'
-// import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 const NotesList = ({ notes = [] }) => {
   return (

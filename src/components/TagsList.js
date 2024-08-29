@@ -1,8 +1,8 @@
-import React from 'react';
-import setupTags from '../utils/setupTags';
-import { Link } from 'gatsby';
-import slugify from 'slugify';
-import styled from 'styled-components';
+import React from 'react'
+import setupTags from '../utils/setupTags'
+import { Link } from 'gatsby'
+import slugify from 'slugify'
+import styled from 'styled-components'
 
 // const StyledSection = styled.div`
 //   .tags-container {
@@ -32,26 +32,27 @@ import styled from 'styled-components';
 // `;
 
 const TagsList = ({ recipes }) => {
-  const newTags = setupTags(recipes);
+  const newTags = setupTags(recipes)
   return (
     // <StyledSection>
-    <div className='tag-container'>
+    <div className="tag-container">
       <h4>Post</h4>
-      <div className='tags-list'>
+      <div className="tags-list">
         {newTags.map((tag, index) => {
-          const [text, value] = tag;
-          const slug = slugify(text, { lower: true });
+          const [text, value] = tag
+          const slug = slugify(text, { lower: true })
 
           return (
             <Link to={`/tags/${slug}`} key={index}>
               {text} ({value})
             </Link>
-          );
+          )
         })}
       </div>
     </div>
     // </StyledSection>
-  );
-};
+  )
+}
 
-export default TagsList;
+export default TagsList
+

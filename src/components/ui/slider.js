@@ -5,8 +5,8 @@ import { Grid } from 'theme-ui'
 import { Box, Heading } from 'theme-ui'
 import styled from 'styled-components'
 import ImgThree from '../images/about.jpg'
-import theme from '../gatsby-plugin-theme-ui'
-import Card from '../components/card'
+import theme from '../../gatsby-plugin-theme-ui'
+import Card from './card'
 
 const Slider = (props) => {
   const ref = useRef(null)

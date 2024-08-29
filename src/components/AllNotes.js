@@ -53,8 +53,8 @@ const AllNotes = () => {
   return (
     <StyledSection>
       <section className="blog-container">
-        <TagsListNote items={notes} />
-        <NotesList items={notes} />
+        <TagsListNote notes={notes} />
+        <NotesList notes={notes} />
       </section>
     </StyledSection>
   )
