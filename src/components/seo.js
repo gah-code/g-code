@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * SEO component that queries for data with
  * Gatsby's useStaticQuery React hook
@@ -56,6 +57,8 @@ function Seo({ description, title, children, author, siteUrl }) {
 export default Seo
 
 =======
+=======
+>>>>>>> 4e0d886760464a8a99c53168500252a4c77bb69a
 /**
  * SEO component that queries for data with
  * Gatsby's useStaticQuery React hook
@@ -119,4 +122,7 @@ const SEO = ({ title, description, children, author, siteUrl }) => {
 }
 
 export default SEO
+<<<<<<< HEAD
 >>>>>>> 66decae... updates
+=======
+>>>>>>> 4e0d886760464a8a99c53168500252a4c77bb69a

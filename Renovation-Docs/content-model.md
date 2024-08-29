@@ -86,8 +86,14 @@ The `Tag` content type represents tags that can be assigned to blog posts for ca
   - Required: No
 
 - **Blogs**
+
   - Type: Reference (Blog)
   - Description: Blogs associated with this tag.
   - Required: No
   - Multiple: Yes
 
+- **Posts**
+  - Type: Reference (Post)
+  - Description: Posts associated with this tag.
+  - Required: No
+  - Multiple: Yes

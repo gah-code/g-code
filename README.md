@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
@@ -23,6 +24,8 @@ Contentful Integration v2 site build in the works --> https://github.com/gah-cod
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f2ecbaf1-b540-48fd-82fd-b0d389e98a81/deploy-status)](https://app.netlify.com/sites/gilbertaharocode/deploys)
 
 =======
+=======
+>>>>>>> 4e0d886760464a8a99c53168500252a4c77bb69a
 # My 2025 Website Update: Contentful-Powered Gatsby Site
 
 ## g-code Website
@@ -128,4 +131,7 @@ SEO: 93
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f2ecbaf1-b540-48fd-82fd-b0d389e98a81/deploy-status)](https://app.netlify.com/sites/gilbertaharocode/deploys)
 
 [Node](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/)
+<<<<<<< HEAD
 >>>>>>> 66decae... updates
+=======
+>>>>>>> 4e0d886760464a8a99c53168500252a4c77bb69a

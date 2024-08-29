@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
@@ -164,6 +165,8 @@ export const pageQuery = graphql`
 // ).node
 
 =======
+=======
+>>>>>>> 4e0d886760464a8a99c53168500252a4c77bb69a
 import * as React from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
@@ -234,4 +237,7 @@ export default IndexPage
 //     }
 //   }
 // `
+<<<<<<< HEAD
 >>>>>>> 66decae... updates
+=======
+>>>>>>> 4e0d886760464a8a99c53168500252a4c77bb69a

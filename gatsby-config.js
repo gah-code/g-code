@@ -7,6 +7,9 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -18,6 +21,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`, // Needed for dynamic images
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-theme-ui',
     {
@@ -27,15 +32,50 @@ module.exports = {
         name: `content`,
       },
     },
-    'gatsby-plugin-react-helmet',
-    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
+        // Add any options here
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `rpilh1nqkh8b`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_API_KEY,
+      },
+    },
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: 'Montserrat', // 'font-family' property
+              variants: ['300', '400', '500'],
+            },
+            {
+              family: 'Inconsolata',
+              variants: ['400', '500', '700'],
+            },
+          ],
+        },
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+      },
+    },
+    `gatsby-transformer-json`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -69,4 +109,3 @@ module.exports = {
     // },
   ],
 }
-

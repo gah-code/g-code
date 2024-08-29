@@ -58,4 +58,3 @@ textAlign: 'center',
         What I've been up to 2023
       </Heading> */}
       {/* <Slider /> */}
-

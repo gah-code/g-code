@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from "react"
 import { Link } from "gatsby"
 
@@ -55,6 +56,8 @@ export async function getServerData() {
   }
 }
 =======
+=======
+>>>>>>> 4e0d886760464a8a99c53168500252a4c77bb69a
 // import * as React from 'react'
 // import { Link } from 'gatsby'
 
@@ -109,4 +112,7 @@ export async function getServerData() {
 //     }
 //   }
 // }
+<<<<<<< HEAD
 >>>>>>> 66decae... updates
+=======
+>>>>>>> 4e0d886760464a8a99c53168500252a4c77bb69a
