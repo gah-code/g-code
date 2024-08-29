@@ -9,7 +9,7 @@ const NoteTags = ({ data }) => {
   return (
     <Layout>
       <main className="page">
-        <h1>Note Tags</h1>
+        <h1>Note - Tags</h1>
         <section className="tags-page">
           {newNoteTags.map((tag, index) => {
             const [text, value] = tag
