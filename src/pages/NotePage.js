@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import AllRecipes from '../components/AllRecipes'
 // import AllBlogs from '../components/AllBlogs';
 import AllNotes from '../components/AllNotes'
-import SEO from '../components/SEO'
+import SEO from '../components/seo'
 
 const NotePage = () => {
   return (

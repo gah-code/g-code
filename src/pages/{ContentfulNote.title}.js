@@ -27,7 +27,7 @@ const NoteTemplate = ({ data }) => {
               <h2>{title}</h2>
               <p>{description}</p>
               {/* icons */}
-              <div className="recipe-icons">
+              {/* <div className="recipe-icons">
                 <article>
                   <BsClock />
                   <h5>prep time</h5>
@@ -43,7 +43,7 @@ const NoteTemplate = ({ data }) => {
                   <h5>serving</h5>
                   <p>tech</p>
                 </article>
-              </div>
+              </div> */}
               {/* tags */}
               <p className="recipe-tags">
                 Tags :
@@ -77,7 +77,7 @@ const NoteTemplate = ({ data }) => {
             </article>
             <article className="second-column">
               <div>
-                <h4>ingredients</h4>
+                <h4>----</h4>
                 {/* {ingredients.map((item, index) => {
                   return (
                     <p key={index} className='single-ingredient'>

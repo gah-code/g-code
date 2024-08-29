@@ -74,12 +74,14 @@ const Card = styled.div`
     font-weight: 600;
     font-size: 0.7rem;
     color: #fff;
+    margin-bottom: 0.2rem;
   }
   .title {
-    margin-top: 0.09rem;
+    margin-top: 0.08rem;
     color: #fff;
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    line-height: 1.3;
   }
   .date {
     font-size: 0.75rem;
@@ -122,7 +124,7 @@ const CardSlider = () => {
                   {/* <p>{description.description}</p> */}
                   <span className="category">{firstTag}</span>
                   <h4 className="title">{title}</h4>
-                  <span className="category">what it means</span>
+                  {/* <span className="category">what it means</span> */}
                 </Card>
               </Link>
             )
