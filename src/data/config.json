@@ -34,17 +34,17 @@
       {
         "id": 0,
         "type": "li",
-        "text": "Headless Content Modeling"
+        "text": "Content Modeling"
       },
       {
         "id": 1,
         "type": "li",
-        "text": "Component driven architecture"
+        "text": "Component Driven Architecture"
       },
       {
         "id": 3,
         "type": "li",
-        "text": "Node types"
+        "text": "GraphQL (SQL)"
       }
     ]
   },

@@ -71,5 +71,5 @@ yarn-error.log
 
 #other 
 .content.md
-Renovation-Docs/*
+Renovation-Docs/
 /src/pages/recipes.js
