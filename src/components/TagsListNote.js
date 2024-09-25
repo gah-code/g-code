@@ -1,6 +1,7 @@
 import React from 'react'
 // import setupBlogTags from '../utils/setupBlogTags';
 import setupNoteTags from '../utils/setupNoteTags'
+
 import { Link } from 'gatsby'
 import slugify from 'slugify'
 import styled from 'styled-components'
@@ -75,7 +76,7 @@ const TagsListNote = ({ notes }) => {
           const slug = slugify(text, { lower: true })
 
           return (
-            <Link to={`/noteTags/${slug}`} key={index}>
+            <Link to={`/tags/${slug}`} key={index}>
               {text} ({value})
             </Link>
           )

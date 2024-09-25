@@ -3,67 +3,73 @@ import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { BsClockHistory, BsClock, BsPeople } from 'react-icons/bs'
 import Layout from '../components/layout'
+import StyledSection from '../styles/StyledSection'
+
 import slugify from 'slugify'
 
-import '../assets/css/main.css'
+// import '../assets/css/main.css'
 
 const NoteTemplate = ({ data }) => {
   const {
     title,
-    content,
+    content: { subheading, copy, tags, tools }, // Access `copy` from within `content`
     description: { description },
     image,
   } = data.contentfulNote
   const pathToImage = getImage(image)
-  const { tags } = content
+  // const { tags } = content
   return (
     <Layout>
       <main className="page">
-        <div className="recipe-page">
-          {/* hero */}
-          <section className="recipe-hero">
-            <GatsbyImage image={pathToImage} alt={title} className="about-img" />
-            <article className="recipe-info">
-              <h2>{title}</h2>
-              <p>{description}</p>
-              {/* icons */}
-              {/* <div className="recipe-icons">
-                <article>
-                  <BsClock />
-                  <h5>prep time</h5>
-                  <p>reading time</p>
-                </article>
-                <article>
-                  <BsClockHistory />
-                  <h5>cook time</h5>
-                  <p>time</p>
-                </article>
-                <article>
-                  <BsPeople />
-                  <h5>serving</h5>
-                  <p>tech</p>
-                </article>
-              </div> */}
-              {/* tags */}
-              <p className="recipe-tags">
-                Tags :
-                {tags.map((tag, index) => {
-                  const slug = slugify(tag, { lower: true })
+        <StyledSection maxWidth="100rem" padding="4rem 2rem" columnGap84="4rem" rowGap84="8rem">
+          <div className="recipe-page">
+            {/* hero */}
+            <section className="recipe-hero">
+              <GatsbyImage image={pathToImage} alt={title} className="" />
+              <article className="recipe-info">
+                <h1>{title}</h1>
+                <p>{description}</p>
+                {/* icons */}
+                <div className="recipe-icons">
+                  <article>
+                    <BsClock />
+                    {/* <h5>prep time</h5>
+                  <p>reading time</p> */}
+                  </article>
+                  <article>
+                    <BsClockHistory />
+                    {/* <h5>cook time</h5>
+                  <p>time</p> */}
+                  </article>
+                  <article>
+                    <BsPeople />
+                    {/* <h5>serving</h5>
+                  <p>tech</p> */}
+                  </article>
+                </div>
+                {/* tags */}
+                <p className="recipe-tags">
+                  Tags :
+                  {tags.map((tag, index) => {
+                    const slug = slugify(tag, { lower: true })
 
-                  return (
-                    <Link to={`/noteTags/${slug}`} key={index}>
-                      {tag}
-                    </Link>
-                  )
-                })}
-              </p>
-            </article>
-          </section>
-          {/* rest of the content */}
-          <section className="recipe-content">
-            <article>
-              <h4>instructions</h4>
-              {/* {instructions.map((item, index) => {
+                    return (
+                      <Link to={`/notes/${slug}`} key={index}>
+                        {tag}
+                      </Link>
+                    )
+                  })}
+                </p>
+              </article>
+            </section>
+            {/* rest of the content */}
+            <section className="recipe-content">
+              <article>
+                {/* <h4>instructions</h4> */}
+                <h4>{subheading}</h4>
+                <p>{copy}</p>
+
+                {/* {instructions.map((item, index) => {
                 return (
                   <div key={index} className='single-instruction'>
                     <header>
@@ -74,31 +80,32 @@ const NoteTemplate = ({ data }) => {
                   </div>
                 );
               })} */}
-            </article>
-            <article className="second-column">
-              <div>
-                <h4>----</h4>
-                {/* {ingredients.map((item, index) => {
+              </article>
+              <article className="second-column">
+                <div>
+                  {/* <h4>----</h4> */}
+                  {/* {ingredients.map((item, index) => {
                   return (
                     <p key={index} className='single-ingredient'>
                       {item}
                     </p>
                   );
                 })} */}
-              </div>
-              <div>
-                <h4>tools</h4>
-                {/* {tools.map((item, index) => {
-                  return (
-                    <p key={index} className='single-tool'>
-                      {item}
-                    </p>
-                  );
-                })} */}
-              </div>
-            </article>
-          </section>
-        </div>
+                </div>
+                <div>
+                  <h4>tools</h4>
+                  {tools.map((item, index) => {
+                    return (
+                      <p key={index} className="single-tool">
+                        {item}
+                      </p>
+                    )
+                  })}
+                </div>
+              </article>
+            </section>
+          </div>
+        </StyledSection>
       </main>
     </Layout>
   )
@@ -111,6 +118,8 @@ export const query = graphql`
       content {
         ingredients
         instructions
+        subheading
+        copy
         tools
         tags
       }

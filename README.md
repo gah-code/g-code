@@ -103,3 +103,5 @@ SEO: 93
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f2ecbaf1-b540-48fd-82fd-b0d389e98a81/deploy-status)](https://app.netlify.com/sites/gilbertaharocode/deploys)
 
 [Node](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/)
+
+CONTENTFUL BUILD HOOK NEEDED

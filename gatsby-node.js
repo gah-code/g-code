@@ -57,7 +57,7 @@ exports.createPages = async ({ graphql, actions }) => {
     note.content.tags.forEach((tag) => {
       const tagSlug = slugify(tag, { lower: true })
       createPage({
-        path: `/noteTags/${tagSlug}`,
+        path: `/notes/${tagSlug}`,
         component: path.resolve(`src/templates/note-tag-template.js`),
         context: {
           tag: tag,
