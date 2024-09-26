@@ -22,11 +22,6 @@ const About = ({ alt, maxWidth }) => {
             San Jose, CA with my girlfriend and our adorable pup named 🌯. Our weekdays are filled with work, study, and
             workouts, but on the weekends, we love hanging out with friends and indulging in some delicious tacos!
           </Text>
-          {/* <br /> */}
-          {/* <Link style={{ paddingTop: '1rem' }} to="/about-page/">
-            Read More
-          </Link> */}
-          {/* <span className="highlighted">{frontmatter.subtitleHighlight}</span> */}
         </div>
         <PhotoWrapper>
           <Photo src={aboutImg} alt={alt} maxWidth={maxWidth} />

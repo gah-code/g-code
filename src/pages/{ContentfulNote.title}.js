@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { Heading, Text, Button, Paragraph } from 'theme-ui'
+import theme from '../gatsby-plugin-theme-ui'
+
 import { BsClockHistory, BsClock, BsPeople } from 'react-icons/bs'
 import Layout from '../components/layout'
 import StyledSection from '../styles/StyledSection'
@@ -24,25 +27,32 @@ const NoteTemplate = ({ data }) => {
         <StyledSection maxWidth="100rem" padding="4rem 2rem" columnGap84="4rem" rowGap84="8rem">
           <div className="recipe-page">
             {/* hero */}
-            <section className="recipe-hero">
+            <section className="post-hero">
               <GatsbyImage image={pathToImage} alt={title} className="" />
               <article className="recipe-info">
-                <h1>{title}</h1>
-                <p>{description}</p>
+                <Heading
+                  sx={{
+                    mb: 3,
+                    ...theme.styles.h2,
+                  }}
+                >
+                  {title}
+                </Heading>
+                <Text sx={{ mb: 2, ...theme.text.paragraph }}>{description}</Text>
                 {/* icons */}
                 <div className="recipe-icons">
                   <article>
-                    <BsClock />
+                    {/* <BsClock /> */}
                     {/* <h5>prep time</h5>
                   <p>reading time</p> */}
                   </article>
                   <article>
-                    <BsClockHistory />
+                    {/* <BsClockHistory /> */}
                     {/* <h5>cook time</h5>
                   <p>time</p> */}
                   </article>
                   <article>
-                    <BsPeople />
+                    {/* <BsPeople /> */}
                     {/* <h5>serving</h5>
                   <p>tech</p> */}
                   </article>
@@ -66,8 +76,15 @@ const NoteTemplate = ({ data }) => {
             <section className="recipe-content">
               <article>
                 {/* <h4>instructions</h4> */}
-                <h4>{subheading}</h4>
-                <p>{copy}</p>
+                <Heading
+                  sx={{
+                    mb: 2,
+                    ...theme.styles.h3,
+                  }}
+                >
+                  {subheading}
+                </Heading>
+                <Text sx={{ mb: 2, ...theme.text.paragraph }}>{copy}</Text>
 
                 {/* {instructions.map((item, index) => {
                 return (
@@ -91,8 +108,25 @@ const NoteTemplate = ({ data }) => {
                     </p>
                   );
                 })} */}
+                  <div>
+                    <Heading
+                      sx={{
+                        mb: 2,
+                        ...theme.styles.h4,
+                      }}
+                    >
+                      Tools
+                    </Heading>
+                    {tools.map((item, index) => {
+                      return (
+                        <p key={index} className="single-tool">
+                          {item}
+                        </p>
+                      )
+                    })}
+                  </div>
                 </div>
-                <div>
+                {/* <div>
                   <h4>tools</h4>
                   {tools.map((item, index) => {
                     return (
@@ -101,7 +135,7 @@ const NoteTemplate = ({ data }) => {
                       </p>
                     )
                   })}
-                </div>
+                </div> */}
               </article>
             </section>
           </div>

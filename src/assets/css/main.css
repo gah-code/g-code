@@ -711,6 +711,25 @@ form > *:last-child {
   display: grid;
   gap: 3rem;
 }
+.post-hero {
+  display: grid;
+  gap: 3rem;
+  padding: 2rem 0;
+}
+
+.post-hero h1 {
+  font-size: 2rem;
+}
+
+.post-hero p {
+  font-size: 1rem;
+}
+
+.post-hero .about-img {
+  /* height: auto; */
+  /* width: 100%; */
+}
+
 .recipe-hero .about-img {
   height: 400px;
 }
@@ -752,6 +771,10 @@ form > *:last-child {
 }
 @media screen and (min-width: 992px) {
   .recipe-hero {
+    grid-template-columns: 4fr 5fr;
+    align-items: center;
+  }
+  .post-hero {
     grid-template-columns: 4fr 5fr;
     align-items: center;
   }
