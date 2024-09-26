@@ -3,13 +3,11 @@ import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Heading, Text, Button, Paragraph } from 'theme-ui'
 import theme from '../gatsby-plugin-theme-ui'
-
 import { BsClockHistory, BsClock, BsPeople } from 'react-icons/bs'
 import Layout from '../components/layout'
 import StyledSection from '../styles/StyledSection'
 
 import slugify from 'slugify'
-
 // import '../assets/css/main.css'
 
 const NoteTemplate = ({ data }) => {
@@ -39,7 +37,6 @@ const NoteTemplate = ({ data }) => {
                   {title}
                 </Heading>
                 <Text sx={{ mb: 2, ...theme.text.paragraph }}>{description}</Text>
-                {/* icons */}
                 <div className="recipe-icons">
                   <article>
                     {/* <BsClock /> */}
