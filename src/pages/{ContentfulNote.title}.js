@@ -6,6 +6,7 @@ import theme from '../gatsby-plugin-theme-ui'
 import { BsClockHistory, BsClock, BsPeople } from 'react-icons/bs'
 import Layout from '../components/layout'
 import StyledSection from '../styles/StyledSection'
+// import theme from '../gatsby-plugin-theme-ui'
 
 import slugify from 'slugify'
 // import '../assets/css/main.css'
@@ -55,18 +56,30 @@ const NoteTemplate = ({ data }) => {
                   </article>
                 </div>
                 {/* tags */}
-                <p className="recipe-tags">
+
+                <Text
+                  sx={{
+                    mt: 1,
+
+                    ...theme.text.heading,
+                  }}
+                >
                   Tags :
                   {tags.map((tag, index) => {
                     const slug = slugify(tag, { lower: true })
 
                     return (
-                      <Link to={`/notes/${slug}`} key={index}>
-                        {tag}
-                      </Link>
+                      <Button
+                        variant="secondary"
+                        sx={{ m: 1, borderWidth: '2px', borderColor: 'primary', borderStyle: 'solid' }}
+                      >
+                        <Link to={`/notes/${slug}`} key={index}>
+                          {tag}
+                        </Link>
+                      </Button>
                     )
                   })}
-                </p>
+                </Text>
               </article>
             </section>
             {/* rest of the content */}

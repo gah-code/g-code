@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import aboutImg from '../../images/about.jpg'
 import { Heading, Text } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
-import { graphql, Link } from 'gatsby'
 
 const About = ({ alt, maxWidth }) => {
   return (

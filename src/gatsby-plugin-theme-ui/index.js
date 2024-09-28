@@ -131,8 +131,15 @@ const theme = {
       },
     },
     secondary: {
-      color: 'background',
-      bg: 'secondary',
+      fontSize: [1],
+      color: 'text',
+      bg: 'highlight',
+      borderRadius: 20,
+      fontWeight: 600,
+      textTransform: 'uppercase',
+      '&:hover': {
+        bg: 'textDark',
+      },
     },
   },
 }
