@@ -179,7 +179,7 @@ const Tech = ({ content }) => {
             <li>Node types </li>
           </ul>
 
-          <Button variant="primary">
+          <Button variant="secondary" sx={{ mt: 2 }}>
             <Link to="/topics/">Read more</Link>
           </Button>
         </div>

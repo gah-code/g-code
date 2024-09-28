@@ -1,3 +1,5 @@
+import { color } from 'framer-motion'
+
 // example theme file
 const theme = {
   colors: {
@@ -131,14 +133,21 @@ const theme = {
       },
     },
     secondary: {
-      fontSize: [1],
-      color: 'text',
-      bg: 'highlight',
-      borderRadius: 20,
-      fontWeight: 600,
+      ml: 2,
+      border: '3px solid',
+      borderColor: 'primary',
+      fontSize: '0.8rem',
+      fontWeight: 700,
+      backgroundColor: 'primary',
+      borderRadius: '20px',
+      textDecoration: 'none',
+      transition: 'all 0.3s',
+      color: 'textDark',
       textTransform: 'uppercase',
+      letterSpacing: '0.7px',
       '&:hover': {
-        bg: 'textDark',
+        backgroundColor: 'highlight',
+        color: 'text',
       },
     },
   },

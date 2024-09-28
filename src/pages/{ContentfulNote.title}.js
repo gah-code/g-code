@@ -31,13 +31,13 @@ const NoteTemplate = ({ data }) => {
               <article className="recipe-info">
                 <Heading
                   sx={{
-                    mb: 3,
+                    mb: 4,
                     ...theme.styles.h2,
                   }}
                 >
                   {title}
                 </Heading>
-                <Text sx={{ mb: 2, ...theme.text.paragraph }}>{description}</Text>
+                <Text sx={{ ...theme.text.paragraph }}>{description}</Text>
                 <div className="recipe-icons">
                   <article>
                     {/* <BsClock /> */}
@@ -67,12 +67,8 @@ const NoteTemplate = ({ data }) => {
                   Tags :
                   {tags.map((tag, index) => {
                     const slug = slugify(tag, { lower: true })
-
                     return (
-                      <Button
-                        variant="secondary"
-                        sx={{ m: 1, borderWidth: '2px', borderColor: 'primary', borderStyle: 'solid' }}
-                      >
+                      <Button variant="secondary">
                         <Link to={`/notes/${slug}`} key={index}>
                           {tag}
                         </Link>
@@ -94,7 +90,7 @@ const NoteTemplate = ({ data }) => {
                 >
                   {subheading}
                 </Heading>
-                <Text sx={{ mb: 2, ...theme.text.paragraph }}>{copy}</Text>
+                <Text sx={{ mb: 1, ...theme.text.paragraph }}>{copy}</Text>
 
                 {/* {instructions.map((item, index) => {
                 return (
