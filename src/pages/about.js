@@ -41,23 +41,6 @@ const About = () => (
         <Text sx={theme.text.paragraph}></Text>
       </Box>
     </Grid>
-
-    {/* <Grid
-      columns={['1fr', '1fr 2fr']} // One column on small screens, two columns on larger screens
-      gap={4}
-      sx={{
-        padding: 4,
-      }}
-    >
-      <Box sx={{ backgroundColor: 'white', padding: 3 }}>
-        <h2>Column 1</h2>
-        <p>This is the left column content.</p>
-      </Box>
-      <Box sx={{ backgroundColor: 'white', padding: 3 }}>
-        <h2>Column 2</h2>
-        <p>This is the right column content.</p>
-      </Box>
-    </Grid> */}
     <Text sx={{ padding: 3, ...theme.text.paragraph }}>
       <Link to="/">Go back </Link>
     </Text>

@@ -10,6 +10,7 @@ import StyledSection from '../styles/StyledSection'
 
 import slugify from 'slugify'
 // import '../assets/css/main.css'
+import SEO from '../components/seo' // Import SEO component
 
 const NoteTemplate = ({ data }) => {
   const {
@@ -18,6 +19,7 @@ const NoteTemplate = ({ data }) => {
     description: { description },
     image,
   } = data.contentfulNote
+
   const pathToImage = getImage(image)
   // const { tags } = content
   return (
@@ -151,6 +153,22 @@ const NoteTemplate = ({ data }) => {
   )
 }
 
+// SEO Component
+export const Head = ({ data }) => {
+  const {
+    title,
+    description: { description },
+    content: { copy },
+  } = data.contentfulNote
+
+  return (
+    <SEO
+      title={title}
+      content={copy || 'Explore this note for more insights and learnings.'} // Fallback description
+    />
+  )
+}
+
 export const query = graphql`
   query getSingleNote($title: String) {
     contentfulNote(title: { eq: $title }) {
@@ -166,7 +184,6 @@ export const query = graphql`
       description {
         description
       }
-
       image {
         gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
       }

@@ -8,9 +8,6 @@ import Hero from '../components/hero'
 import SEO from '../components/seo'
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
-// import AllNotes from '../components/AllNotes'
-// import HomeTagsList from '../components/HomeTagsList'
-// import AllBlogs from '../components/AllBlogs'
 import CardSlider from '../components/CardSlider'
 
 function Section({ children }) {

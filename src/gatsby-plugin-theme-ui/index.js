@@ -4,7 +4,8 @@ import { color } from 'framer-motion'
 const theme = {
   colors: {
     text: '#333',
-    textDark: '#f9f4e3',
+    textDark: '#222',
+    textLight: '#f9f4e3',
     background: '#ddf3e4',
     backgroundDark: '#263147',
     primary: '#2A3439',
@@ -118,9 +119,9 @@ const theme = {
   buttons: {
     primary: {
       fontSize: 'inherit',
-      color: 'textDark',
+      color: 'textLight',
       bg: 'backgroundDark',
-      mt: [2, 3],
+      mt: [3, 4],
       px: 3,
       py: 1,
       borderRadius: 10,
@@ -134,20 +135,23 @@ const theme = {
     },
     secondary: {
       ml: 2,
+      px: 3,
+      py: 1,
       border: '3px solid',
       borderColor: 'primary',
-      fontSize: '0.8rem',
+      fontSize: '0.7rem',
       fontWeight: 700,
-      backgroundColor: 'primary',
-      borderRadius: '20px',
+      borderRadius: '25px',
       textDecoration: 'none',
       transition: 'all 0.3s',
-      color: 'textDark',
       textTransform: 'uppercase',
       letterSpacing: '0.7px',
+      backgroundColor: 'background',
+      color: 'text',
+
       '&:hover': {
-        backgroundColor: 'highlight',
-        color: 'text',
+        backgroundColor: 'primary',
+        color: 'textLight',
       },
     },
   },
