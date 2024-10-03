@@ -4,9 +4,25 @@ import { Link } from 'gatsby'
 import { Grid, Heading, Text, Box } from 'theme-ui'
 import theme from '../gatsby-plugin-theme-ui'
 import SEO from '../components/seo'
+import NodeGraph from '../components/NodeGraph'
 
 const Topics = () => (
   <Layout>
+    <Heading
+      as="h2"
+      sx={{
+        fontSize: [5, 5],
+        color: 'primary',
+        fontFamily: 'heading',
+        mb: 4,
+        mt: 1,
+        padding: 5,
+      }}
+    >
+      ...{' '}
+    </Heading>
+    <NodeGraph />
+
     <Grid
       columns={['1fr', '1fr 2fr 1fr']} // One column on small screens, three columns on larger screens
       gap={[4, 4]} // Adjust spacing for better readability on small screens
@@ -37,7 +53,7 @@ const Topics = () => (
             },
           }}
         >
-          <Heading
+          {/* <Heading
             as="h2"
             sx={{
               fontSize: [5, 5],
@@ -48,17 +64,17 @@ const Topics = () => (
             }}
           >
             What I've been digging into
-          </Heading>
+          </Heading> */}
 
-          <Text sx={{ marginBottom: '3rem', ...theme.text.paragraph }}>
+          {/* <Text sx={{ marginBottom: '3rem', ...theme.text.paragraph }}>
             Working on it
             <strong> ! </strong>.
-          </Text>
+          </Text> */}
           <br />
 
           <hr />
 
-          <Box
+          {/* <Box
             as="ul"
             sx={{
               listStyleType: 'disc',
@@ -66,7 +82,7 @@ const Topics = () => (
               marginTop: '2rem',
               paddingLeft: '1rem',
               color: 'text',
-              fontSize: '1.2rem',
+              fontSize: '1.1rem',
               lineHeight: '1.75',
             }}
           >
@@ -109,11 +125,12 @@ const Topics = () => (
             >
               Everything React Hooks{' '}
             </Box>
-          </Box>
+          </Box> */}
 
-          <Box
+          {/* <Box
             as="blockquote"
             sx={{
+              fontSize: '1rem',
               borderLeftWidth: '5px',
               borderLeftStyle: 'solid',
               borderLeftColor: 'highlight',
@@ -136,7 +153,7 @@ const Topics = () => (
             Real education is about genuine understanding and the ability to figure things out on your own; not about
             making sure every 7th grader has memorized all the facts some bureaucrats have put in the 7th grade
             curriculum. Be curious. Read widely. Try new things.
-          </Box>
+          </Box> */}
         </article>
       </Box>
     </Grid>

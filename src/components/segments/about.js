@@ -3,11 +3,14 @@ import styled from 'styled-components'
 import aboutImg from '../../images/about.jpg'
 import { Heading, Text } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
+import GridWrapper from '../../styles/gridWrapper'
+import StyledSection from '../../styles/StyledSection' // Import the reusable StyledSection
 
 const About = ({ alt, maxWidth }) => {
   return (
-    <StyledSection>
-      <div className="container grid-2">
+    // Use the StyledSection component and pass in props for reusability
+    <StyledSection maxWidth="80rem" padding="4rem 2rem" columnGap84="6rem" rowGap84="8rem">
+      <GridWrapper className="grid--2-cols">
         <div>
           <Heading
             sx={{
@@ -17,76 +20,18 @@ const About = ({ alt, maxWidth }) => {
             About
           </Heading>
           <Text sx={theme.text.paragraph}>
-            {' '}
             San Jose, CA with my girlfriend and our adorable pup named 🌯. Our weekdays are filled with work, study, and
-            workouts, but on the weekends, we love hanging out with friends and indulging in some delicious tacos!
+            workouts, but on the weekends, we love hanging out with friends and indulging in some delicious food and
+            wine.
           </Text>
         </div>
         <PhotoWrapper>
-          <Photo src={aboutImg} alt={alt} maxWidth={maxWidth} />
+          <Photo src={aboutImg} alt={alt} maxWidth={maxWidth || '100%'} />
         </PhotoWrapper>
-      </div>
+      </GridWrapper>
     </StyledSection>
   )
 }
-
-const StyledSection = styled.section`
-  max-width: 120rem;
-  padding: 3.9rem 2rem;
-
-  @media (max-width: 84em) {
-    column-gap: 5rem;
-    row-gap: 7rem;
-  }
-
-  @media (max-width: 75em) {
-    column-gap: 2rem;
-    row-gap: 6.9rem;
-  }
-
-  @media (max-width: 59em) {
-    column-gap: 1rem;
-    row-gap: 6rem;
-  }
-
-  @media (max-width: 34em) {
-    padding: 3rem 0.8rem 2rem 0.8rem;
-    row-gap: 5rem;
-  }
-
-  .subtitle {
-    margin-top: 2rem;
-  }
-  .highlighted {
-    color: hsl(260, 20%, 40%);
-    font-size: 1.2rem;
-    display: grid;
-    padding: 1rem 0 2rem 0;
-  }
-  .projects {
-    width: 444px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    justify-content: center;
-  }
-
-  .item {
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    padding: 10px 18px;
-    padding-right: 20px;
-    cursor: pointer;
-    border-top: 4px solid #fff;
-    border-bottom: 4px solid #fff;
-    border-radius: 20px;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    column-gap: 24px;
-    row-gap: 32px;
-    align-items: center;
-    background: #7887;
-  }
-`
 
 const PhotoWrapper = styled.div`
   position: relative;

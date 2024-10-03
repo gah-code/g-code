@@ -1,21 +1,39 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { Heading, Text, Button, Paragraph } from 'theme-ui'
+import { Heading, Text, Button } from 'theme-ui'
+import styled from 'styled-components'
+
 import theme from '../gatsby-plugin-theme-ui'
 import { BsClockHistory, BsClock, BsPeople } from 'react-icons/bs'
 import Layout from '../components/layout'
 import StyledSection from '../styles/StyledSection'
-// import theme from '../gatsby-plugin-theme-ui'
-
 import slugify from 'slugify'
-// import '../assets/css/main.css'
-import SEO from '../components/seo' // Import SEO component
+import SEO from '../components/seo'
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #2a3439;
+  font-weight: bold;
+  padding: 1.5rem 0;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    color: #c4e4;
+  }
+
+  &:active {
+    background-color: #c4e4ff;
+  }
+`
 
 const NoteTemplate = ({ data }) => {
   const {
     title,
-    content: { subheading, copy, tags, tools }, // Access `copy` from within `content`
+    content: { subheading, copy, tags, tools, link },
     description: { description },
     image,
   } = data.contentfulNote
@@ -40,6 +58,7 @@ const NoteTemplate = ({ data }) => {
                   {title}
                 </Heading>
                 <Text sx={{ ...theme.text.paragraph }}>{description}</Text>
+
                 <div className="recipe-icons">
                   <article>
                     {/* <BsClock /> */}
@@ -92,7 +111,9 @@ const NoteTemplate = ({ data }) => {
                 >
                   {subheading}
                 </Heading>
-                <Text sx={{ mb: 1, ...theme.text.paragraph }}>{copy}</Text>
+                <Text sx={{ mb: 3, ...theme.text.paragraph }}>{copy}</Text>
+
+                <StyledLink>{link}</StyledLink>
 
                 {/* {instructions.map((item, index) => {
                 return (
@@ -156,15 +177,14 @@ const NoteTemplate = ({ data }) => {
 // SEO Component
 export const Head = ({ data }) => {
   const {
-    title,
-    description: { description },
-    content: { copy },
+    seoTitle,
+    seoDescription: { seoDescription },
   } = data.contentfulNote
 
   return (
     <SEO
-      title={title}
-      content={copy || 'Explore this note for more insights and learnings.'} // Fallback description
+      title={seoTitle}
+      description={seoDescription || 'Explore this note for more insights and learnings.'} // Fallback description
     />
   )
 }
@@ -179,10 +199,15 @@ export const query = graphql`
         subheading
         copy
         tools
+        link
         tags
       }
       description {
         description
+      }
+      seoTitle
+      seoDescription {
+        seoDescription
       }
       image {
         gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)

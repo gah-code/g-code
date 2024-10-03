@@ -38,8 +38,13 @@ const StyledContentWrapper = styled.div`
   box-sizing: border-box;
 
   .section-title {
-    margin: 3rem 0 3rem 2rem;
+    font-size: 1.2rem;
+    margin: 3rem 0 2rem 2.5rem;
   }
+
+  /* .highlighted {
+    box-shadow: inset 0 -1.5rem 4.5rem #61ad;
+  } */
 `
 
 const ArticlesWrapper = styled.div`
@@ -105,7 +110,10 @@ const CardSlider = () => {
   return (
     <StyledSection initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7 }}>
       <StyledContentWrapper>
-        <h3 className="section-title">Notes</h3>
+        <h3 className="section-title">
+          {' '}
+          <span className="highlighted">NOTES</span>
+        </h3>
         <ArticlesWrapper>
           {notes.map((note) => {
             const { id, title, content, description } = note

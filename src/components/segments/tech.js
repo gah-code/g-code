@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { Heading, Text, Button, Paragraph } from 'theme-ui'
+import { Heading, Text, Button } from 'theme-ui'
 import theme from '../../gatsby-plugin-theme-ui'
+import GridWrapper from '../../styles/gridWrapper'
+import StyledSection from '../../styles/StyledSection'
 
 const skills = [
   {
@@ -143,10 +145,10 @@ const skills = [
   },
 ]
 
-const Tech = ({ content }) => {
+const Tech = () => {
   return (
-    <StyledSection>
-      <div className="container grid-2">
+    <TechSection maxWidth="85rem" padding="4rem 2rem" columnGap84="4rem" rowGap84="6rem">
+      <GridWrapper className="grid--2-cols">
         <div className="data">
           <SkillList />
         </div>
@@ -157,7 +159,6 @@ const Tech = ({ content }) => {
             }}
           >
             Syntax and Systems
-            {/* {frontmatter.title} */}
           </Heading>
           <Text sx={theme.text.paragraph}>
             With many possible solutions for building modern web applications, developer experience could be considered
@@ -183,8 +184,8 @@ const Tech = ({ content }) => {
             <Link to="/topics/">Read more</Link>
           </Button>
         </div>
-      </div>
-    </StyledSection>
+      </GridWrapper>
+    </TechSection>
   )
 }
 
@@ -198,31 +199,18 @@ function SkillList() {
   )
 }
 
-function Skill({ skill, color, level }) {
+function Skill({ skill, color }) {
   return (
     <div className="skill" style={{ backgroundColor: color }}>
       <span>{skill}</span>
-      {/* <span>
-        {level === 'beginner' && ''}
-        {level === 'intermediate' && ''}
-        {level === 'advanced' && ''}
-      </span> */}
     </div>
   )
 }
 
-const StyledSection = styled.section`
+// Preserve the same styles for the .item, .project, and other classes
+const TechSection = styled(StyledSection)`
   position: relative;
   padding: 3.5rem 2rem;
-
-  @media (max-width: 84em) {
-    padding: 5.8rem 0;
-  }
-
-  @media (max-width: 34em) {
-    padding: 3rem 0.8rem 2rem 0.8rem;
-    row-gap: 5rem;
-  }
 
   .item {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -237,7 +225,6 @@ const StyledSection = styled.section`
     column-gap: 24px;
     row-gap: 32px;
     align-items: center;
-    /* background: #7887; */
   }
 
   .project {
@@ -246,12 +233,10 @@ const StyledSection = styled.section`
   }
 
   li {
-    color: #263147;
+    color: #222;
     list-style-type: disc;
   }
-  li:first-of-type {
-    color: #263147;
-  }
+
   .data {
     padding: 32px 0;
     padding-top: 10px;
@@ -292,6 +277,7 @@ const StyledSection = styled.section`
       padding: 0 0.2rem;
     }
   }
+
   @media (max-width: 34em) {
     .skill-list {
       gap: 6px;
@@ -307,7 +293,6 @@ const StyledSection = styled.section`
     }
   }
 
-  /* BELOW 544px (Phones) */
   @media (max-width: 34em) {
     .grid--2-cols-other {
       grid-template-columns: 1fr;
@@ -320,10 +305,6 @@ const StyledSection = styled.section`
     .skill-list {
       margin-top: 1.5rem;
     }
-
-    /* .step-img-box {
-      transform: translateY(2.4rem);
-    } */
   }
 `
 
