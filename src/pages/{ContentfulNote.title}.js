@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Heading, Text, Button } from 'theme-ui'
 import styled from 'styled-components'
-
+import '../assets/css/main.css'
 import theme from '../gatsby-plugin-theme-ui'
 import { BsClockHistory, BsClock, BsPeople } from 'react-icons/bs'
 import Layout from '../components/layout'
@@ -113,7 +113,7 @@ const NoteTemplate = ({ data }) => {
                 </Heading>
                 <Text sx={{ mb: 3, ...theme.text.paragraph }}>{copy}</Text>
 
-                <StyledLink>{link}</StyledLink>
+                {/* <a>{link}</a> */}
 
                 {/* {instructions.map((item, index) => {
                 return (
