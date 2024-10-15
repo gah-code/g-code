@@ -34,7 +34,7 @@ const Footer = () => (
           py: 4,
         }}
       >
-        <Link href="https://www.linkedin.com/in/gilbert-haro-2b108222b/" sx={{ variant: 'styles.navlink', p: 2 }}>
+        <Link href="https://www.linkedin.com/in/gilberto-haro-2b108222b/" sx={{ variant: 'styles.navlink', p: 2 }}>
           <FaLinkedin />
         </Link>
         <Link href="https://codepen.io/Gilbert-Haro" sx={{ variant: 'styles.navlink', p: 2 }}>
