@@ -3,7 +3,11 @@ import styled from 'styled-components'
 const StyledSection = styled.section`
   /* Add styles here */
   position: relative;
-  padding: 3.5rem 2rem;
+  padding: 4rem 2.5rem;
+
+  @media (max-width: 34em) {
+    padding: 4rem 0.5rem;
+  }
 
   .item {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -32,7 +36,7 @@ const StyledSection = styled.section`
 
   .data {
     padding: 32px 0;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     position: relative;
     display: flex;
     align-items: center;
@@ -46,7 +50,7 @@ const StyledSection = styled.section`
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 2rem;
-    max-width: 32rem;
+    max-width: 34rem;
   }
 
   .skill {
@@ -73,16 +77,18 @@ const StyledSection = styled.section`
 
   @media (max-width: 34em) {
     .skill-list {
-      gap: 6px;
-      margin: 1.5rem 0 5rem 0;
+      gap: 5px;
+      margin: 1.5rem 0 1rem 0;
     }
     .skill {
       padding: 0.6rem 0.8rem;
-      font-size: 0.7rem;
+      font-size: 0.8rem;
     }
 
     .data {
       padding: 0;
+      align-items: left;
+      justify-content: left;
     }
   }
 

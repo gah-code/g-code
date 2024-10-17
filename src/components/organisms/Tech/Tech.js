@@ -7,7 +7,7 @@ import StyledSection from './Tech.styles'
 import theme from '../../../gatsby-plugin-theme-ui'
 import { Link } from 'gatsby'
 
-const Tech = () => {
+const Tech = ({ maxWidth }) => {
   const skills = [
     /* skills data here */
     {
@@ -149,44 +149,43 @@ const Tech = () => {
   ]
 
   return (
-    <StyledSection>
+    <StyledSection maxWidth="80rem">
       <GridWrapper className="grid--2-cols">
         <div className="data">
           <SkillList skills={skills} />
         </div>
+
         <div>
-          <div>
-            <Heading
-              sx={{
-                ...theme.styles.h3,
-              }}
-            >
-              Syntax and Systems
-            </Heading>
-            <Text sx={theme.text.paragraph}>
-              With many possible solutions for building modern web applications, developer experience could be
-              considered like never before.
-            </Text>
+          <Heading
+            sx={{
+              ...theme.styles.h3,
+            }}
+          >
+            Syntax and Systems
+          </Heading>
+          <Text sx={theme.text.paragraph}>
+            With many possible solutions for building modern web applications, developer experience could be considered
+            like never before.
+          </Text>
 
-            <Text
-              sx={{
-                mt: 3,
-                display: 'block',
-                ...theme.text.heading,
-              }}
-            >
-              What I've been digging into this year:
-            </Text>
-            <ul>
-              <li>Headless Content Modeling </li>
-              <li>Component driven architecture </li>
-              <li>Node types </li>
-            </ul>
+          <Text
+            sx={{
+              mt: 3,
+              display: 'block',
+              ...theme.text.heading,
+            }}
+          >
+            Some modern front-end development practices I've been digging into:
+          </Text>
+          <ul>
+            <li>Component-Based Architecture</li>
+            <li>Atomic Design Principles</li>
+            <li>Styled Components and Theming</li>
+          </ul>
 
-            <Button variant="secondary" sx={{ mt: 2 }}>
-              <Link to="/topics/">Read more</Link>
-            </Button>
-          </div>
+          <Button variant="secondary" sx={{ mt: 3 }}>
+            <Link to="/topics/">Read more</Link>
+          </Button>
         </div>
       </GridWrapper>
     </StyledSection>

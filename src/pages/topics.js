@@ -6,157 +6,99 @@ import theme from '../gatsby-plugin-theme-ui'
 import SEO from '../components/seo'
 import NodeGraph from '../components/NodeGraph'
 
+const topics = [
+  {
+    title: 'Component-Based Architecture',
+    description: 'Learn how to build reusable and self-contained components.',
+    // path: '/topics/component-based-architecture',
+  },
+  {
+    title: 'Atomic Design Principles',
+    description: 'Organize your codebase using atomic design methodology.',
+    // path: '/topics/atomic-design',
+  },
+  {
+    title: 'Storybook for Documentation',
+    description: 'Use Storybook to document and test your components.',
+    // path: '/topics/storybook',
+  },
+  {
+    title: 'Styled Components and Theming',
+    description: 'Explore using styled-components and Theme UI for styling.',
+    // path: '/topics/styling-theming',
+  },
+  {
+    title: 'Error Debugging and Handling',
+    description: 'Techniques for debugging common errors in React applications.',
+    // path: '/topics/debugging',
+  },
+  {
+    title: 'Organizing Code for Scalability',
+    description: 'Best practices for structuring code to support future growth.',
+    // path: '/topics/code-organization',
+  },
+]
+
 const Topics = () => (
   <Layout>
-    <Heading
-      as="h2"
+    <Box
       sx={{
-        fontSize: [5, 5],
-        color: 'primary',
-        fontFamily: 'heading',
-        mb: 4,
-        mt: 1,
-        padding: 5,
+        maxWidth: '85rem',
+        margin: '0 auto',
+        padding: '4rem 2rem',
       }}
     >
-      ...{' '}
-    </Heading>
-    <NodeGraph />
-
-    <Grid
-      columns={['1fr', '1fr 2fr 1fr']} // One column on small screens, three columns on larger screens
-      gap={[4, 4]} // Adjust spacing for better readability on small screens
-      sx={{
-        padding: [3, 2], // Larger padding on small screens
-      }}
-    >
-      <Box
+      <Heading as="h1" sx={{ fontSize: [5, 6], mb: 4 }}>
+        Yo!
+        <br /> Welcome to my Topics
+      </Heading>
+      <Text sx={{ fontSize: 3, mb: 3 }}>
+        This section is all about the key concepts in front-end development I've been digging into this year. Learn
+        about component-based architecture, atomic design principles, and more. Feel free to explore the topics below to
+        discover the best practices and techniques for modern web development.
+      </Text>
+      <Text sx={{ fontSize: 3, mb: 5 }}>
+        Each topic provides detailed explanations and examples to help me improve development skills and build scalable,
+        maintainable applications.
+      </Text>
+      <Heading as="h2" sx={{ fontSize: 4, mb: 4, mt: 5 }}>
+        Topics Overview
+      </Heading>
+      <Grid
+        columns={[1, 2, 3]}
+        gap={4}
         sx={{
-          gridColumn: ['1 / -1', '1 / span 3'],
-          padding: 3,
+          marginBottom: '2rem',
         }}
       >
-        <article
-          sx={{
-            maxWidth: '800px',
-            margin: 'auto',
-            padding: 3,
-            strong: {
-              fontWeight: 'bold',
-            },
-            a: {
-              color: 'primary',
-              textDecoration: 'underline',
-              ':hover': {
-                color: 'secondary',
-              },
-            },
-          }}
-        >
-          {/* <Heading
-            as="h2"
+        {topics.map((topic) => (
+          <Box
+            key={topic.title}
             sx={{
-              fontSize: [5, 5],
-              color: 'primary',
-              fontFamily: 'heading',
-              mb: 4,
-              mt: 1,
-            }}
-          >
-            What I've been digging into
-          </Heading> */}
-
-          {/* <Text sx={{ marginBottom: '3rem', ...theme.text.paragraph }}>
-            Working on it
-            <strong> ! </strong>.
-          </Text> */}
-          <br />
-
-          <hr />
-
-          {/* <Box
-            as="ul"
-            sx={{
-              listStyleType: 'disc',
-              marginLeft: '1.5rem',
-              marginTop: '2rem',
-              paddingLeft: '1rem',
-              color: 'text',
-              fontSize: '1.1rem',
-              lineHeight: '1.75',
-            }}
-          >
-            <Box
-              as="li"
-              sx={{
-                marginBottom: '0.50rem',
-                paddingLeft: '0.1rem',
-                transition: 'color 0.3s',
-                ':hover': {
-                  color: 'primary',
-                },
-              }}
-            >
-              Constraint-based design principles
-            </Box>
-            <Box
-              as="li"
-              sx={{
-                marginBottom: '0.50rem',
-                paddingLeft: '0.1rem',
-                transition: 'color 0.3s',
-                ':hover': {
-                  color: 'primary',
-                },
-              }}
-            >
-              Component-Driven Development (CDD)
-            </Box>
-            <Box
-              as="li"
-              sx={{
-                marginBottom: '0.80rem',
-                paddingLeft: '0.1rem',
-                transition: 'color 0.3s',
-                ':hover': {
-                  color: 'primary',
-                },
-              }}
-            >
-              Everything React Hooks{' '}
-            </Box>
-          </Box> */}
-
-          {/* <Box
-            as="blockquote"
-            sx={{
-              fontSize: '1rem',
-              borderLeftWidth: '5px',
-              borderLeftStyle: 'solid',
-              borderLeftColor: 'highlight',
-              backgroundColor: 'primary',
-              padding: '1rem',
-              marginY: '3rem',
-              marginX: '0.5rem',
-              marginTop: '3rem',
+              padding: 3,
               borderRadius: '8px',
-              fontStyle: 'italic',
-              color: 'textLight',
-              boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
-              transition: 'background-color 0.3s',
+              boxShadow: '0 0 8px rgba(0, 0, 0, 0.125)',
+              transition: 'transform 0.3s',
               ':hover': {
-                backgroundColor: 'primary',
-                color: 'textLight',
+                transform: 'translateY(-5px)',
               },
             }}
           >
-            Real education is about genuine understanding and the ability to figure things out on your own; not about
-            making sure every 7th grader has memorized all the facts some bureaucrats have put in the 7th grade
-            curriculum. Be curious. Read widely. Try new things.
-          </Box> */}
-        </article>
-      </Box>
-    </Grid>
+            <Heading as="h3" sx={{ fontSize: 3, marginBottom: 2 }}>
+              <Link to={topic.path} sx={{ textDecoration: 'none', color: 'text' }}>
+                {topic.title}
+              </Link>
+            </Heading>
+            <Text sx={{ marginBottom: 3 }}>{topic.description}</Text>
+            {/* <Link to={topic.path} sx={{ variant: 'buttons.secondary' }}>
+              Read More
+            </Link> */}
+          </Box>
+        ))}
+      </Grid>
+    </Box>
+
+    <NodeGraph />
   </Layout>
 )
 
