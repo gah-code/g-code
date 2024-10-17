@@ -6,7 +6,7 @@ import theme from '../gatsby-plugin-theme-ui'
 import { Box } from 'theme-ui'
 
 import Layout from '../components/layout'
-import SEO from '../components/SEO'
+import SEO from '../components/seo'
 
 const About = () => (
   <Layout>

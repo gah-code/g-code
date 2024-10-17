@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import AllNotes from '../components/AllNotes'
-import SEO from '../components/SEO'
+import SEO from '../components/seo'
 
 const NotePage = () => {
   const pageTitle = 'My Notes'

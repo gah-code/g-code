@@ -9,7 +9,7 @@ import theme from '../gatsby-plugin-theme-ui'
 import Layout from '../components/layout'
 import StyledSection from '../styles/StyledSection'
 import slugify from 'slugify'
-import SEO from '../components/SEO'
+import SEO from '../components/seo'
 // import ToolList from '../components/ui/ToolList'
 
 const StyledLink = styled(Link)`

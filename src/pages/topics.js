@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import { Link } from 'gatsby'
 import { Grid, Heading, Text, Box } from 'theme-ui'
 import theme from '../gatsby-plugin-theme-ui'
-import SEO from '../components/SEO'
+import SEO from '../components/seo'
 import NodeGraph from '../components/NodeGraph'
 
 const Topics = () => (
