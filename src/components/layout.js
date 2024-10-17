@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from './header'
-import Footer from './footer'
+import Header from './organisms/Header/Header'
+import Footer from './organisms/Footer/Footer'
 import { ThemeUIProvider } from 'theme-ui'
 import theme from '../gatsby-plugin-theme-ui' // Ensure this path is correct
 import styled from 'styled-components'

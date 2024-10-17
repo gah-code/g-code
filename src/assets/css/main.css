@@ -131,10 +131,6 @@ small,
   font-size: var(--smallText);
 }
 
-ul {
-  /* padding: 0; */
-  /* list-style-type: none; */
-}
 a {
   text-decoration: none;
 }
@@ -798,7 +794,6 @@ form > *:last-child {
 .single-instruction header p {
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--primary-500);
   margin-bottom: 0;
 }
 
@@ -815,10 +810,4 @@ form > *:last-child {
 .single-ingredient {
   border-bottom: 1px solid var(--grey-500);
   padding-bottom: 0.75rem;
-}
-.single-tool {
-  border-bottom: 1px solid var(--grey-500);
-  padding-bottom: 0.75rem;
-  color: var(--primary-500);
-  text-transform: capitalize;
 }

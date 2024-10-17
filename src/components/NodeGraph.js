@@ -154,9 +154,9 @@ const NodeGraph = () => {
       .attr('y', (d) => -(d.value / 5 + 40))
       .attr('text-anchor', 'middle')
       .style('font-size', '1rem')
-      .style('font-weight', '500')
+      .style('font-weight', '400')
       .style('text-transform', 'uppercase')
-      .style('letter-spacing', '0.06em')
+      .style('letter-spacing', '0.07em')
       .style('fill', '#222')
       .text((d) => d.id)
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Heading, Text } from 'theme-ui'
-import theme from '../gatsby-plugin-theme-ui'
+import theme from '../../../gatsby-plugin-theme-ui'
 import { graphql, useStaticQuery } from 'gatsby'
 
 const StyledSection = styled.section`

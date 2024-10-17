@@ -1,17 +1,25 @@
 import React from 'react'
 import Layout from '../components/layout'
-import AllRecipes from '../components/AllRecipes'
-// import AllBlogs from '../components/AllBlogs';
 import AllNotes from '../components/AllNotes'
-import SEO from '../components/seo'
+import SEO from '../components/SEO'
 
 const NotePage = () => {
+  const pageTitle = 'My Notes'
+  const pageDescription = 'Browse through all my notes with tags and additional details.'
+  const pageUrl = '/notes/'
+
   return (
     <Layout>
-      <SEO title="Recipes" />
+      <SEO
+        title={pageTitle} // Pass the title to SEO
+        description={pageDescription}
+        pathname={pageUrl}
+        // Optionally, add an image for better sharing on social media
+        // image="https://mywebsite.com/images/notes-preview.png"
+      />
       <main className="page">
-        {/* <AllBlogs /> */}
-        {/* <AllRecipes /> */}
+        {/* You can display the page title if needed */}
+        <h1>{pageTitle}</h1>
         <AllNotes />
       </main>
     </Layout>

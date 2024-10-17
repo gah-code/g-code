@@ -6,6 +6,10 @@ import theme from '../../gatsby-plugin-theme-ui'
 import GridWrapper from '../../styles/gridWrapper'
 import StyledSection from '../../styles/StyledSection'
 
+{
+  /* <SkillList items={skills} /> */
+}
+
 const skills = [
   {
     skill: 'HTML',
@@ -150,7 +154,8 @@ const Tech = () => {
     <TechSection maxWidth="85rem" padding="4rem 2rem" columnGap84="4rem" rowGap84="6rem">
       <GridWrapper className="grid--2-cols">
         <div className="data">
-          <SkillList />
+          {/* <SkillList items={skills} /> */}
+          <SkillList skills={skills} />
         </div>
         <div>
           <Heading

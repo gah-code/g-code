@@ -4,11 +4,12 @@ import { graphql } from 'gatsby'
 import { Text, Link, Divider } from 'theme-ui'
 import About from '../components/segments/about'
 import Tech from '../components/segments/tech'
-import Hero from '../components/hero'
-import SEO from '../components/seo'
+// import Hero from '../components/organisms/Hero/Hero'
+import Hero from '../components/organisms/Hero/Hero'
+import SEO from '../components/SEO'
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
-import CardSlider from '../components/CardSlider'
+import CardSlider from '../components/CardSlider/CardSlider'
 
 function Section({ children }) {
   const ref = useRef(null)
@@ -28,10 +29,24 @@ function Section({ children }) {
     </section>
   )
 }
+
 const IndexPage = () => {
+  const pageTitle = 'Home Page'
+  const pageDescription =
+    'Welcome to my personal website, where I share my projects, skills, and blog posts on technology. Passionate about transforming ideas into reality through coding, thanks for stopping by!!'
+  const pageUrl = '/'
+  const pageKeywords = ['frontend Developer', 'portfolio', 'projects', 'blog', 'digital', 'web development', 'notes']
+
   return (
     <Layout>
-      <SEO title="Home Page" />
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={pageKeywords}
+        pathname={pageUrl}
+        // Optionally, you can add an image for social sharing
+        // image="https://mywebsite.com/images/homepage-preview.png"
+      />
       <Section>
         <Hero />
       </Section>

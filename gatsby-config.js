@@ -15,7 +15,7 @@ module.exports = {
   siteMetadata: {
     title: `Frontend Things`,
     description: `Front End Developer located in San Jose Ca Bay Area, passionate about transforming ideas into reality through coding, thanks for stopping by!!`,
-    author: `Gilbert A. Haro`,
+    author: `Gilberto Alejandro Haro`,
     siteUrl: `https://gilbertaharo.com`,
     logo: `.gah`,
   },
@@ -87,7 +87,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#28b485`,
         theme_color: `#28b485`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
