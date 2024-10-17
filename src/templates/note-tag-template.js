@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 // import RecipesList from '../components/RecipesList';
-import NotesList from '../components/NotesList'
+import NotesList from '../components/molecules/NotesList/NotesList'
 import Layout from '../components/layout'
 
 const NoteTagTemplate = ({ data, pageContext }) => {

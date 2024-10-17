@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import AllNotes from '../components/AllNotes'
+import AllNotes from '../components/organisms/AllNotes/AllNotes'
 import SEO from '../components/seo'
 
 const NotePage = () => {

@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import { motion } from 'framer-motion'
 import slugify from 'slugify'
-import Card from './Card'
+import Card from '../../molecules/Card/Card'
 import { StyledSection, StyledContentWrapper, ArticlesWrapper } from './CardSlider.styles'
 
 const CardSlider = () => {

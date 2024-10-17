@@ -1,9 +1,9 @@
 import React from 'react'
-import TagsListNote from './TagsListNote'
-import NotesList from './NotesList'
+import TagsListNote from '../../molecules/TagsListNote/TagsListNote'
+import NotesList from '../../molecules/NotesList/NotesList'
 import styled from 'styled-components'
-import '../assets/css/main.css'
 import { graphql, useStaticQuery } from 'gatsby'
+import '../../../assets/css/main.css'
 
 const query = graphql`
   query {

@@ -2,14 +2,13 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import { Text, Link, Divider } from 'theme-ui'
-import About from '../components/segments/about'
-import Tech from '../components/segments/tech'
-// import Hero from '../components/organisms/Hero/Hero'
+import { About } from '../components/organisms/About'
+import { Tech } from '../components/organisms/Tech'
 import Hero from '../components/organisms/Hero/Hero'
 import SEO from '../components/seo'
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
-import CardSlider from '../components/CardSlider/CardSlider'
+import CardSlider from '../components/organisms/CardSlider/CardSlider'
 
 function Section({ children }) {
   const ref = useRef(null)
@@ -58,7 +57,7 @@ const IndexPage = () => {
         <Tech />
       </Section>
       <Divider />
-      <About maxWidth="250px" />
+      <About maxWidth="250px" alt="Gilberto Alejandro Hero, Web Developer" />
       <Divider />
     </Layout>
   )

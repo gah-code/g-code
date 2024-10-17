@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import slugify from 'slugify'
-import '../assets/css/main.css'
+import '../../../assets/css/main.css'
 
 const NotesList = ({ notes = [] }) => {
   return (

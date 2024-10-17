@@ -1,11 +1,11 @@
 import React from 'react'
 // import setupBlogTags from '../utils/setupBlogTags';
-import setupNoteTags from '../utils/setupNoteTags'
+import setupNoteTags from '../../../utils/setupNoteTags'
 
 import { Link } from 'gatsby'
 import slugify from 'slugify'
 import styled from 'styled-components'
-import '../assets/css/main.css'
+import '../../../assets/css/main.css'
 
 // const TagsListBlog = ({ blogs }) => {
 //   const newTags = setupBlogTags(blogs);
