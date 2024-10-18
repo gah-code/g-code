@@ -164,8 +164,8 @@ const Tech = ({ maxWidth }) => {
             Syntax and Systems
           </Heading>
           <Text sx={theme.text.paragraph}>
-            With many possible solutions for building modern web applications, developer experience could be considered
-            like never before.
+            With many potential solutions available for creating modern web applications, the developer experience has
+            never been more important.
           </Text>
 
           <Text

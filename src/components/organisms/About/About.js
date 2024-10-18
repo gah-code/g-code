@@ -14,9 +14,10 @@ const About = ({ alt, maxWidth }) => {
         <div>
           <Heading sx={{ ...theme.styles.h2 }}>About</Heading>
           <Text sx={theme.text.paragraph}>
-            San Jose, CA with my girlfriend and our adorable pup named 🌯. Our weekdays are filled with work, study, and
-            workouts, but on the weekends, we love hanging out with friends and indulging in some delicious food and
-            wine.
+            In sunny San Jose, California, my girlfriend, our lovable pup 🌯, and I lead a pretty busy life during the
+            week. Between work, study, and squeezing in our workouts, the days just seem to fly by. But when the weekend
+            rolls around, we're all about hanging out with our friends and treating ourselves to some amazing food and
+            wine. It's all about striking that perfect balance between hustle and relaxation!
           </Text>
         </div>
         <PhotoWrapper>
