@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Heading, Text, Button } from 'theme-ui'
 import GridWrapper from '../../../styles/gridWrapper'
-import SkillList from './SkillList'
 import StyledSection from './Tech.styles'
+import SkillIconList from '../../SkillIconList'
 import theme from '../../../gatsby-plugin-theme-ui'
 import { Link } from 'gatsby'
 
@@ -150,9 +150,9 @@ const Tech = ({ maxWidth }) => {
 
   return (
     <StyledSection maxWidth="80rem">
-      <GridWrapper className="grid--2-cols">
+      <GridWrapper className="grid--2-cols" columnGap="1rem" rowGap="1rem" columnGapSm="0.5rem" rowGapSm="0.5rem">
         <div className="data">
-          <SkillList skills={skills} />
+          <SkillIconList />
         </div>
 
         <div>
@@ -163,7 +163,7 @@ const Tech = ({ maxWidth }) => {
           >
             Syntax and Systems
           </Heading>
-          <Text sx={theme.text.paragraph}>
+          <Text sx={{ ...theme.text.paragraph }}>
             With many potential solutions available for creating modern web applications, the developer experience has
             never been more important.
           </Text>

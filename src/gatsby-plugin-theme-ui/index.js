@@ -123,8 +123,11 @@ const theme = {
       bg: 'backgroundDark',
       mt: [3, 4],
       px: 3,
-      py: 1,
-      borderRadius: 10,
+      py: 2,
+      borderRadius: '25px',
+      textTransform: 'uppercase',
+      letterSpacing: '0.7px',
+      fontSize: '0.9rem',
 
       '&:hover': {
         bg: 'highlight',
@@ -136,10 +139,10 @@ const theme = {
     secondary: {
       ml: 2,
       px: 3,
-      py: 1,
+      py: 2,
       border: '3px solid',
       borderColor: 'primary',
-      fontSize: '0.7rem',
+      fontSize: '0.8rem',
       fontWeight: 700,
       borderRadius: '25px',
       textDecoration: 'none',

@@ -2,11 +2,10 @@ import styled from 'styled-components'
 
 const GridWrapper = styled.div`
   display: grid;
-  column-gap: 6.4rem;
-  row-gap: 9.6rem;
+  column-gap: ${(props) => props.columnGap || '6.4rem'};
+  row-gap: ${(props) => props.rowGap || '9.6rem'};
 
   &.grid-2 {
-    display: grid;
     gap: 1em;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   }
@@ -42,8 +41,8 @@ const GridWrapper = styled.div`
   /* BELOW 1200px (Landscape Tablets) */
   /**************************/
   @media (max-width: 75em) {
-    column-gap: 4.8rem;
-    row-gap: 6.4rem;
+    column-gap: ${(props) => props.columnGapSm || '4.8rem'};
+    row-gap: ${(props) => props.rowGapSm || '6.4rem'};
   }
 
   /**************************/
@@ -58,7 +57,7 @@ const GridWrapper = styled.div`
   }
 
   @media (max-width: 34em) {
-    row-gap: 4.8rem;
+    row-gap: ${(props) => props.rowGapXs || '4.8rem'};
     padding: 0 1.5rem;
     &.grid--2-cols,
     &.grid--3-cols,

@@ -41,6 +41,7 @@ const topics = [
 
 const Topics = () => (
   <Layout>
+    <NodeGraph />
     <Box
       sx={{
         maxWidth: '85rem',
@@ -48,9 +49,8 @@ const Topics = () => (
         padding: '4rem 2rem',
       }}
     >
-      <Heading as="h1" sx={{ fontSize: [5, 6], mb: 4 }}>
-        Yo!
-        <br /> Welcome to my Topics
+      <Heading as="h1" sx={{ fontSize: [5, 6], mb: 3 }}>
+        Topics
       </Heading>
       <Text sx={{ fontSize: 3, mb: 3 }}>
         This section is all about the key concepts in front-end development I've been digging into this year. Learn
@@ -97,8 +97,6 @@ const Topics = () => (
         ))}
       </Grid>
     </Box>
-
-    <NodeGraph />
   </Layout>
 )
 

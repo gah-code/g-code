@@ -31,11 +31,12 @@ const StyledSection = styled.section`
 
   li {
     color: #222;
+    font-weight: 500;
     list-style-type: disc;
   }
 
   .data {
-    padding: 32px 0;
+    /* padding: 32px 0; */
     /* padding-top: 10px; */
     position: relative;
     display: flex;
@@ -72,6 +73,8 @@ const StyledSection = styled.section`
   @media (max-width: 59em) {
     .data {
       padding: 0 0.2rem;
+      align-items: left;
+      justify-content: left;
     }
   }
 
@@ -87,8 +90,8 @@ const StyledSection = styled.section`
 
     .data {
       padding: 0;
-      align-items: left;
-      justify-content: left;
+      align-items: center;
+      justify-content: center;
     }
   }
 
