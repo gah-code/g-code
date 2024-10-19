@@ -21,10 +21,12 @@ const About = ({ alt, maxWidth }) => {
             around, we're all about hanging out with our friends and treating ourselves to fantastic food and wine. It's
             all about striking that perfect balance between hustle and relaxation!
           </Text>
+          <br />
           <Button variant="primary" sx={{ mt: 4 }}>
             <Link to="/about/">Read more</Link>
           </Button>
         </div>
+
         <PhotoWrapper>
           <Photo src={aboutImg} alt={alt} maxWidth={maxWidth || '100%'} />
         </PhotoWrapper>
