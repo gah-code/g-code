@@ -107,7 +107,7 @@ const Header = () => {
           {data.site.siteMetadata.logo}
         </Box>
       </Link>
-      <ToggleColorMode />
+      {/* <ToggleColorMode /> */}
     </Box>
   )
 }

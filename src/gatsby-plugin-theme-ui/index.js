@@ -22,7 +22,7 @@ const theme = {
       dark: {
         text: '#f9f4e3',
         background: '#263147',
-        primary: '#6C3082',
+        primary: '#f5f5f4',
         secondary: '#2A3439',
         highlight: '#e3b567',
         link: '#8bcf9e',

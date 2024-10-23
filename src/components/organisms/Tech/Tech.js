@@ -191,7 +191,7 @@ const Tech = ({ maxWidth }) => {
       >
         <Grid className="grid--2-cols-other" columns={[1, 1, 2]} gap={[1, 1, '2rem']}>
           <Box className="data">
-            <SkillIconList className="skill-list" />
+            <SkillIconList />
           </Box>
 
           <Box>

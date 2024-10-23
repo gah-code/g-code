@@ -48,7 +48,7 @@ const SkillIconList = () => {
             },
           },
         }}
-        columns={[2, 4, 6]}
+        columns={[4, 4, 6, 6]}
         gap={1}
         sx={{
           width: 'fit-content',
