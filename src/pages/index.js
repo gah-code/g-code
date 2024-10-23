@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/layout'
-import { graphql } from 'gatsby'
-import { Text, Link, Divider } from 'theme-ui'
+import { Divider } from 'theme-ui'
 import { About } from '../components/organisms/About'
 import { Tech } from '../components/organisms/Tech'
 import Hero from '../components/organisms/Hero/Hero'

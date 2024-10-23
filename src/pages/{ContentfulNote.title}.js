@@ -45,7 +45,7 @@ const NoteTemplate = ({ data }) => {
   return (
     <Layout>
       <main className="page">
-        <StyledSection maxWidth="100rem" padding="4rem 2rem" columnGap84="4rem" rowGap84="8rem">
+        <StyledSection maxWidth="60rem" padding="4rem 2rem" columnGap84="4rem" rowGap84="8rem">
           <div className="recipe-page">
             {/* hero */}
             <section className="post-hero">

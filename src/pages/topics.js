@@ -2,7 +2,6 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import { Link } from 'gatsby'
 import { Grid, Heading, Text, Box } from 'theme-ui'
-import theme from '../gatsby-plugin-theme-ui'
 import SEO from '../components/seo'
 import NodeGraph from '../components/NodeGraph'
 
@@ -41,7 +40,23 @@ const topics = [
 
 const Topics = () => (
   <Layout>
+    <Box
+      sx={{
+        maxWidth: '85rem',
+
+        // This is equal to 85rem * 16px = 1360px
+        // width: ['100%', '75%', '50%', '33.33%'], // Apply responsive widths based on breakpoints
+        margin: '0 auto',
+        padding: [2, 3, 4], // Apply responsive padding (scale from theme)
+        backgroundColor: ['primary', 'secondary', 'highlight', 'backgroundDark'], // Change background color for each breakpoint
+        fontSize: [2, 3, 4, 5], // Apply responsive font size based on breakpoints
+        fontWeight: ['body', 'heading', 'display'], // Apply responsive font weight based on breakpoints
+      }}
+    >
+      Responsive Box with Responsive Typography
+    </Box>
     <NodeGraph />
+
     <Box
       sx={{
         maxWidth: '85rem',
@@ -65,7 +80,7 @@ const Topics = () => (
         Topics Overview
       </Heading>
       <Grid
-        columns={[1, 2, 3]}
+        columns={[1, 1, 2, 3]}
         gap={4}
         sx={{
           marginBottom: '2rem',

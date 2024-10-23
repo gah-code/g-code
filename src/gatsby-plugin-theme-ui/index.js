@@ -2,16 +2,35 @@ import { color } from 'framer-motion'
 
 // example theme file
 const theme = {
+  breakpoints: [
+    '30em', // 480px (xs)
+    '48em', // 768px (sm)
+    '62em', // 992px (md)
+    '75em', // 1200px (lg)
+  ],
   colors: {
     text: '#333',
-    textDark: '#222',
-    textLight: '#f9f4e3',
     background: '#ddf3e4',
-    backgroundDark: '#263147',
     primary: '#2A3439',
     secondary: '#6C3082',
     highlight: 'rgb(236 201 137)',
     link: '#28b485',
+    textLight: '#f9f4e3',
+    textDark: '#222',
+    backgroundDark: '#263147',
+    modes: {
+      dark: {
+        text: '#f9f4e3',
+        background: '#263147',
+        primary: '#6C3082',
+        secondary: '#2A3439',
+        highlight: '#e3b567',
+        link: '#8bcf9e',
+        textLight: '#263147',
+        textDark: '#f9f4e3',
+        backgroundDark: '#f8f8f8f8',
+      },
+    },
   },
   fonts: {
     body: 'system-ui, sans-serif',
@@ -58,7 +77,6 @@ const theme = {
       mt: 3,
       mb: 3,
     },
-
     h4: {
       fontSize: [18, 24],
       fontFamily: 'heading',
@@ -67,7 +85,6 @@ const theme = {
       mt: [5, 6],
       mb: 3,
     },
-
     hr: {
       bg: 'primary',
       border: '1px',
@@ -75,7 +92,6 @@ const theme = {
       m: 3,
     },
   },
-
   text: {
     default: {
       color: 'text',
@@ -128,7 +144,6 @@ const theme = {
       textTransform: 'uppercase',
       letterSpacing: '0.7px',
       fontSize: '0.9rem',
-
       '&:hover': {
         bg: 'highlight',
         color: 'backgroundDark',
@@ -151,7 +166,6 @@ const theme = {
       letterSpacing: '0.7px',
       backgroundColor: 'background',
       color: 'text',
-
       '&:hover': {
         backgroundColor: 'primary',
         color: 'textLight',

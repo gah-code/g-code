@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, Button } from 'theme-ui'
+// import { Heading, Text, Button } from 'theme-ui'
 import GridWrapper from '../../../styles/gridWrapper'
 import StyledSection from './Tech.styles'
 import SkillIconList from '../../SkillIconList'
 import theme from '../../../gatsby-plugin-theme-ui'
+import { Text, Button, Box, Grid, Heading } from 'theme-ui'
 import { Link } from 'gatsby'
+import ResponsiveSection from '../../../styles/ResponsiveSection'
 
 const Tech = ({ maxWidth }) => {
   const skills = [
@@ -149,46 +151,112 @@ const Tech = ({ maxWidth }) => {
   ]
 
   return (
-    <StyledSection maxWidth="80rem">
-      <GridWrapper className="grid--2-cols" columnGap="1rem" rowGap="1rem" columnGapSm="0.5rem" rowGapSm="0.5rem">
-        <div className="data">
-          <SkillIconList />
-        </div>
+    <Box
+      as="section"
+      sx={{
+        maxWidth: '80rem',
+        padding: '4rem 2rem',
+        mx: 'auto',
+        '@media screen and (max-width: 84em)': {
+          columnGap: '6rem',
+          rowGap: '8rem',
+        },
+        '@media screen and (max-width: 75em)': {
+          columnGap: '4rem',
+          rowGap: '6.9rem',
+        },
+        '@media screen and (max-width: 59em)': {
+          columnGap: '4rem',
+          rowGap: '6rem',
+        },
+        '@media screen and (max-width: 34em)': {
+          rowGap: '5rem',
+        },
+      }}
+    >
+      <ResponsiveSection
+        sx={{
+          '@media screen and (max-width: 59em)': {
+            '.grid--2-cols-other': {
+              gridTemplateColumns: '1fr', // Switch to one column layout on smaller screens
+            },
+            '.data:nth-of-type(1)': {
+              gridRow: '2', // Make the data section appear below the heading
+            },
+            '.skill-list': {
+              marginTop: '1.5rem', // Increase margin for the skill list on small screens
+            },
+          },
+        }}
+      >
+        <Grid className="grid--2-cols-other" columns={[1, 1, 2]} gap={[1, 1, '2rem']}>
+          <Box className="data">
+            <SkillIconList className="skill-list" />
+          </Box>
 
-        <div>
-          <Heading
-            sx={{
-              ...theme.styles.h3,
-            }}
-          >
-            Syntax and Systems
-          </Heading>
-          <Text sx={{ ...theme.text.paragraph }}>
-            With many potential solutions available for creating modern web applications, the developer experience has
-            never been more important.
-          </Text>
+          <Box>
+            <Heading sx={{ ...theme.styles.h3 }}>Syntax and Systems</Heading>
+            <Text sx={{ ...theme.text.paragraph }}>
+              With many potential solutions available for creating modern web applications, the developer experience has
+              never been more important.
+            </Text>
 
-          <Text
-            sx={{
-              mt: 3,
-              display: 'block',
-              ...theme.text.heading,
-            }}
-          >
-            Some modern front-end development practices I've been digging into:
-          </Text>
-          <ul>
-            <li>Component-Based Architecture</li>
-            <li>Atomic Design Principles</li>
-            <li>Styled Components and Theming</li>
-          </ul>
+            <Text sx={{ mt: 3, mb: 3, display: 'block', ...theme.text.heading }}>
+              Some modern front-end development practices I've been digging into:
+            </Text>
+            <Box as="ul">
+              <Text as="li">Component-Based Architecture</Text>
+              <Text as="li">Atomic Design Principles</Text>
+              <Text as="li">Styled Components and Theming</Text>
+            </Box>
 
-          <Button variant="secondary" sx={{ mt: 3 }}>
-            <Link to="/topics/">Read more</Link>
-          </Button>
-        </div>
-      </GridWrapper>
-    </StyledSection>
+            <Button variant="secondary" sx={{ mt: 4, mb: 4 }}>
+              <Link to="/topics/">Read more</Link>
+            </Button>
+          </Box>
+        </Grid>
+      </ResponsiveSection>
+    </Box>
+    // <StyledSection maxWidth="80rem">
+    //   <GridWrapper className="grid--2-cols" columnGap="1rem" rowGap="1rem" columnGapSm="0.5rem" rowGapSm="0.5rem">
+    //     <div className="data">
+    //       <SkillIconList />
+    //     </div>
+
+    //     <div>
+    //       <Heading
+    //         sx={{
+    //           ...theme.styles.h3,
+    //         }}
+    //       >
+    //         Syntax and Systems
+    //       </Heading>
+    //       <Text sx={{ ...theme.text.paragraph }}>
+    //         With many potential solutions available for creating modern web applications, the developer experience has
+    //         never been more important.
+    //       </Text>
+
+    //       <Text
+    //         sx={{
+    //           mt: 3,
+    //           display: 'block',
+    //           ...theme.text.heading,
+    //         }}
+    //       >
+    //         Some modern front-end development practices I've been digging into:
+    //       </Text>
+    //       <ul>
+    //         <li>Component-Based Architecture</li>
+    //         <li>Atomic Design Principles</li>
+    //         <li>Styled Components and Theming</li>
+    //       </ul>
+
+    //       <Button variant="secondary" sx={{ mt: 3 }}>
+    //         <Link to="/topics/">Read more</Link>
+    //       </Button>
+    //     </div>
+    //   </GridWrapper>
+    // </StyledSection>
   )
 }
 

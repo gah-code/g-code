@@ -64,7 +64,7 @@
   --max-width: 1120px;
   --fixed-width: 600px;
 }
-html {
+/* html {
   font-size: var(--defaultFontSize);
 }
 @media only screen and (min-width: 576px) {
@@ -76,7 +76,7 @@ html {
   :root {
     --defaultFontSize: 112.5%;
   }
-}
+} */
 
 body {
   /* background: var(--backgroundColor); */
@@ -246,7 +246,7 @@ button.block {
   margin: 0 auto;
 }
 .page {
-  width: 95vw;
+  /* width: 95vw; */
   max-width: var(--max-width);
   margin: 0 auto;
 }

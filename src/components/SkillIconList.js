@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
-import styled from 'styled-components'
 import { useInView } from 'framer-motion'
 import { motion } from 'framer-motion'
+import { Box, Grid, Image } from 'theme-ui'
 
 const SkillIconList = () => {
   const ref = useRef(null)
@@ -37,7 +37,7 @@ const SkillIconList = () => {
       animate={{ opacity: isInView ? 1 : 0 }}
       transition={{ duration: 0.8 }}
     >
-      <IconGrid
+      <Grid
         as={motion.div}
         initial="hidden"
         animate={isInView ? 'visible' : 'hidden'}
@@ -48,9 +48,16 @@ const SkillIconList = () => {
             },
           },
         }}
+        columns={[2, 4, 6]}
+        gap={1}
+        sx={{
+          width: 'fit-content',
+          margin: '0 auto',
+          padding: ['1rem', '1rem'],
+        }}
       >
-        {skills.slice(0, 16).map((skill, index) => (
-          <SkillIcon
+        {skills.map((skill, index) => (
+          <Box
             as={motion.div}
             key={index}
             variants={{
@@ -58,11 +65,26 @@ const SkillIconList = () => {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              // backgroundColor: skill.color,
+              padding: ['0.2rem', '0.3rem'],
+              borderRadius: '0.5rem',
+            }}
           >
-            <img src={`https://skillicons.dev/icons?i=${getSkillIconName(skill.skill)}&theme=dark`} alt={skill.skill} />
-          </SkillIcon>
+            <Image
+              src={`https://skillicons.dev/icons?i=${getSkillIconName(skill.skill)}&theme=dark`}
+              alt={skill.skill}
+              sx={{
+                width: ['3rem', '4rem'],
+                height: ['3rem', '4rem'],
+              }}
+            />
+          </Box>
         ))}
-      </IconGrid>
+      </Grid>
     </motion.div>
   )
 }
@@ -101,37 +123,4 @@ const getSkillIconName = (skillName) => {
 }
 
 export default SkillIconList
-
-const IconGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 0.2rem;
-  width: fit-content;
-  margin: 0 auto;
-
-  @media (max-width: 59em) {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    padding: 2rem 0;
-  }
-`
-
-const SkillIcon = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${(props) => props.color};
-  padding: 0.2rem;
-  border-radius: 0.5rem;
-
-  img {
-    width: 4rem;
-    height: 4rem;
-  }
-
-  @media (max-width: 34em) {
-    padding: 0.3rem;
-  }
-`
 

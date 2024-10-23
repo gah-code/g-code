@@ -1,8 +1,9 @@
 import React from 'react'
 import Header from './organisms/Header/Header'
 import Footer from './organisms/Footer/Footer'
-import { ThemeUIProvider } from 'theme-ui'
+import { ThemeUIProvider, useColorMode, Button } from 'theme-ui'
 import theme from '../gatsby-plugin-theme-ui' // Ensure this path is correct
+// import Projects from './Projects'
 import styled from 'styled-components'
 import GlobalStyle from '../styles/globalStyle' // Ensure this path is correct
 
@@ -27,6 +28,9 @@ const Layout = ({ children }) => {
       <StyledLayout>
         <GlobalStyle />
         <Header />
+        {/* <Projects /> */}
+        {/* <ToggleColorMode /> */}
+
         {/* <Navbar /> */}
         <main id="main-content">{children}</main>
 
