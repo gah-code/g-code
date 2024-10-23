@@ -40,7 +40,7 @@ const topics = [
 
 const Topics = () => (
   <Layout>
-    <Box
+    {/* <Box
       sx={{
         maxWidth: '85rem',
 
@@ -54,8 +54,7 @@ const Topics = () => (
       }}
     >
       Responsive Box with Responsive Typography
-    </Box>
-    <NodeGraph />
+    </Box> */}
 
     <Box
       sx={{
@@ -112,13 +111,14 @@ const Topics = () => (
         ))}
       </Grid>
     </Box>
+    <NodeGraph />
   </Layout>
 )
 
 // SEO component for better search engine visibility
 export const Head = () => (
   <SEO
-    title="Topics - Explore Concepts I'm Learning"
+    title="Topics | Explore Concepts I'm Learning"
     description="Discover the various topics I'm currently diving into, including constraint-based design, component-driven development, and everything about React Hooks."
   />
 )

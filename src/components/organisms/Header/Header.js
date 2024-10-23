@@ -63,19 +63,19 @@ import { Link } from 'gatsby'
 import { useColorMode, Button, Box } from 'theme-ui'
 import { useStaticQuery, graphql } from 'gatsby'
 
-const ToggleColorMode = () => {
-  const [colorMode, setColorMode] = useColorMode()
-  return (
-    <Button
-      onClick={() => {
-        setColorMode(colorMode === 'default' ? 'dark' : 'default')
-      }}
-      sx={{ mt: [0, 0] }}
-    >
-      {colorMode === 'default' ? '🌙' : '💡'}
-    </Button>
-  )
-}
+// const ToggleColorMode = () => {
+//   const [colorMode, setColorMode] = useColorMode()
+//   return (
+//     <Button
+//       onClick={() => {
+//         setColorMode(colorMode === 'default' ? 'dark' : 'default')
+//       }}
+//       sx={{ mt: [0, 0] }}
+//     >
+//       {colorMode === 'default' ? '🌙' : '💡'}
+//     </Button>
+//   )
+// }
 
 const Header = () => {
   const data = useStaticQuery(graphql`
