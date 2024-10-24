@@ -1,34 +1,9 @@
 import React from 'react'
-// import setupBlogTags from '../utils/setupBlogTags';
 import setupNoteTags from '../../../utils/setupNoteTags'
-
 import { Link } from 'gatsby'
 import slugify from 'slugify'
 import styled from 'styled-components'
 import '../../../assets/css/main.css'
-
-// const TagsListBlog = ({ blogs }) => {
-//   const newTags = setupBlogTags(blogs);
-//   return (
-//     <div className='tag-container'>
-//       <h4>blogs</h4>
-//       <div className='tags-list'>
-//         {newTags.map((tag, index) => {
-//           const [text, value] = tag;
-//           const slug = slugify(text, { lower: true });
-
-//           return (
-//             <Link to={`/tags/${slug}`} key={index}>
-//               {text} ({value})
-//             </Link>
-//           );
-//         })}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default TagsListBlog;
 
 const TagContainer = styled.div`
   padding: 20px;

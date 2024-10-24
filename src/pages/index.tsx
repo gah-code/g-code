@@ -9,8 +9,13 @@ import { useRef } from 'react'
 import { useInView } from 'framer-motion'
 import CardSlider from '../components/organisms/CardSlider/CardSlider'
 
-function Section({ children }) {
-  const ref = useRef(null)
+// Define the props interface for the Section component
+interface SectionProps {
+  children: React.ReactNode
+}
+
+function Section({ children }: SectionProps) {
+  const ref = useRef<HTMLElement | null>(null)
   const isInView = useInView(ref, { once: true })
 
   return (
@@ -28,7 +33,7 @@ function Section({ children }) {
   )
 }
 
-const IndexPage = () => {
+const IndexPage: React.FC = () => {
   const pageTitle = 'Home Page'
   const pageDescription =
     'Welcome to my personal website, where I share my projects, skills, and blog posts on technology. Passionate about transforming ideas into reality through coding, thanks for stopping by!!'
@@ -37,14 +42,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO
-        title={pageTitle}
-        description={pageDescription}
-        keywords={pageKeywords}
-        pathname={pageUrl}
-        // Optionally, you can add an image for social sharing
-        // image="https://mywebsite.com/images/homepage-preview.png"
-      />
+      <SEO title={pageTitle} description={pageDescription} keywords={pageKeywords} pathname={pageUrl} />
       <Section>
         <Hero />
       </Section>

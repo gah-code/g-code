@@ -25,6 +25,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-theme-ui',
+    'gatsby-plugin-typescript',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

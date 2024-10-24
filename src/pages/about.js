@@ -11,7 +11,7 @@ const movies = ['Whiplash', 'Kill Bill Vol 2', 'King Kong', 'Kung Fu Hustle', '1
 const shows = ['Breaking Bad', 'Mr. Robot', 'Everybody Hates Chris']
 const books = ['Breaking Through', 'Death of a Salesman', 'The Great Gatsby', 'Ultimate Power']
 
-const About = ({ alt, maxWidth }) => (
+const About = () => (
   <Layout>
     <ResponsiveSection
       maxWidth="80rem"
@@ -32,31 +32,7 @@ const About = ({ alt, maxWidth }) => (
         article={false}
         pathname="/about"
       />
-
-      {/* Intro Section */}
-      <Box
-      // as="section"
-      // sx={{
-      //   maxWidth: '80rem',
-      //   padding: '4rem 2rem',
-      //   mx: 'auto',
-      //   '@media screen and (max-width: 84em)': {
-      //     columnGap: '6rem',
-      //     rowGap: '8rem',
-      //   },
-      //   '@media screen and (max-width: 75em)': {
-      //     columnGap: '4rem',
-      //     rowGap: '6.9rem',
-      //   },
-      //   '@media screen and (max-width: 59em)': {
-      //     columnGap: '4rem',
-      //     rowGap: '6rem',
-      //   },
-      //   '@media screen and (max-width: 34em)': {
-      //     rowGap: '5rem',
-      //   },
-      // }}
-      >
+      <Box>
         <Heading as="h2" sx={{ variant: 'styles.h2', color: 'primary', mb: 3 }}>
           A little about me
         </Heading>

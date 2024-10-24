@@ -25,10 +25,6 @@ const StyledSection = styled.section`
     line-height: 1;
   }
 
-  /**************************/
-  /* BELOW 944px (Tablets) */
-  /**************************/
-
   @media (max-width: 59em) {
     .description {
       padding: 5rem 0 3rem 0;
