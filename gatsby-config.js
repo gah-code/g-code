@@ -24,7 +24,10 @@ module.exports = {
     `gatsby-transformer-sharp`, // Needed for dynamic images
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
-    'gatsby-plugin-theme-ui',
+    {
+      resolve: 'gatsby-plugin-theme-ui',
+      // No need for options here if you use your custom preset
+    },
     'gatsby-plugin-typescript',
     {
       resolve: `gatsby-source-filesystem`,

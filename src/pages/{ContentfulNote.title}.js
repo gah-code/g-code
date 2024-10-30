@@ -5,12 +5,10 @@ import { Heading, Text, Button } from 'theme-ui'
 import styled from 'styled-components'
 import '../assets/css/main.css'
 import theme from '../gatsby-plugin-theme-ui'
-// import { BsClockHistory, BsClock, BsPeople } from 'react-icons/bs'
 import Layout from '../components/layout'
 import StyledSection from '../styles/StyledSection'
 import slugify from 'slugify'
 import SEO from '../components/seo'
-// import ToolList from '../components/ui/ToolList'
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -164,6 +162,21 @@ const NoteTemplate = ({ data }) => {
     </Layout>
   )
 }
+// SEO Component
+export const Head = ({ data, location }) => {
+  const {
+    seoTitle,
+    seoDescription: { seoDescription },
+  } = data.contentfulNote
+
+  return (
+    <SEO
+      title={seoTitle}
+      description={seoDescription || 'Explore this note for more insights and learnings.'} // Fallback description
+      pathname={location.pathname} // Pass the current page pathname dynamically
+    />
+  )
+}
 
 const ToolBlock = styled.div`
   padding: 32px 0;
@@ -184,21 +197,6 @@ const ToolColumn = styled.div`
     text-transform: capitalize;
   }
 `
-
-// SEO Component
-export const Head = ({ data }) => {
-  const {
-    seoTitle,
-    seoDescription: { seoDescription },
-  } = data.contentfulNote
-
-  return (
-    <SEO
-      title={seoTitle}
-      description={seoDescription || 'Explore this note for more insights and learnings.'} // Fallback description
-    />
-  )
-}
 
 export const query = graphql`
   query getSingleNote($title: String) {

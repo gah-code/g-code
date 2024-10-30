@@ -10,11 +10,6 @@ export const StyledContentWrapper = styled.div`
   width: 100%;
   padding: 0;
   box-sizing: border-box;
-
-  .section-title {
-    font-size: 1.2rem;
-    margin: 3rem 0 2rem 2.5rem;
-  }
 `
 
 export const ArticlesWrapper = styled.div`

@@ -3,6 +3,9 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import { motion } from 'framer-motion'
 import slugify from 'slugify'
 import Card from '../../molecules/Card/Card'
+import { Heading, Text, Box } from 'theme-ui'
+import theme from '../../../gatsby-plugin-theme-ui'
+
 import { StyledSection, StyledContentWrapper, ArticlesWrapper } from './CardSlider.styles'
 
 const CardSlider = () => {
@@ -33,9 +36,19 @@ const CardSlider = () => {
   return (
     <StyledSection initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7 }}>
       <StyledContentWrapper>
-        <h3 className="section-title">
-          <span className="highlighted">NOTES</span>
-        </h3>
+        <Box
+          sx={{
+            margin: '3rem 1rem 3rem 2rem',
+          }}
+        >
+          <Heading sx={{ ...theme.styles.h3 }}>Deep Dives & Discoveries Notes</Heading>
+          <Text sx={theme.text.paragraph}>
+            {' '}
+            Get the latest on my deep dives, projects, and explorations—follow along as I share insights, discoveries,
+            and everything I’m currently fascinated by.
+          </Text>
+        </Box>
+
         <ArticlesWrapper>
           {notes.map((note) => {
             const { id, title, content } = note

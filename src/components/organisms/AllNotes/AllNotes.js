@@ -4,6 +4,7 @@ import NotesList from '../../molecules/NotesList/NotesList'
 import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import '../../../assets/css/main.css'
+import PropTypes from 'prop-types'
 
 const query = graphql`
   query {
@@ -22,6 +23,7 @@ const query = graphql`
     }
   }
 `
+
 const StyledSection = styled.section`
   max-width: 120rem;
   padding: 3.9rem 1.5rem;
@@ -54,11 +56,26 @@ const AllNotes = () => {
     <StyledSection>
       <section className="blog-container">
         <TagsListNote notes={notes} />
-        <NotesList notes={notes} />
+        {/* <NotesList notes={notes} /> */}
       </section>
     </StyledSection>
   )
 }
 
+AllNotes.propTypes = {
+  notes: PropTypes.arrayOf(
+    PropTypes.shape({
+      featured: PropTypes.bool.isRequired,
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      content: PropTypes.shape({
+        tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+      }).isRequired,
+      image: PropTypes.shape({
+        gatsbyImageData: PropTypes.object.isRequired,
+      }).isRequired,
+    })
+  ),
+}
 export default AllNotes
 

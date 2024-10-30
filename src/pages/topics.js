@@ -102,6 +102,8 @@ export const Head = () => (
   <SEO
     title="Topics | Explore Concepts I'm Learning"
     description="Discover the various topics I'm currently diving into, including constraint-based design, component-driven development, and everything about React Hooks."
+    keywords={['Topics', 'Web Development', 'Component-Based Architecture', 'Atomic Design', 'Storybook', 'React']}
+    pathname="/topics"
   />
 )
 

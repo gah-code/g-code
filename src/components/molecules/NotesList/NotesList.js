@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import slugify from 'slugify'
 import '../../../assets/css/main.css'
+import PropTypes from 'prop-types'
 
 const NotesList = ({ notes = [] }) => {
   return (
@@ -14,7 +15,7 @@ const NotesList = ({ notes = [] }) => {
         return (
           <Link key={id} to={`/${slug}`} className="recipe">
             <GatsbyImage image={pathToImage} className="recipe-img" alt={title} />
-            <h5>{title}</h5>
+            <h4>{title}</h4>
             <p>
               {/* <p>{description ? documentToReactComponents(description.json) : null}</p> */}
               {/* <p>{description}</p> */}
@@ -25,6 +26,18 @@ const NotesList = ({ notes = [] }) => {
       })}
     </div>
   )
+}
+
+NotesList.propTypes = {
+  notes: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      image: PropTypes.shape({
+        gatsbyImageData: PropTypes.object.isRequired,
+      }).isRequired,
+    })
+  ),
 }
 
 export default NotesList

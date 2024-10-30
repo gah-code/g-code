@@ -11,7 +11,18 @@ export const CardWrapper = styled.div`
   background-color: #314237;
   border-radius: 20px;
   flex-shrink: 0;
-  transition: box-shadow 0.3s ease-out;
+  transition: box-shadow 0.4s ease-out, border 0.3s ease-out;
+  border: 2px solid #314237;
+
+  &:hover {
+    border: 3px solid #e3b567;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    border: 2px solid #e3b567;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 
   .category {
     text-transform: uppercase;

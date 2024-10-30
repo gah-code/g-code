@@ -3,8 +3,8 @@
     "target": "es5",
     "module": "commonjs",
     "strict": true,
-    "esModuleInterop": true, // Add this to fix import issues
-    "jsx": "react", // Enable JSX support
+    "esModuleInterop": true,
+    "jsx": "react",
     "moduleResolution": "node",
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,

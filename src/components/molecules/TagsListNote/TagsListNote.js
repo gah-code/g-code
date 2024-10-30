@@ -44,14 +44,14 @@ const TagsListNote = ({ notes }) => {
 
   return (
     <div className="tag-container">
-      <h4>My Notes</h4>
+      <h4>Tags</h4>
       <TagList className="tags-list">
         {newNoteTags.map((tag, index) => {
           const [text, value] = tag
           const slug = slugify(text, { lower: true })
 
           return (
-            <Link to={`/tags/${slug}`} key={index}>
+            <Link to={`/notes/${slug}`} key={index}>
               {text} ({value})
             </Link>
           )

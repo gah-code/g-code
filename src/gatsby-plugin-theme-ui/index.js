@@ -8,29 +8,30 @@ const theme = {
     '62em', // 992px (md)
     '75em', // 1200px (lg)
   ],
+  initialColorModeName: 'light',
   colors: {
-    text: '#333',
-    background: '#ddf3e4',
-    primary: '#2A3439',
-    secondary: '#6C3082',
-    highlight: 'rgb(236 201 137)',
-    link: '#28b485',
-    textLight: '#f9f4e3',
-    textDark: '#222',
-    backgroundDark: '#263147',
-    modes: {
-      dark: {
-        text: '#f9f4e3',
-        background: '#263147',
-        primary: '#f5f5f4',
-        secondary: '#2A3439',
-        highlight: '#e3b567',
-        link: '#8bcf9e',
-        textLight: '#263147',
-        textDark: '#f9f4e3',
-        backgroundDark: '#f8f8f8f8',
-      },
-    },
+    text: '#333', // Keep this as it has good contrast against light backgrounds
+    background: '#ddf3e4', // Lighten the background to improve contrast with text
+    primary: '#2A3439', // Primary color is fine as it has good contrast
+    secondary: '#6C3082', // This is good, but you could consider slightly darkening it for contrast
+    highlight: '#e3b567', // Adjusted for better contrast
+    link: '#006d5b', // Darken the link color for better contrast
+    textLight: '#f9f4e3', // This is good for use against darker backgrounds
+    textDark: '#222', // Good contrast against light backgrounds
+    backgroundDark: '#1b2a34', // Darkened to enhance contrast in dark mode
+    // modes: {
+    //   dark: {
+    //     text: '#f9f4e3', // Light text for better contrast on dark backgrounds
+    //     background: '#1b2a34', // Darkened the background slightly to improve contrast
+    //     primary: '#f5f5f4', // A light primary color for good visibility
+    //     secondary: '#2A3439', // Maintain this color as it has sufficient contrast
+    //     highlight: '#e3b567', // Slight adjustment for accessibility
+    //     link: '#8bcf9e', // Link color that stands out without straining the eyes
+    //     textLight: '#1b2a34', // Darkened for use on light elements
+    //     textDark: '#f9f4e3', // Light text for use on dark backgrounds
+    //     backgroundDark: '#1b2a34', // Used for dark sections to maintain consistency
+    //   },
+    // },
   },
   fonts: {
     body: 'system-ui, sans-serif',

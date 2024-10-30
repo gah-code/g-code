@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-// import { Heading, Text, Button } from 'theme-ui'
 import GridWrapper from '../../../styles/gridWrapper'
 import StyledSection from './Tech.styles'
 import SkillIconList from '../../SkillIconList'

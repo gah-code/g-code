@@ -1,11 +1,12 @@
 import React from 'react'
 import Header from './organisms/Header/Header'
 import Footer from './organisms/Footer/Footer'
-import { ThemeUIProvider, useColorMode, Button } from 'theme-ui'
+import { ThemeUIProvider } from 'theme-ui'
 import theme from '../gatsby-plugin-theme-ui' // Ensure this path is correct
 // import Projects from './Projects'
 import styled from 'styled-components'
 import GlobalStyle from '../styles/globalStyle' // Ensure this path is correct
+// import { ColorModeProvider } from '../context/ColorModeContext' // Import the provider
 
 const StyledLayout = styled.div`
   width: 100%;
