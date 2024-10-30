@@ -15,14 +15,14 @@ const About = () => (
   <Layout>
     <ResponsiveSection
       maxWidth="80rem"
-      padding="4rem 2rem"
+      padding="3rem 2rem"
       columnGap84="6rem"
       rowGap84="8rem"
       columnGap75="2rem"
       rowGap75="6.9rem"
       columnGap59="1rem"
       rowGap59="6rem"
-      paddingSmall="3rem 1.5rem 2rem 1.5rem"
+      paddingSmall="2rem 1.5rem 2rem 1.5rem"
       rowGap34="5rem"
     >
       <SEO
@@ -49,7 +49,7 @@ const About = () => (
       </Box>
 
       {/* Movies, Shows, and Books Section */}
-      <Grid columns={[1, 1, 3, 3]} gap={4} sx={{ maxWidth: '85rem', margin: '0 auto', padding: '2rem 0.1rem' }}>
+      {/* <Grid columns={[1, 1, 3, 3]} gap={4} sx={{ maxWidth: '85rem', margin: '0 auto', padding: '2rem 0.1rem' }}>
         {[
           { title: 'Movies', items: movies },
           { title: 'Shows', items: shows },
@@ -90,7 +90,7 @@ const About = () => (
             </Box>
           </Box>
         ))}
-      </Grid>
+      </Grid> */}
 
       {/* Update Section */}
       <UpdateSection />
@@ -100,8 +100,8 @@ const About = () => (
 
 const UpdateSection = () => {
   return (
-    <Box sx={{ padding: 2 }}>
-      <Heading as="h2" sx={{ variant: 'styles.h2', color: 'primary', mb: 3 }}>
+    <Box>
+      <Heading as="h3" sx={{ variant: 'styles.h3', color: 'primary', mb: 3, mt: 4 }}>
         Update: 9/1/24
       </Heading>
       <Text sx={{ variant: 'text.paragraph' }}>

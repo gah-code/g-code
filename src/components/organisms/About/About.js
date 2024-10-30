@@ -39,14 +39,15 @@ const About = ({ alt, maxWidth }) => {
           <div>
             <Heading sx={{ ...theme.styles.h2 }}>About</Heading>
             <Text sx={theme.text.paragraph}>
-              In sunny San Jose, California, my girlfriend, our lovable pup 🌯, and I lead a pretty busy life during the
-              week. The days between work, study, and squeezing in our workouts seem to fly by. But when the weekend
-              rolls around, we're all about hanging out with our friends and treating ourselves to fantastic food and
-              wine. It's all about striking that perfect balance between hustle and relaxation!
+              Just soaking up the sun in San Jose, California! I’m sharing life with my amazing girlfriend and our cute
+              pup, 🌯. During the week, I’m all in as a full-time web developer at Robert Half, every day is a crazy mix
+              of work, learning, cooking, and getting my step count in. On the weekends, we relax with friends, go plant
+              shopping, and sometimes I have photography bookings or editing to catch up on. We enjoy delicious food and
+              great views around the Bay area.
             </Text>
             <br />
             <Button variant="primary" sx={{ mt: 4, mb: 4 }}>
-              <Link to="/about/">Read more</Link>
+              <Link to="/about">Read more</Link>
             </Button>
           </div>
           <Box

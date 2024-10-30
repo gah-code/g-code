@@ -61,9 +61,9 @@ const IndexPage: React.FC = () => {
       <Divider />
       <About maxWidth="250px" alt="Gilberto Alejandro Hero, Web Developer" />
       <Divider />
-      <section>
+      {/* <section>
         <AllNotes />
-      </section>
+      </section> */}
       {/* <ToolList /> */}
     </Layout>
   )

@@ -1,8 +1,6 @@
 # My 2025 Website Update: Contentful-Powered Theme UI Gatsby Site
 
-## g-code Website
-
-Contentful Notes and Code Recipes
+![Lighthouse Score](./src/assets/images/lighthouse-score.png)
 
 ## Purpose
 
@@ -13,7 +11,7 @@ This project showcases a dynamic web application built using Gatsby, a modern st
 ### Dynamic Content Management
 
 - Utilizes Contentful CMS to manage and deliver content for notes and code recipes, allowing non-technical users to easily add, modify, and organize content.
-- Each content type includes fields such as title, description, cook/prep time for code recipes, and tags shared across both notes and recipes for unified taxonomy.
+- Theme UI
 
 ### Advanced Image Handling
 
