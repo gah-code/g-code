@@ -20,7 +20,7 @@ const StyledSection = styled.section`
   }
 
   @media (max-width: 34em) {
-    padding: ${(props) => props.paddingSmall || '3rem 0.8rem 2rem 0.8rem'};
+    padding: ${(props) => props.paddingSmall || '3rem 1.5rem 2rem 1.5rem'};
     row-gap: ${(props) => props.rowGap34 || '5rem'};
   }
 `

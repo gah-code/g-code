@@ -117,6 +117,7 @@ body {
       transition: all 0.3s;
     }
     
+    
 `
 
 export default GlobalStyle

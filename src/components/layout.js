@@ -1,12 +1,14 @@
 import React from 'react'
 import Header from './organisms/Header/Header'
 import Footer from './organisms/Footer/Footer'
+import { StrictMode } from 'react'
+
 import { ThemeUIProvider } from 'theme-ui'
 import theme from '../gatsby-plugin-theme-ui' // Ensure this path is correct
 // import Projects from './Projects'
 import styled from 'styled-components'
 import GlobalStyle from '../styles/globalStyle' // Ensure this path is correct
-// import { ColorModeProvider } from '../context/ColorModeContext' // Import the provider
+import ColorModeToggle from './ColorModeToggle'
 
 const StyledLayout = styled.div`
   width: 100%;
@@ -25,19 +27,23 @@ const StyledLayout = styled.div`
 
 const Layout = ({ children }) => {
   return (
-    <ThemeUIProvider theme={theme}>
-      <StyledLayout>
-        <GlobalStyle />
-        <Header />
-        {/* <Projects /> */}
-        {/* <ToggleColorMode /> */}
+    <StrictMode>
+      <ThemeUIProvider theme={theme}>
+        <StyledLayout>
+          <GlobalStyle />
+          <Header />
+          {/* <ColorModeToggle /> */}
 
-        {/* <Navbar /> */}
-        <main id="main-content">{children}</main>
+          {/* <Projects /> */}
+          {/* <ToggleColorMode /> */}
 
-        <Footer />
-      </StyledLayout>
-    </ThemeUIProvider>
+          {/* <Navbar /> */}
+          <main id="main-content">{children}</main>
+
+          <Footer />
+        </StyledLayout>
+      </ThemeUIProvider>
+    </StrictMode>
   )
 }
 

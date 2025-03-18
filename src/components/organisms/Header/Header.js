@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Box } from 'theme-ui'
 import { useStaticQuery, graphql } from 'gatsby'
+import ColorModeToggle from '../../ColorModeToggle'
 
 // import ToggleColorMode from '../../ToggleColorMode/ToggleColorMode'
 
@@ -35,6 +36,7 @@ const Header = () => {
           {data.site.siteMetadata.logo}
         </Box>
       </Link>
+      <ColorModeToggle />
       {/* <ToggleColorMode /> */}
     </Box>
   )

@@ -3,6 +3,8 @@ import Layout from '../components/layout'
 import { Divider } from 'theme-ui'
 import { About } from '../components/organisms/About'
 import { Tech } from '../components/organisms/Tech'
+import { StrictMode } from 'react'
+
 import { ThemeUIProvider } from 'theme-ui' // Use `ThemeProvider` instead of `ThemeUIProvider`
 // import theme from '../gatsby-plugin-theme-ui'
 
@@ -52,19 +54,12 @@ const IndexPage: React.FC = () => {
       <Section>
         <CardSlider />
       </Section>
-      {/* <section>
-        <AllNotes />
-      </section> */}
       <Section>
         <Tech />
       </Section>
       <Divider />
       <About maxWidth="250px" alt="Gilberto Alejandro Hero, Web Developer" />
       <Divider />
-      {/* <section>
-        <AllNotes />
-      </section> */}
-      {/* <ToolList /> */}
     </Layout>
   )
 }

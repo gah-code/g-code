@@ -1,6 +1,4 @@
-import { color } from 'framer-motion'
-
-// example theme file
+// theme.js
 const theme = {
   breakpoints: [
     '30em', // 480px (xs)
@@ -8,31 +6,30 @@ const theme = {
     '62em', // 992px (md)
     '75em', // 1200px (lg)
   ],
-  initialColorModeName: 'light',
+  initialColorModeName: 'light', // Start with light mode
+  useColorSchemeMediaQuery: true, // Optional: Enable automatic color mode detection based on system preferences
   colors: {
-    text: '#333', // Keep this as it has good contrast against light backgrounds
-    background: '#ddf3e4', // Lighten the background to improve contrast with text
-    primary: '#2A3439', // Primary color is fine as it has good contrast
-    secondary: '#6C3082', // This is good, but you could consider slightly darkening it for contrast
-    highlight: '#e3b567', // Adjusted for better contrast
-    link: '#006d5b', // Darken the link color for better contrast
-    textLight: '#f9f4e3', // This is good for use against darker backgrounds
-    textDark: '#222', // Good contrast against light backgrounds
-    backgroundDark: '#1b2a34', // Darkened to enhance contrast in dark mode
-    // modes: {
-    //   dark: {
-    //     text: '#f9f4e3', // Light text for better contrast on dark backgrounds
-    //     background: '#1b2a34', // Darkened the background slightly to improve contrast
-    //     primary: '#f5f5f4', // A light primary color for good visibility
-    //     secondary: '#2A3439', // Maintain this color as it has sufficient contrast
-    //     highlight: '#e3b567', // Slight adjustment for accessibility
-    //     link: '#8bcf9e', // Link color that stands out without straining the eyes
-    //     textLight: '#1b2a34', // Darkened for use on light elements
-    //     textDark: '#f9f4e3', // Light text for use on dark backgrounds
-    //     backgroundDark: '#1b2a34', // Used for dark sections to maintain consistency
-    //   },
-    // },
+    // Default (light) mode
+    text: '#333',
+    background: '#ddf3e4',
+    primary: '#2A3439',
+    secondary: '#6C3082',
+    highlight: '#e3b567',
+    link: '#006d5b',
+
+    modes: {
+      // Dark mode
+      dark: {
+        text: '#f9f4e3', // Ensure text is light on dark background
+        background: '#263147', // Dark background
+        primary: '#cc7', // Adjusted for dark mode
+        secondary: '#9b4aac',
+        highlight: '#ffda79',
+        link: '#76c7c0',
+      },
+    },
   },
+
   fonts: {
     body: 'system-ui, sans-serif',
     heading: 'system-ui, sans-serif',
@@ -96,7 +93,7 @@ const theme = {
   text: {
     default: {
       color: 'text',
-      fontSize: [2, 3],
+      fontSize: [4, 2],
       fontWeight: 400,
     },
     heading: {
@@ -136,8 +133,8 @@ const theme = {
   buttons: {
     primary: {
       fontSize: 'inherit',
-      color: 'textLight',
-      bg: 'backgroundDark',
+      color: 'background', // Ensure high contrast on light backgrounds
+      bg: 'primary',
       mt: [3, 4],
       px: 3,
       py: 2,
@@ -147,9 +144,9 @@ const theme = {
       fontSize: '0.9rem',
       '&:hover': {
         bg: 'highlight',
-        color: 'backgroundDark',
+        color: 'text',
         borderColor: 'secondary',
-        border: '2px',
+        border: '2px solid',
       },
     },
     secondary: {
@@ -169,7 +166,7 @@ const theme = {
       color: 'text',
       '&:hover': {
         backgroundColor: 'primary',
-        color: 'textLight',
+        color: 'highlight',
       },
     },
   },

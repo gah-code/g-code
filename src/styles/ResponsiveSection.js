@@ -23,7 +23,7 @@ const ResponsiveSection = (props) => (
         rowGap: props.rowGap59 || '6rem',
       },
       '@media screen and (max-width: 34em)': {
-        padding: props.paddingSmall || '3rem 0.8rem 2rem 0.8rem',
+        padding: props.paddingSmall || '3rem 1.5rem 2rem 1.5rem',
         rowGap: props.rowGap34 || '5rem',
       },
     }}
